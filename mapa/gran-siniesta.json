@@ -1,0 +1,556 @@
+{
+  "lugares": [
+    {
+      "x": 53.01668806161746,
+      "y": 47.24668310437948,
+      "nombre": "Ciudad del Rey",
+      "descripcion": "Bla bla",
+      "icono": "fab fa-fort-awesome",
+      "color": "#6951c9",
+      "vegetacion": [],
+      "monstruos": [
+        "Draco",
+        "Hombre lobo",
+        "Las'kram"
+      ],
+      "minerales": [
+        "Acero",
+        "Madera",
+        "Plata"
+      ],
+      "comida": [],
+      "imagen": "",
+      "tamaño": "18px"
+    },
+    {
+      "x": 57.25288831835687,
+      "y": 73.5470235998591,
+      "nombre": "cosita",
+      "descripcion": "asdasd",
+      "icono": "fas fa-chess-rook",
+      "color": "#1e7329",
+      "vegetacion": [],
+      "monstruos": [],
+      "minerales": [],
+      "comida": [
+        "Cebada",
+        "Especias",
+        "Lechuga",
+        "Patatas"
+      ],
+      "imagen": "",
+      "tamaño": "12px"
+    },
+    {
+      "x": 28.498075577555255,
+      "y": 52.71515781568152,
+      "nombre": "Menesa",
+      "descripcion": "Capital Vaelekin",
+      "icono": "fab fa-fort-awesome",
+      "color": "#0054ad",
+      "vegetacion": [],
+      "monstruos": [],
+      "minerales": [],
+      "comida": [
+        "Avena"
+      ],
+      "imagen": "",
+      "tamaño": "18px"
+    },
+    {
+      "x": 29.845956354300384,
+      "y": 86.23732926304254,
+      "nombre": "Sepúlveda",
+      "descripcion": "Capital Sarrakena. Cosas pasan.",
+      "icono": "fab fa-fort-awesome",
+      "color": "#c93457",
+      "vegetacion": [],
+      "monstruos": [
+        "Las'kram",
+        "Nakkros",
+        "Hombre lobo"
+      ],
+      "minerales": [
+        "Oro"
+      ],
+      "comida": [],
+      "imagen": "",
+      "tamaño": "18px"
+    },
+    {
+      "x": 28.967116592281762,
+      "y": 27.073002505770503,
+      "nombre": "Vanalis",
+      "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.\n\nWhy do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "imagen": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbOpUUxBRrUeu9Un2ZmIT31HZp8FDCHgEscWdVitGVF6tDOw5BcUYRA2DVBQGPGLk_zB02ahMBMskK2vS428kDAivUihcpO9Un15ZBI8WiSjiyKj5-c_IWdq1IsphhnDWgh0NzZnbA0CJF/s1600/Bel%2527ashir+ciudad+elfa+edificios.jpg",
+      "icono": "fab fa-fort-awesome",
+      "color": "#008791",
+      "vegetacion": [
+        "Celidonia",
+        "Milenrama",
+        "Raíz de Mandrágora"
+      ],
+      "monstruos": [],
+      "minerales": [],
+      "comida": [],
+      "tamaño": "18px"
+    },
+    {
+      "x": 54.49293966623877,
+      "y": 57.76681930257133,
+      "nombre": "Reden",
+      "descripcion": "Ciudad sin Ley",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "color": "#b545de",
+      "vegetacion": [],
+      "monstruos": [],
+      "minerales": [
+        "Madera",
+        "Arsénico"
+      ],
+      "comida": [],
+      "tamaño": "12px"
+    },
+    {
+      "x": 67.47802987401938,
+      "y": 20.4256634647018,
+      "nombre": "Alta Sanabria",
+      "descripcion": "La mayor ciudad del norte. Antigua capital de Lorentia y actual residencia del núcle familiar de los Kal'arch.\n\nDurante el verano es una zona calmada, pero durante el invierno sufren constantes ventiscas y grandes nevadas.",
+      "imagen": "",
+      "icono": "fab fa-fort-awesome",
+      "tamaño": "18px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Drupa de Mirlo",
+        "Milenrama",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Cocatriz",
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 56.039210937750404,
+      "y": 22.277373292967315,
+      "nombre": "Fuerte Bruma",
+      "descripcion": "Un pequeño fuerte rodeado siempre de brumas y niebla\n\nEntre los valles más ocultos de estas montañas se encuentra una sociedad secreta élfica llamada Sel Delmah, Nuevo Hogar. En esta zona, asentados unas ruinas enanas, tiene lugar la vida social elfa, así como el comercio y otras actividades relacionadas, mientras que la vida cotidiana la realizan en el interior de la montaña. Estas cavidades internas están aún más escondidas que las ruinas enanas, y sirven de refugio a familias y niños.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Bejin",
+        "Espino de Hart",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Espina Roja",
+        "Garuba",
+        "Lisovik"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 58.95209311685462,
+      "y": 5.837550019081901,
+      "nombre": "Brumhavn",
+      "descripcion": "Ciudad en la isla Draugrkas, importante por su puerto y habilidad pesquera, que alimenta a gran parte del territorio Kal'arch.\nEs la ciudad de la casa Vallza.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo",
+        "Welwitschia"
+      ],
+      "monstruos": [
+        "Draco",
+        "Wyvern"
+      ],
+      "minerales": [],
+      "comida": [
+        "Fresas",
+        "Lubina",
+        "Salmón",
+        "Trucha"
+      ]
+    },
+    {
+      "x": 62.24646983311939,
+      "y": 7.081131853939181,
+      "nombre": "Ciudadela",
+      "descripcion": "Ciudad norteña, bastión de la casa Rahdun.\nSu nombre viene de la antigua Ciudadela que había allí, lugar de estudio y reflexión del que salieron grandes filósofos, alquimistas, médicos, y que siempre han favorecido a la casa Kal'arch.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo",
+        "Welwitschia"
+      ],
+      "monstruos": [
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 61.964056482670095,
+      "y": 1.4453446049078313,
+      "nombre": "Edhen",
+      "descripcion": "Paisaje completamente helado. Una gran zona blanca de frío extremo.\n\nEstá separado del continente por un gran lago, normalmente helado.",
+      "imagen": "",
+      "icono": "ra ra-spikeball",
+      "tamaño": "14px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo",
+        "Welwitschia"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Cocatriz",
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 58.75481386392811,
+      "y": 11.326758248209464,
+      "nombre": "Bosque Blanco",
+      "descripcion": "Un gran area de vegetación poco espesa completamente blanca debido a la nieve.",
+      "imagen": "",
+      "icono": "fab fa-pagelines",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Bejin",
+        "Espino de Hart",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Espina Roja",
+        "Garuba",
+        "Lisovik"
+      ],
+      "minerales": [],
+      "comida": [
+        "Carne de Caza",
+        "Huevo",
+        "Patatas"
+      ]
+    },
+    {
+      "x": 61.65596919127086,
+      "y": 12.867206762944699,
+      "nombre": "Norvigar",
+      "descripcion": "Ciudad en el valle entre grandes peñascos y precipicios.\nEs la ciudad de la casa Kev'red.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 68.22849807445442,
+      "y": 13.167782082893037,
+      "nombre": "Villa Refugio",
+      "descripcion": "Pequeña aldea fundada por viajeros que recorrían el norte y debían buscar refugio durante tormentas o grandes nevadas.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": [
+        "Bayas",
+        "Seta"
+      ]
+    },
+    {
+      "x": 73.74839537869063,
+      "y": 15.046377832570155,
+      "nombre": "Montañas de Fjorndal",
+      "descripcion": "La isla de Fjorndal es pequeña y deshabitada. Sin embargo tiene unas montañas a las que suelen acudir muchos mineros para extraer pólvora.",
+      "imagen": "",
+      "icono": "fas fa-mountain",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Reina de la Noche"
+      ],
+      "monstruos": [
+        "Kathakano"
+      ],
+      "minerales": [
+        "Pólvora"
+      ],
+      "comida": []
+    },
+    {
+      "x": 72.25930680359434,
+      "y": 16.849829752260185,
+      "nombre": "Fjordnal",
+      "descripcion": "Pequeño pueblo costero que une el continente con la isla de Fjorndal.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Espino de Hart"
+      ],
+      "monstruos": [
+        "Cocatriz",
+        "Sirena"
+      ],
+      "minerales": [],
+      "comida": [
+        "Bayas",
+        "Salmón",
+        "Vino"
+      ]
+    },
+    {
+      "x": 66.84210526315789,
+      "y": 16.023247622402252,
+      "nombre": "Fuerte Desolación",
+      "descripcion": "Ciudad clave del paso de mercancías y viajeros hacia el norte.\nEs la ciudad de la casa Ard.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo",
+        "Raíz de Mandrágora"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": [
+        "Carne de Caza",
+        "Fresas",
+        "Patatas"
+      ]
+    },
+    {
+      "x": 79.19127086007703,
+      "y": 20.15615827169191,
+      "nombre": "Castillo Viejo",
+      "descripcion": "Antiguo castillo, bastión del señor de Dos Picos, antigua región disputada entre los Kal'arch y los Reshk'arch.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Drupa de Mirlo"
+      ],
+      "monstruos": [
+        "Sirena",
+        "Wyvern"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 73.5173299101412,
+      "y": 22.22261359633674,
+      "nombre": "Montes Urko",
+      "descripcion": "Línea de montañas importantes en la minería norteña.",
+      "imagen": "",
+      "icono": "fas fa-mountain",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Bejin",
+        "Espino de Hart",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Espina Roja",
+        "Garuba",
+        "Lisovik"
+      ],
+      "minerales": [
+        "Bronce",
+        "Cobre",
+        "Hierro"
+      ],
+      "comida": []
+    },
+    {
+      "x": 61.63029525032092,
+      "y": 21.884466361394857,
+      "nombre": "Cordillera Val-Linde",
+      "descripcion": "Un gran area de vegetación poco espesa completamente blanca debido a la nieve.\n\nEntre los valles más ocultos de estas montañas se encuentra una sociedad secreta élfica llamada Sel Delmah, Nuevo Hogar. En esta zona, asentados unas ruinas enanas, tiene lugar la vida social elfa, así como el comercio y otras actividades relacionadas, mientras que la vida cotidiana la realizan en el interior de la montaña. Estas cavidades internas están aún más escondidas que las ruinas enanas, y sirven de refugio a familias y niños.",
+      "imagen": "",
+      "icono": "fas fa-mountain",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Bejin",
+        "Espino de Hart",
+        "Pino del Diablo"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Espina Roja",
+        "Garuba",
+        "Lisovik"
+      ],
+      "minerales": [],
+      "comida": []
+    },
+    {
+      "x": 56.47683491874682,
+      "y": 18.1359232267353,
+      "nombre": "Bastión Espanto",
+      "descripcion": "Bastión fortificado donde los Kal'arch han entrenado a su ejército durante generaciones.\nCon el tiempo, al rededor de la fortificación se fueron creando casas y comercios locales para dar cobijo a los soldados que allí vivían.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Acónito",
+        "Pino del Diablo",
+        "Raíz de Mandrágora"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Draco"
+      ],
+      "minerales": [],
+      "comida": [
+        "Carne de Caza",
+        "Fresas",
+        "Patatas"
+      ]
+    },
+    {
+      "x": 53.50099184797126,
+      "y": 28.25472390402383,
+      "nombre": "Ysmud",
+      "descripcion": "Pequeña aldea entre árboles",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Drupa de Mirlo",
+        "Milenrama"
+      ],
+      "monstruos": [
+        "Acantha",
+        "Garuba",
+        "Mamarro"
+      ],
+      "minerales": [],
+      "comida": [
+        "Calabaza",
+        "Manzana",
+        "Seta"
+      ]
+    },
+    {
+      "x": 49.3581514945386,
+      "y": 22.4481547389975,
+      "nombre": "Lohrestiel",
+      "descripcion": "Una tranquila zona donde antaño estaba el antiguo reino elfo Lohrestiel, y que da nombre a los actuales Lohres, pues allí fue donde se encontraron las primeras runas y el primer rastro de magia a partir del cual los humanos aprendieron a manejarla.",
+      "imagen": "",
+      "icono": "ra ra-spikeball",
+      "tamaño": "14px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Bayas de Brionia Dioica",
+        "Milenrama"
+      ],
+      "monstruos": [
+        "Arpía",
+        "Garuba",
+        "Las'kram",
+        "Sirena"
+      ],
+      "minerales": [],
+      "comida": [
+        "Carne de Caza",
+        "Lechuga",
+        "Manzana"
+      ]
+    },
+    {
+      "x": 60.85793695959274,
+      "y": 27.053247325307744,
+      "nombre": "Norrfen",
+      "descripcion": "Ciudad situada en una explanada entre dos grandes zonas rocosas, por lo que tiene mucho tráfico de minería.",
+      "imagen": "",
+      "icono": "fas fa-chess-rook",
+      "tamaño": "12px",
+      "color": "#a11011",
+      "vegetacion": [
+        "Bejin"
+      ],
+      "monstruos": [
+        "Acantha"
+      ],
+      "minerales": [],
+      "comida": [
+        "Calabaza",
+        "Lechuga",
+        "Seta"
+      ]
+    }
+  ],
+  "territorios": {
+    "52_48": "#1e7329",
+    "52_47": "#1e7329",
+    "52_46": "#1e7329",
+    "52_45": "#1e7329",
+    "53_45": "#1e7329",
+    "54_45": "#1e7329",
+    "25_34": "#0054ad",
+    "25_33": "#0054ad",
+    "26_33": "#0054ad",
+    "26_34": "#0054ad",
+    "48_29": "#6951c9",
+    "49_29": "#6951c9",
+    "48_30": "#6951c9",
+    "49_30": "#6951c9",
+    "43_58": "#731010",
+    "44_58": "#731010",
+    "44_57": "#731010",
+    "43_57": "#731010",
+    "50_36": "#b545de"
+  }
+}
