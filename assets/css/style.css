@@ -1,15 +1,98 @@
-html::before {
-  content: 'CodePen ♥ The Web';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-  font-family: monospace;
-  opacity: 0.6;
-  background: rebeccapurple;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
+/* =========================
+   FUENTES
+========================= */
+
+@font-face {
+    font-family: "Medici";
+    src: url("../fonts/MediciText.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+
+:root{
+    --gs-text: #f2eee6;
+    --gs-accent: #b89b5e;
+    --gs-dark: #0f0f0f;
+    --gs-card-bg: rgba(12,12,12,.72);
+    --gs-border: rgba(255,255,255,.12);
+    --gs-shadow: rgba(0,0,0,.45);
+    --gs-transition: .25s ease;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:var(--gs-text);
+    background:var(--gs-dark);
+    font-family: Georgia, serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   TIPOGRAFÍAS
+========================= */
+
+.gs-title{
+    font-family:"Medici", serif;
+    letter-spacing:.08em;
+}
+
+.gs-center{
+    text-align:center;
+}
+
+/* =========================
+   BOTÓN GRAN SINIESTRA
+========================= */
+
+.gs-button{
+    display:inline-block;
+    padding:14px 34px;
+    text-decoration:none;
+    color:var(--gs-text);
+    border:1px solid var(--gs-accent);
+    border-radius:10px;
+    background:rgba(184,155,94,.08);
+    transition:var(--gs-transition);
+}
+
+.gs-button:hover{
+    transform:translateY(-2px);
+    background:rgba(184,155,94,.18);
+}
+
+/* =========================
+   SEPARADOR
+========================= */
+
+.gs-divider{
+    width:100%;
+    height:1px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
 }
