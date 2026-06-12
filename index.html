@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gran Siniestra</title>
+
+<style>
+:root{
+    --text: #f2eee6;
+    --accent: #b89b5e;
+    --card-bg: rgba(12,12,12,.72);
+    --border: rgba(255,255,255,.12);
+    --shadow: rgba(0,0,0,.45);
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+    font-family: Georgia, serif;
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* FONDO */
+.background{
+    position:fixed;
+    inset:0;
+    background-image:url("TU_IMAGEN_DE_FONDO");
+    background-size:cover;
+    background-position:center;
+    z-index:-2;
+}
+.background::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.78);
+    backdrop-filter:blur(2px);
+}
+
+/* CONTENIDO */
+.container{
+    width:min(1400px, 92%);
+    margin:auto;
+    padding:40px 0 80px;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+.logo{
+    width:130px;
+    height:130px;
+    object-fit:contain;
+    margin-bottom:18px;
+}
+.title{
+    font-size:clamp(2.8rem, 5vw, 5rem);
+    letter-spacing:.08em;
+    margin-bottom:10px;
+}
+.subtitle{
+    font-size:1rem;
+    opacity:.85;
+    margin-bottom:24px;
+}
+.discord-btn{
+    display:inline-block;
+    padding:14px 34px;
+    text-decoration:none;
+    color:var(--text);
+    border:1px solid var(--accent);
+    border-radius:10px;
+    background:rgba(184,155,94,.08);
+    transition:.25s;
+    font-weight:bold;
+}
+.discord-btn:hover{
+    transform:translateY(-2px);
+    background:rgba(184,155,94,.18);
+}
+
+/* SEPARADOR */
+.divider{
+    width:100%;
+    height:1px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    margin:40px 0;
+}
+
+/* GRID */
+.portal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+  
+/* TARJETAS */
+.portal-card{
+    text-decoration:none;
+    color:var(--text);
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow:hidden;
+    transition:.25s ease;
+    box-shadow:0 10px 25px var(--shadow);
+}
+.portal-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(184,155,94,.5);
+}
+.portal-card:hover .card-image img{
+    transform:scale(1.05);
+}
+.card-image{
+    aspect-ratio:16/9;
+    overflow:hidden;
+}
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.35s ease;
+}
+.card-title{
+    text-align:center;
+    padding:18px;
+    font-size:1.1rem;
+    font-weight:bold;
+    letter-spacing:.08em;
+}
+
+/* MÓVIL */
+@media (max-width:600px){
+    .container{
+        width:95%;
+    }
+    .logo{
+        width:100px;
+        height:100px;
+    }
+    .card-title{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+<body>
+  
+<div class="background"></div>
+  <div class="container">
+  <header class="header">
+    <img
+        class="logo"
+        src="TU_LOGO"
+        alt="Gran Siniestra">
+    <h1 class="title">GRAN SINIESTRA</h1>
+    <p class="subtitle">
+        Servidor de rol de fantasía oscura
+    </p>
+    <a class="discord-btn"
+       href="ENLACE_DISCORD"
+       target="_blank">
+       UNIRSE AL DISCORD
+    </a>
+</header>
+  
+<div class="divider"></div>
+<section class="portal-grid">
+  
+    <a class="portal-card" href="./mapa">
+        <div class="card-image">
+            <img src="IMAGEN_MAPA" alt="Mapa">
+        </div>
+        <div class="card-title">
+            MAPA
+        </div>
+    </a>
+  
+    <a class="portal-card" href="/lore">
+        <div class="card-image">
+            <img src="IMAGEN_LORE" alt="Lore">
+        </div>
+        <div class="card-title">
+            LORE
+        </div>
+    </a>
+  
+</section>
+</div>
+</body>
+</html>
