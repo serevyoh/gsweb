@@ -1356,12 +1356,14 @@ ${(lugar.descripcion || "").replace(/\n/g, "<br>")}
   }
 
   if(lugar.minerales?.length){
-
+  
     html +=
       `<div class="label">MINERALES</div><br>`
-      + lugar.minerales.join(", ")
+      + lugar.minerales
+          .map(m => typeof m === "string" ? m : m.nombre)
+          .join(", ")
       + "<br>";
-
+  
   }
 
   if(lugar.comida?.length){
