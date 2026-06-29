@@ -899,8 +899,19 @@ marcador.onclick = (e) => {
     inner.appendChild(marcador);
   }
 console.log("PASO 4");
+
 // ================= CARGAR MARCADORES =================
-  
+
+console.log("Voy a crear", lugares.length, "marcadores");
+
+lugares.forEach(lugar => {
+
+  crearMarcador(lugar);
+
+});
+
+console.log("Marcadores creados");
+
 // ================= CLICK MAPA =================
 
 inner.onclick = function(e) {
