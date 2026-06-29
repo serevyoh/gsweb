@@ -1,4 +1,5 @@
 window.onload = async function() {
+  alert("SCRIPT CARGADO");
 
   const container = document.getElementById("mapa-container");
   const inner = document.getElementById("mapa-inner");
