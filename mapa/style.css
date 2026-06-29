@@ -116,9 +116,10 @@ body {
 }
 
 #mapa-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position:absolute;
+  top:0;
+  left:0;
+  display:inline-block;
 }
 
 #mapa {
@@ -134,8 +135,10 @@ body {
   left:0;
   width:100%;
   height:100%;
+  object-fit:contain;
   pointer-events:none;
-  z-index:100;
+  user-select:none;
+  -webkit-user-drag:none;
 }
 
 /* MARCADORES */
