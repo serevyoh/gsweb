@@ -8,6 +8,22 @@ window.onload = function() {
 
   let lugares = [];
   let territorios = {};
+
+  async function cargarDatos(){
+
+  const respuesta =
+    await fetch("gran-siniesta.json");
+
+  const datos =
+    await respuesta.json();
+
+  lugares =
+    datos.lugares || [];
+
+  territorios =
+    datos.territorios || {};
+
+}
   // ================= GUARDADO =================
 
 const datosGuardados =
