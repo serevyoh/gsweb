@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = async function() {
 
   const container = document.getElementById("mapa-container");
   const inner = document.getElementById("mapa-inner");
@@ -24,6 +24,7 @@ window.onload = function() {
     datos.territorios || {};
 
 }
+  await cargarDatos();
   // ================= GUARDADO =================
 
 const datosGuardados =
