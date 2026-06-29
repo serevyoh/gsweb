@@ -898,11 +898,7 @@ marcador.onclick = (e) => {
     inner.appendChild(marcador);
   }
 
-  // ================= CARGAR MARCADORES =================
-  
-lugares.forEach(lugar => {
-  crearMarcador(lugar);
-});
+// ================= CARGAR MARCADORES =================
   
 // ================= CLICK MAPA =================
 
