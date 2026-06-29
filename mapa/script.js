@@ -1,5 +1,4 @@
 window.onload = async function() {
-  alert("SCRIPT CARGADO");
 
   const container = document.getElementById("mapa-container");
   const inner = document.getElementById("mapa-inner");
@@ -562,7 +561,6 @@ actualizarFiltrosActivos();
   };
 
 });
-  console.log("PASO 1");
   botonAdmin.onclick = () => {
 
   adminPanel.classList.toggle(
@@ -588,7 +586,6 @@ actualizarFiltrosActivos();
   }
 
 };
-console.log("PASO 2"); 
 botonGuardar.onclick = () => {
 
   localStorage.setItem(
@@ -730,7 +727,6 @@ botonExportar.onclick = () => {
 );
 
   // ================= DRAG =================
-  console.log("PASO 3");
   let scale = 1, posX = 0, posY = 0;
   let isDragging = false, startX, startY;
   
@@ -898,7 +894,6 @@ marcador.onclick = (e) => {
     lugar._el = marcador;
     inner.appendChild(marcador);
   }
-console.log("PASO 4");
 
 // ================= CARGAR MARCADORES =================
 
