@@ -25,6 +25,8 @@ window.onload = async function() {
 
 }
   await cargarDatos();
+  console.log(lugares);
+  console.log(territorios);
   // ================= GUARDADO =================
 
 const datosGuardados =
