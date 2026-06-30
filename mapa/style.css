@@ -669,3 +669,31 @@ body {
 #toggleNombres.activo{
   background:#5a0f0f;
 }
+
+/* ========================================
+   SCROLLBAR GRAN SINIESTRA
+======================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#080808;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gs-accent);
+    border-radius:20px;
+    border:2px solid #080808;
+    transition:.2s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--gs-accent-soft);
+}
+
+::-webkit-scrollbar-corner{
+    background:#080808;
+}
