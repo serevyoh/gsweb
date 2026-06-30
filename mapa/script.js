@@ -1320,34 +1320,36 @@ function mostrarLugar(lugar) {
 
   document.getElementById("nombre").innerText = "";
 
-  let html = "";
+  let cabecera = "";
+  let contenido = "";
 
-if(lugar.imagen){
+  if(lugar.imagen){
 
-  html += `
-    <img
-      src="${lugar.imagen}"
-      class="info-imagen"
-      id="imagenLugar"
-    >
-  `;
+    cabecera += `
+      <img
+        src="${lugar.imagen}"
+        class="info-imagen"
+        id="imagenLugar"
+      >
+    `;
 
-}
+  }
 
-  html += `
+  cabecera += `
     <div class="tituloLugar">
       ${lugar.nombre || ""}
     </div>
   `;
 
-html += `
-<div class="textoDescripcion">
-${(lugar.descripcion || "").replace(/\n/g, "<br>")}
-</div>`;
+  contenido += `
+    <div class="textoDescripcion">
+      ${(lugar.descripcion || "").replace(/\n/g,"<br>")}
+    </div>
+  `;
 
   if(lugar.vegetacion?.length){
 
-    html +=
+    contenido +=
       `<div class="label">VEGETACIÓN</div><br>`
       + lugar.vegetacion.join(", ")
       + "<br>";
@@ -1356,7 +1358,7 @@ ${(lugar.descripcion || "").replace(/\n/g, "<br>")}
 
   if(lugar.monstruos?.length){
 
-    html +=
+    contenido +=
       `<div class="label">MONSTRUOS</div><br>`
       + lugar.monstruos.join(", ")
       + "<br>";
@@ -1364,65 +1366,62 @@ ${(lugar.descripcion || "").replace(/\n/g, "<br>")}
   }
 
   if(lugar.minerales?.length){
-  
-    html +=
+
+    contenido +=
       `<div class="label">MINERALES</div><br>`
       + lugar.minerales
-          .map(m => typeof m === "string" ? m : m.nombre)
-          .join(", ")
+        .map(m => typeof m === "string" ? m : m.nombre)
+        .join(", ")
       + "<br>";
-  
+
   }
 
   if(lugar.comida?.length){
 
-    html +=
+    contenido +=
       `<div class="label">COMIDA</div><br>`
       + lugar.comida.join(", ");
 
   }
 
-document.getElementById(
-  "descripcion"
-).innerHTML = html;
+  document.getElementById("descripcion").innerHTML = `
+    <div id="fichaCabecera">
+      ${cabecera}
+    </div>
 
-const imagen =
-document.getElementById(
-  "imagenLugar"
-);
+    <div id="fichaContenido">
+      ${contenido}
+    </div>
+  `;
 
-if(imagen){
+  const imagen = document.getElementById("imagenLugar");
 
-  imagen.onclick = () => {
+  if(imagen){
 
-    const popup =
-      document.createElement("div");
+    imagen.onclick = () => {
 
-    popup.className =
-      "imagen-popup";
+      const popup = document.createElement("div");
 
-    popup.innerHTML = `
+      popup.className = "imagen-popup";
 
-      <img
-        src="${lugar.imagen}"
-        class="imagen-popup-img"
-      >
+      popup.innerHTML = `
+        <img
+          src="${lugar.imagen}"
+          class="imagen-popup-img"
+        >
+      `;
 
-    `;
+      popup.onclick = () => {
 
-    popup.onclick = () => {
+        popup.remove();
 
-      popup.remove();
+      };
+
+      document.body.appendChild(popup);
 
     };
 
-    document.body.appendChild(
-      popup
-    );
-
-  };
-
-}
+  }
 
 }
 // ================= LEYENDA =================
