@@ -11,17 +11,16 @@ body {
 }
 
 /* SIDEBAR */
-#sidebar {
+#sidebar{
   width:320px;
   background:var(--gs-bg-soft);
   color:var(--gs-text);
-  padding:25px;
-  box-sizing:border-box;
   border-right:1px solid var(--gs-border);
   display:flex;
   flex-direction:column;
-  overflow-y:auto;
-  overflow-x:hidden;
+  height:100vh;
+  overflow:hidden;
+  padding:8px;
 }
 
 #sidebar h1 {
@@ -38,9 +37,13 @@ body {
   margin-bottom:12px;
 }
 
-#info {
+#info{
   margin-top:20px;
-
+  overflow-y:auto;
+  overflow-x:hidden;
+  flex:1;
+  min-height:0;
+  padding-right:6px;
 }
 
 #info h2{
@@ -105,6 +108,7 @@ body {
 
 #botones{
   overflow:visible;
+  flex-shrink:0;
 }
 
 /* MAPA */
@@ -536,7 +540,8 @@ body {
 /* DISCORD */
 /* ================================================== */
 #discordBox{
-  margin-top:auto;
+  margin-top:20px;
+  flex-shrink:0;
   text-align:center;
   padding-top:15px;
   border-top:1px solid #6d5731;
