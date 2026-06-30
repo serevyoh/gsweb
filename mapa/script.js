@@ -608,38 +608,19 @@ botonExportar.onclick = () => {
 
   const exportable = {
 
-    lugares: lugares.map(lugar => {
+  lugares: lugares.map(lugar => {
 
-      const copia = {...lugar};
+    const copia = { ...lugar };
 
-      delete copia._el;
+    delete copia._el;
 
-      if(copia.minerales){
+    return copia;
 
-        copia.minerales =
-          copia.minerales.map(nombre => ({
+  }),
 
-            nombre,
+  territorios
 
-            rareza:
-              RECURSOS.minerales[nombre]?.rareza
-              || "desconocida",
-
-            tirada:
-              RECURSOS.minerales[nombre]?.tirada
-              || ""
-
-          }));
-
-      }
-
-      return copia;
-
-    }),
-
-    territorios
-
-  };
+};
 
   const json =
     JSON.stringify(exportable, null, 2);
