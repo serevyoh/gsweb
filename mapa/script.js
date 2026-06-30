@@ -459,16 +459,16 @@ document
       btnCasas.onclick = () => {
 
         mapaAlt = !mapaAlt;
-
+      
         mapaImg.src = mapaAlt
-          ? "https://i.imgur.com/JDwDzay.jpeg"
-          : "https://i.imgur.com/Mr40FCw.jpeg";
-
+          ? "https://i.imgur.com/IPGz3cb.png"
+          : "https://i.imgur.com/UYGHioP.jpeg";
+      
         btnCasas.classList.toggle(
           "activo",
           mapaAlt
         );
-
+      
       };
 
       const btnGrid =
