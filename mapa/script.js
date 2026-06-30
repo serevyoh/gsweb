@@ -1164,10 +1164,14 @@ function crearCheckboxes(
 
           <div
             class="filtroTag editorTag ${
-              seleccion.includes(item)
-              ? "activo"
-              : ""
-            }"
+  seleccion.some(s =>
+    typeof s === "string"
+      ? s === item
+      : s.nombre === item
+    )
+      ? "activo"
+      : ""
+}"
             data-prefix="${prefix}"
             data-value="${item}"
           >
