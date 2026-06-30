@@ -671,10 +671,26 @@ botonExportar.onclick = () => {
           JSON.parse(ev.target.result);
 
         lugares =
-          datos.lugares || [];
+  datos.lugares || [];
 
-        territorios =
-          datos.territorios || {};
+// Convertir minerales antiguos (objetos)
+// en minerales de texto
+
+lugares.forEach(lugar => {
+
+  lugar.minerales =
+    (lugar.minerales || []).map(mineral =>
+
+      typeof mineral === "object"
+        ? mineral.nombre
+        : mineral
+
+    );
+
+});
+
+territorios =
+  datos.territorios || {};
 
         reconstruirMapa();
 
