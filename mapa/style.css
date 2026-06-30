@@ -727,6 +727,17 @@ body {
 }
 
 #descripcion{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    overflow:hidden;
+}
+
+#fichaCabecera{
+    flex-shrink:0;
+}
+
+#fichaContenido{
     flex:1;
     overflow-y:auto;
     overflow-x:hidden;
