@@ -472,13 +472,27 @@ body {
   font-family:var(--font-ui);
 }
 
-#dividerLogo{
-  display:block;
-  width:180px;
-  margin:8px auto 14px auto;
-  opacity:.95;
-  user-select:none;
-  pointer-events:none;
+#ornamento{
+
+  width:120px;
+  height:1px;
+  background:#6d5731;
+  margin:0 auto 18px auto;
+  position:relative;
+
+}
+
+#ornamento::before{
+
+  content:"◆";
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  color:#c9a96e;
+  font-size:12px;
+  background:#0b0f14;
+  padding:0 6px;
 
 }
 
