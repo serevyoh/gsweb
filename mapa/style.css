@@ -472,24 +472,13 @@ body {
   font-family:var(--font-ui);
 }
 
-#ornamento{
-  width:120px;
-  height:1px;
-  background:var(--gs-accent);
-  margin:0 auto 18px auto;
-  position:relative;
-}
-
-#ornamento::before{
-  content:"◆";
-  position:absolute;
-  left:50%;
-  top:-1px;
-  transform:translateX(-50%);
-  font-size:12px;
-  color:var(--gs-accent-soft);
-  background:var(--gs-bg-soft);
-  padding:0 6px;
+#dividerLogo{
+  display:block;
+  width:180px;
+  margin:8px auto 14px auto;
+  opacity:.95;
+  user-select:none;
+  pointer-events:none;
 
 }
 
@@ -497,7 +486,6 @@ body {
   width:100%;
   display:block;
   box-sizing:border-box;
-
 }
 
 *{
