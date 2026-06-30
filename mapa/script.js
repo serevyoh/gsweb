@@ -1212,12 +1212,19 @@ function aplicarFiltros(){
 
     const datosLugar = [
 
-      ...(lugar.vegetacion || []),
-      ...(lugar.monstruos || []),
-      ...(lugar.minerales || []),
-      ...(lugar.comida || [])
+  ...(lugar.vegetacion || []),
 
-    ];
+  ...(lugar.monstruos || []),
+
+  ...(lugar.minerales || []).map(m =>
+    typeof m === "string"
+      ? m
+      : m.nombre
+  ),
+
+  ...(lugar.comida || [])
+
+];
 
     const cumpleTodos =
 
