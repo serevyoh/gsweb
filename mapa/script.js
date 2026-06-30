@@ -456,20 +456,24 @@ document
       const btnCasas =
       document.getElementById("toggleCasasPolitica");
 
-      btnCasas.onclick = () => {
+      const mapaCasas =
+document.getElementById("mapaCasas");
 
-        mapaAlt = !mapaAlt;
-      
-        mapaImg.src = mapaAlt
-          ? "https://i.imgur.com/IPGz3cb.png"
-          : "https://i.imgur.com/UYGHioP.jpeg";
-      
-        btnCasas.classList.toggle(
-          "activo",
-          mapaAlt
-        );
-      
-      };
+btnCasas.onclick = () => {
+
+  mapaAlt = !mapaAlt;
+
+  mapaCasas.style.display =
+    mapaAlt
+      ? "block"
+      : "none";
+
+  btnCasas.classList.toggle(
+    "activo",
+    mapaAlt
+  );
+
+};
 
       const btnGrid =
       document.getElementById("toggleGridPolitica");
