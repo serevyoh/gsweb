@@ -569,21 +569,24 @@ body {
   right:15px;
   background:rgba(0,0,0,0.55);
   border:1px solid var(--gs-text);
-  padding:10px 14px;
+  padding:6px;
   z-index:999999;
   color:#ddd;
-  font-family:Calibri, sans-serif;
+  text-align:center;
+  font-family:var(--font-ui);
   font-size:13px;
   backdrop-filter:blur(3px);
   pointer-events:auto;
-  z-index:9999999;
+  text-align:center;
+  letter-spacing:3px;
+  font-size:14px;
 }
 .leyendaTitulo{
   text-align:center;
   color:var(--gs-text);
   letter-spacing:2px;
   margin-bottom:8px;
-  font-family:Calibri, sans-serif;
+  font-family:var(--font-ui);
   font-size:14px;
 }
 #leyendaMapa div{
@@ -598,13 +601,16 @@ body {
   cursor:pointer;
   color:var(--gs-text);
   text-align:center;
+  margin-top:8px;
   letter-spacing:2px;
   font-size:14px;
+  padding:5px;
 }
 #leyendaContenido{
   display:none;
   margin-top:8px;
   text-align:left;
+  padding:7px;
 }
 
 #panelFiltrosActivos{
@@ -650,26 +656,23 @@ body {
   position:fixed;
   bottom:20px;
   right:20px;
-  width:100px;
-  padding:10px;
+  width:120px;
+  padding:9px;
   background:rgba(0,0,0,.55);
   backdrop-filter:blur(3px);
-  border:1px solid #6d5731;
+  border:1px solid var(--gs-textgris);
   color:var(--gs-text);
+  font-family:var(--font-ui);
   text-align:center;
-  letter-spacing:2px;
+  letter-spacing:5px;
+  font-size:10px;
   cursor:pointer;
   z-index:999999;
   transition:.25s;
-  cursor:pointer;
-  color:var(--gs-text);
-  text-align:center;
-  letter-spacing:2px;
-  font-size:14px;
 }
 
 #toggleNombres:hover{
-  border-color:#c9a96e;
+  border-color:var(--gs-text);
 }
 
 #toggleNombres.activo{
