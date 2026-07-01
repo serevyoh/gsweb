@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cronología - Gran Siniestra</title>
+<!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+<!-- RPG Awesome -->
+    <link rel="stylesheet"
+      href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css">
+
+<!-- Honeybee -->
+    <link rel="stylesheet"
+      href="https://solrainha.github.io/honeybee/honeybee.css">
+<!-- Yanone Kaffeesatz -->
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="cronologia-container">
+
+        <header class="cronologia-top">
+
+    <div class="cronologia-brand">
+        <h1>Cronología</h1>
+        <p>Historia de Gran Siniestra</p>
+    </div>
+
+    <section class="cronologia-filtros">
+
+            <button class="era-btn"
+                    data-era="antigua">
+                    Historia Antigua
+            </button>
+
+            <button class="era-btn"
+                    data-era="clasica">
+                    Historia Clásica
+            </button>
+
+            <button class="era-btn activo"
+                    data-era="actual">
+                    Actualidad
+            </button>
+
+</section>
+
+    <div class="cronologia-busqueda">
+
+    <a href="../index.html" class="volver-home">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <input
+        type="text"
+        placeholder="Buscar evento..."
+        id="buscador"
+    >
+
+</div>
+
+</header>
+
+        <!-- TIMELINE -->
+        <section class="timeline-wrapper">
+        <div class="timeline-scroll">
+        <div class="timeline-line"></div>
+        <div id="marcas-tiempo"></div>
+        <div id="timeline"></div>
+    </div>
+
+</section>
+
+        <!-- PANEL DETALLE -->
+        <section id="detalle-evento" class="detalle-evento oculto">
+            <button id="cerrar-detalle" class="cerrar-detalle">
+                    <i class="fas fa-times"></i>
+            </button>
+            <div class="detalle-imagen"></div>
+            <div class="detalle-contenido">
+                 <div class="detalle-centro">
+            <span class="detalle-anio">1258</span>
+            <h2>Selecciona un evento</h2>
+
+            <p class="detalle-descripcion">
+            Haz clic sobre un evento para explorar la historia.
+            </p>
+            <button
+                id="leer-mas"
+                class="leer-mas oculto">
+             Leer relato completo →
+
+</button>
+
+        <div
+            class="detalle-consecuencias-destacadas oculto">
+
+            <h3>
+            Consecuencias
+            </h3>
+
+        <div
+            class="consecuencias-destacadas-lista">
+    </div>
+
+</div>
+
+    </div>
+
+    <aside class="detalle-meta">
+        <div class="meta-item">
+    <h3>
+        <i class="ra ra-crossed-swords"></i>
+        Tipo
+    </h3>
+    <p class="meta-tipo">—</p>
+</div>
+
+<div class="meta-item">
+    <h3>
+        <i class="far fa-calendar-alt"></i>
+        Duración
+    </h3>
+    <p class="meta-duracion">—</p>
+</div>
+
+<div class="meta-item">
+    <h3>
+        <i class="fas fa-map-marker-alt"></i>
+        Lugares principales
+    </h3>
+    <ul class="meta-lugares"></ul>
+</div>
+
+<div class="meta-item bloque-reinos">
+
+    <h3>
+        <i class="fas fa-flag"></i>
+        Reinos
+    </h3>
+
+    <div class="detalle-reinos"></div>
+
+</div>
+
+<div class="meta-item bloque-personajes">
+
+    <h3>
+        <i class="fas fa-user"></i>
+        Figuras clave
+    </h3>
+
+    <div class="detalle-personajes"></div>
+
+</div>
+
+<div class="meta-item">
+    <h3>
+        <i class="fas fa-burn"></i>
+        Consecuencias
+    </h3>
+    <ul class="meta-consecuencias"></ul>
+</div>
+    </aside>
+
+</div>
+        </section>
+
+    <div class="timeline-nav">
+    <button class="nav-btn" id="nav-izquierda">
+    <i class="fas fa-chevron-left"></i>
+</button>
+    <div class="nav-centro">
+        <div class="nav-barra">
+            <div class="nav-indicador" id="nav-indicador"></div>
+        </div>
+        <span>
+            Arrastra para explorar la línea temporal
+        </span>
+    </div>
+    <button class="nav-btn" id="nav-derecha">
+    <i class="fas fa-chevron-right"></i>
+</button>
+</div>    
+
+    </main>
+
+<div id="popup-relato" class="popup-relato oculto">
+    <div class="popup-fondo"></div>
+    <div class="popup-contenido">
+        <button
+            id="cerrar-popup"
+            class="cerrar-popup">
+            <i class="fas fa-times"></i>
+        </button>
+        <span class="popup-anio"></span>
+        <h2 class="popup-titulo"></h2>
+        <div class="popup-texto"></div>
+
+    </div>
+
+</div>
+
+<div id="popup-personaje" class="popup-relato oculto">
+
+    <div class="popup-fondo"></div>
+
+    <div class="popup-contenido popup-personaje-contenido">
+
+        <button
+            id="cerrar-popup-personaje"
+            class="cerrar-popup">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+        <div
+            class="popup-personaje-imagen">
+        </div>
+
+        <h2
+            class="popup-personaje-nombre">
+        </h2>
+
+    </div>
+
+</div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
