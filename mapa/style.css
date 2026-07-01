@@ -622,7 +622,8 @@ body {
 
 #tituloFiltrosActivos{
   color:#c9a96e;
-  font-size:11px;
+  font-family:var(--font-ui);
+  font-size:13px;
   letter-spacing:2px;
   margin-bottom:8px;
 }
@@ -637,7 +638,9 @@ body {
   background:#5a0f0f;
   border:1px solid #c9a96e;
   color:white;
-  font-size:11px;
+  font-family:var(--font-ui);
+  font-size:12px;
+  letter-spacing:2px;
   padding:4px 8px;
   cursor:pointer;
   user-select:none;
