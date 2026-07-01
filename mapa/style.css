@@ -1,1485 +1,763 @@
-window.onload = async function() {
+body {
+  margin: 0;
+  background: black;
+  font-family: serif;
+}
 
-  const container = document.getElementById("mapa-container");
-  const inner = document.getElementById("mapa-inner");
-  const mapaImg = document.getElementById("mapa");
-  const gridOverlay =
-  document.getElementById("gridOverlay");
+/* LAYOUT */
+#app {
+  display: flex;
+  height: 100vh;
+}
 
-  let lugares = [];
-  let territorios = {};
+/* SIDEBAR */
+#sidebar{
+  width:320px;
+  background:var(--gs-bg-soft);
+  color:var(--gs-text);
+  border-right:1px solid var(--gs-border);
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  overflow:hidden;
+  padding:8px;
+}
 
-  async function cargarDatos(){
+#sidebar h1 {
+  margin:0;
+  padding:15px;
+  text-align:center;
+  font-size:42px;
+  line-height:1;
+  color:var(--gs-text);
+  font-family:var(--font-logo);
+  font-weight:normal;
+  font-size:38px;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
 
-  const respuesta =
-    await fetch("gran-siniesta.json");
+#info{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    height:100%;
+}
 
-  const datos =
-    await respuesta.json();
+#info h2{
+  display:none;
+}
 
-  lugares =
-    datos.lugares || [];
+/* TEXTO DESCRIPCIONES, MONSTRUOS */
+#descripcion {
+  font-family:Calibri, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.textoDescripcion{
+  white-space: pre-line;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding-top:0;
+}
+/* ETIQUETAS FILTRO */
+#descripcion,
+.filtroTag,
+.label{
+  font-family:Calibri, sans-serif;
+}
 
-  territorios =
-    datos.territorios || {};
+/* ETIQUETAS */
+.label {
+  display:inline-block;
+  background:var(--gs-blood);
+  color:var(--gs-text);
+  padding:3px 6px;
+  margin-top:10px;
+  letter-spacing:3px;
+  font-size:11px;
+  border-left:3px solid var(--gs-accent-soft);
+}
+
+/* BOTONES */
+#botones button{
+  width:100%;
+  margin-bottom:10px;
+  padding:10px;
+  background:rgba(106,20,18,.10);
+  color:var(--gs-text);
+  border:1px solid var(--gs-border-red);
+  cursor:pointer;
+  transition:var(--gs-transition);
+}
+
+#botones button:hover{
+  background:rgba(106,20,18,.22);
+}
+
+#botones button.activo{
+  background:var(--gs-blood);
+  border-color:var(--gs-accent-soft);
+  color:white;
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,.05),
+    0 0 12px rgba(106,20,18,.35);
+}
+
+#botones{
+  overflow:visible;
+  flex-shrink:0;
+}
+
+/* MAPA */
+#mapa-container {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+}
+
+#mapa-inner {
+  position:absolute;
+  top:0;
+  left:0;
+  display:inline-block;
+}
+
+#mapa {
+  width: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#mapaNombres{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  pointer-events:none;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* MARCADORES */
+.marcador {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#modoEdicion.activo {
+  background: #5a0f0f;
+}
+
+.form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:var(--gs-bg-soft);
+  padding: 20px;
+  border:1px solid var(--gs-border);
+  z-index: 99999;
+  width: 550px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.form-popup input,
+.form-popup textarea {
+  width:100%;
+  margin-bottom:8px;
+  background:var(--gs-bg);
+  color:var(--gs-text);
+  border:1px solid var(--gs-border);
+  padding:5px;
+}
+
+.form-popup button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* ========================= */
+/* ACORDEONES DEL EDITOR */
+/* ========================= */
+
+.form-popup details{
+  margin-bottom:8px;
+  border:1px solid var(--gs-border);
+  background:var(--gs-bg);
+  padding:6px;
+}
+
+.form-popup summary {
+  cursor: pointer;
+  color:var(--gs-accent-soft);
+  font-weight: bold;
+}
+
+/* ========================= */
+/* GRID DE CHECKBOXES */
+/* ========================= */
+
+.checkbox-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:2px 15px;
+}
+
+.checkbox-grid label {
+  color:#ddd;
+  display:flex;
+  align-items:center;
+  gap:2px;
+  margin:0;
+  padding:0;
+  line-height:1.1;
+}
+
+/* ===================== */
+/* ICONOS */
+/* ===================== */
+
+.icon-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5px;
+  margin-bottom:10px;
+}
+
+.icon-option{
+  border:1px solid var(--gs-border);
+  background:var(--gs-bg);
+  padding:6px;
+
+  cursor:pointer;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.icon-option:hover{
+  border-color:var(--gs-accent-soft);
+}
+
+.selected-icon{
+  border:2px solid var(--gs-accent-soft);
+}
+
+/* ===================== */
+/* COLORES */
+/* ===================== */
+
+.color-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:10px;
+}
+
+.color-option{
+  width:24px;
+  height:24px;
+  border:2px solid #333;
+  cursor:pointer;
+}
+
+.selected-color{
+  border:2px solid white;
+}
+
+.form-popup > label {
+  color: #ddd;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ===================== */
+/* CUADRÍCULA */
+/* ===================== */
+
+#gridOverlay{
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  display:none;
+
+  pointer-events:auto;
+
+  z-index:500;
 
 }
-  await cargarDatos();
-  console.log(lugares);
-  console.log(territorios);
-  // ================= GUARDADO =================
 
-const datosGuardados =
-  localStorage.getItem("granSiniestaMapa");
+.grid-cell{
 
-if (datosGuardados) {
+  box-sizing:border-box;
 
-  const datos =
-    JSON.parse(datosGuardados);
-
-  lugares =
-    datos.lugares || [];
-
-  territorios =
-    datos.territorios || {};
+  border:1px solid rgba(0,0,0,0.4);
 
 }
-  let modoEdicion = false;
+
+/* ===================== */
+/* FACCIONES */
+/* ===================== */
+
+#selectorFaccion{
+  margin-bottom:15px;
+}
+
+#selectorFaccion h3{
+  color:#c9a96e;
+  font-size:13px;
+  margin:10px 0;
+}
+
+.faccion{
+  padding:6px 8px;
+  margin-bottom:4px;
+  background:var(--gs-bg);
+  border:1px solid var(--gs-border);
+  border-left:8px solid transparent;
+  cursor:pointer;
+  color:var(--gs-text);
+  font-size:12px;
+  transition:var(--gs-transition);
+}
+
+.faccion:hover{
+  background:rgba(106,20,18,.12);
+}
+
+.faccion.activa{
+  background:rgba(106,20,18,.22);
+  border-left-color:var(--gs-accent-soft);
+}
+
+#adminPanel{
+  display:none;
+}
+
+#adminPanel.abierto{
+  display:block;
+}
+
+/* ===================== */
+/* FILTROS */
+/* ===================== */
+
+#filtrosCategorias{
+
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+  margin-bottom:15px;
+
+}
+
+.categoriaFiltro{
+
+  font-size:32px;
+  cursor:pointer;
+  padding:5px;
+  opacity:0.6;
+  transition:0.2s;
+
+}
+
+.categoriaFiltro:hover{
+  opacity:1;
+
+}
+
+.categoriaFiltro.activa{
+  opacity:1;
+  border-bottom:2px solid #c9a96e;
+
+}
+
+#panelFiltros{
+  min-height:140px;
+  max-height:220px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  margin-bottom:15px;
+  border-top:1px solid #444;
+  padding-top:10px;
+}
+
+.filtroItem{
+  font-size:12px;
+  margin-bottom:4px;
+  color:white;
+
+}
+
+.filtroItem input{
+  margin-right:6px;
+
+}
+
+.filtroTag{
+  display:inline-block;
+  padding:4px 8px;
+  margin:2px;
+  background:var(--gs-bg);
+  border:1px solid var(--gs-border);
+  color:var(--gs-text);
+  font-size:11px;
+  cursor:pointer;
+  user-select:none;
+  transition:var(--gs-transition);
+}
+
+.filtroTag:hover{
+  border-color:var(--gs-accent-soft);
   
-let colorTerritorio = "#a11011";
-
-/*
-==================================================
-MODO ADMIN
-true  = edición habilitada
-false = modo público (GitHub Pages)
-==================================================
-*/
-
-const ES_ADMIN = false;
-
-  // ================= LIBRERÍA COMPLETA =================
-
-  const RECURSOS = {
-
-  minerales: {
-
-    "Madera": {
-      rareza: "comun",
-      tirada: "d6+2"
-    },
-
-    "Cobre": {
-      rareza: "comun",
-      tirada: "d6+2"
-    },
-
-    "Bronce": {
-      rareza: "comun",
-      tirada: "d6+2"
-    },
-
-    "Hierro": {
-      rareza: "comun",
-      tirada: "d6+2"
-    },
-
-    "Azufre": {
-      rareza: "comun",
-      tirada: "d6+2"
-    },
-
-    "Basalto": {
-      rareza: "comun",
-      tirada: "d6+2"
-    },
-
-    "Acero": {
-      rareza: "inusual",
-      tirada: "d4"
-    },
-
-    "Pólvora": {
-      rareza: "inusual",
-      tirada: "d4"
-    },
-
-    "Obsidiana": {
-      rareza: "inusual",
-      tirada: "d4"
-    },
-
-    "Ámbar": {
-      rareza: "inusual",
-      tirada: "d4"
-    },
-
-    "Ópalo": {
-      rareza: "inusual",
-      tirada: "d4"
-    },
-
-    "Plata": {
-      rareza: "raro",
-      tirada: "d3"
-    },
-
-    "Cuarzo": {
-      rareza: "raro",
-      tirada: "d3"
-    },
-
-    "Trozo de Meteorito": {
-      rareza: "raro",
-      tirada: "d3"
-    },
-
-    "Mercurio": {
-      rareza: "raro",
-      tirada: "d3"
-    },
-
-    "Oro": {
-      rareza: "muy_raro",
-      tirada: "1"
-    },
-
-    "Viasrion": {
-      rareza: "muy_raro",
-      tirada: "1"
-    }
-
-  }
-
-};
-  const LIB = {
-
-    minerales: [
-      "Madera","Antimonio","Arsénico","Cobre","Bronce","Hierro","Acero","Plomo","Plata","Oro",
-      "Mercurio","Azufre","Pólvora","Basalto","Obsidiana","Ámbar","Cuarzo","Esmeralda","Ópalo",
-      "Turquesa","Haxio","Viasrion","Trozo de Meteorito","Agua Vital"
-    ],
-
-    vegetacion: [
-      "Acónito","Madreselva","Arrayán Blanco","Verbena","Celidonia","Cicuta","Milenrama",
-      "Espino de Hart","Raíz de Mandrágora","Bayas de Brionia Dioica","Bejin","Tremol",
-      "Coral Azul","Pino del Diablo","Rafflesia Arnoldii","Yiacar","Drupa de Mirlo",
-      "Flor de Tacca","Reina de la Noche","Drakaea","Flor de Mimosa","Jade",
-      "Welwitschia","Lycoris Radiata"
-    ],
-
-    monstruos: [
-      "Draco","Golem","Las'kram","Nagkar","Nakkros","Dorgselbur","Hombre lobo",
-      "Alto Vampiro","Lamia","Kathakano","Vieszcy","Apariciones","Sangrientos",
-      "Doppler","Mamarro","Lisovik","Nazbag","Quimera","Grifo","Arpía","Sirena",
-      "Narvashji","Espina Roja","Garuba","Acantha","Gallón","Wyvern","Cocatriz","Basilisco"
-    ],
-
-    comida: [
-      "Ajo","Arroz","Avena","Calabaza","Cebada","Cebolla","Especias","Huevo","Lechuga",
-      "Miel","Patatas","Pimiento","Salmón","Tomate","Trigo","Trucha","Vino","Uvas",
-      "Bayas","Carne de Caza","Cerezas","Dorada","Fresas","Leche","Lubina","Manzana",
-      "Plátano","Seta"
-    ]
-
-  };
-  
-  Object.keys(LIB).forEach(categoria => {
-  LIB[categoria].sort((a, b) =>
-    a.localeCompare(b, "es")
-  );
-});
-
-const ICONOS = [
-
-  {
-    nombre: "Capital",
-    clase: "fab fa-fort-awesome",
-    tamaño: "18px"
-  },
-
-  {
-    nombre: "Región / Zona",
-    clase: "ra ra-spikeball",
-    tamaño: "14px"
-  },
-
-  {
-    nombre: "Ciudad",
-    clase: "fas fa-chess-rook",
-    tamaño: "12px"
-  },
-
-  {
-    nombre: "Bosque",
-    clase: "fab fa-pagelines",
-    tamaño: "12px"
-  },
-
-  {
-    nombre: "Montaña",
-    clase: "fas fa-mountain",
-    tamaño: "12px"
-  },
-
-  {
-    nombre: "Mar",
-    clase: "ra ra-aquarius",
-    tamaño: "12px"
-  },
-  
-    {
-    nombre: "Hiniestra",
-    clase: "ra ra-capitol",
-    tamaño: "18px"
-  }
-
-];
-
-  // ================= CUADRÍCULA =================
-
-let gridVisible = false;
-let mapaAlt = false;
-let filtrosActivos = new Set();
-
-function crearCuadricula(){
-
-  gridOverlay.innerHTML = "";
-
-  gridOverlay.style.display = "grid";
-
-  gridOverlay.style.gridTemplateColumns =
-    "repeat(93, 1fr)";
-
-  gridOverlay.style.gridTemplateRows =
-    "repeat(64, 1fr)";
-
-for(let fila=0; fila<64; fila++){
-
-  for(let columna=0; columna<93; columna++){
-
-    const cell =
-      document.createElement("div");
-
-    cell.className = "grid-cell";
-
-    cell.dataset.x = columna;
-    cell.dataset.y = fila;
-
-cell.addEventListener("click", () => {
-
-  if(!ES_ADMIN) return;
-
-  if(!modoEdicion) return;
-
-  const clave =
-    columna + "_" + fila;
-
-  // MISMO COLOR → BORRAR
-
-  if(
-    territorios[clave] === colorTerritorio
-  ){
-
-    delete territorios[clave];
-
-    cell.style.backgroundColor =
-      "transparent";
-
-    return;
-
-  }
-
-  // COLOR DISTINTO → PINTAR
-
-  territorios[clave] =
-    colorTerritorio;
-
-  cell.style.backgroundColor =
-    colorTerritorio;
-
-  cell.style.opacity = "0.6";
-
-});
-
-    gridOverlay.appendChild(cell);
-
-  }
+}
+
+.filtroTag.activo{
+  background:var(--gs-blood);
+  border-color:var(--gs-accent-soft);
+  color:var(--gs-text);
+}
+
+.info-imagen{
+  width:100%;
+  max-height:180px;
+  object-fit:cover;
+  border:1px solid #333;
+  margin-bottom:10px;
+  cursor:pointer;
 
 }
 
-}
-
-crearCuadricula();
-
-gridOverlay.style.display = "none";
-  Object.entries(territorios)
-.forEach(([clave, color]) => {
-
-  const partes =
-    clave.split("_");
-
-  const x =
-    partes[0];
-
-  const y =
-    partes[1];
-
-  const indice =
-    (Number(y) * 93)
-    + Number(x);
-
-  const cell =
-    document.querySelectorAll(".grid-cell")[indice];
-
-  if(!cell) return;
-
-  cell.style.backgroundColor =
-    color;
-
-  cell.style.opacity = "0.6";
-
-});
-  
-  // ================= MODO EDICIÓN =================
-
-  const botonModo = document.getElementById("modoEdicion");
-  const botonAdmin =
-document.getElementById("toggleAdmin");
-
-const adminPanel =
-document.getElementById("adminPanel");
-if(!ES_ADMIN){
-
-  document.getElementById(
-    "toggleAdmin"
-  ).style.display = "none";
-
-  document.getElementById(
-    "adminPanel"
-  ).style.display = "none";
+.tituloLugar{
+  background:#5a0f0f;
+  padding:10px;
+  font-size:14px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  border-left:4px solid #c9a96e;
+  margin-bottom:0px;
 
 }
-  const botonGuardar =
-  document.getElementById("guardarMapa");
-  const botonExportar =
-  document.getElementById("exportarMapa");
-  const botonImportar =
-document.getElementById("importarMapa");
 
-const inputImport =
-document.getElementById("importFile");
-const panelFiltros =
-document.getElementById("panelFiltros");
-const botonLimpiar =
-document.getElementById("limpiarFiltros");
-  
-document
-.querySelectorAll(".faccion")
-.forEach(el => {
-
-  el.style.borderLeftColor =
-    el.dataset.color;
-
-  el.onclick = () => {
-
-    document
-      .querySelectorAll(".faccion")
-      .forEach(f =>
-        f.classList.remove("activa")
-      );
-
-    el.classList.add("activa");
-
-    colorTerritorio =
-      el.dataset.color;
-
-  };
-
-});
-
-document
-.querySelector(".faccion")
-.classList.add("activa");
-botonLimpiar.onclick = () => {
-
-  filtrosActivos.clear();
-
-  aplicarFiltros();
-
-  actualizarFiltrosActivos();
-
-  document
-    .querySelectorAll(".filtroTag")
-    .forEach(tag => {
-
-      tag.classList.remove("activo");
-
-    });
-
-};
-document
-.querySelectorAll(".categoriaFiltro")
-.forEach(icono => {
-
-  icono.onclick = () => {
-
-    document
-      .querySelectorAll(".categoriaFiltro")
-      .forEach(i =>
-        i.classList.remove("activa")
-      );
-
-    icono.classList.add("activa");
-
-    const categoria =
-      icono.dataset.categoria;
-
-    // =====================
-    // POLÍTICA
-    // =====================
-
-    if(categoria === "politica"){
-
-      panelFiltros.innerHTML = `
-
-        <button id="toggleCasasPolitica">
-          Las Siete Casas
-        </button>
-
-        <button id="toggleGridPolitica">
-          Cuadrícula
-        </button>
-
-      `;
-
-      const btnCasas =
-      document.getElementById("toggleCasasPolitica");
-
-      btnCasas.onclick = () => {
-
-        mapaAlt = !mapaAlt;
-
-        mapaImg.src = mapaAlt
-          ? "https://i.imgur.com/JDwDzay.jpeg"
-          : "https://i.imgur.com/Mr40FCw.jpeg";
-
-        btnCasas.classList.toggle(
-          "activo",
-          mapaAlt
-        );
-
-      };
-
-      const btnGrid =
-      document.getElementById("toggleGridPolitica");
-
-      btnGrid.onclick = () => {
-
-        gridVisible = !gridVisible;
-
-        gridOverlay.style.display =
-          gridVisible
-          ? "grid"
-          : "none";
-
-        btnGrid.classList.toggle(
-          "activo",
-          gridVisible
-        );
-
-      };
-
-      return;
-
-    }
-
-    // =====================
-    // RESTO DE CATEGORÍAS
-    // =====================
-
-    const lista =
-      LIB[categoria];
-
-panelFiltros.innerHTML =
-  lista.map(item => `
-
-    <div
-      class="filtroTag ${
-        filtrosActivos.has(item)
-          ? "activo"
-          : ""
-      }"
-      data-valor="${item}"
-    >
-      ${item}
-    </div>
-
-  `).join("");
-document
-.querySelectorAll(".filtroTag")
-.forEach(tag => {
-
-  tag.addEventListener(
-    "click",
-    () => {
-
-      const valor =
-        tag.dataset.valor;
-
-      tag.classList.toggle(
-        "activo"
-      );
-
-      if(
-        filtrosActivos.has(valor)
-      ){
-
-        filtrosActivos.delete(
-          valor
-        );
-
-      }
-      else{
-
-        filtrosActivos.add(
-          valor
-        );
-
-      }
-
-      aplicarFiltros();
-      actualizarFiltrosActivos();
-
-    }
-  );
-
-});
-    
-actualizarFiltrosActivos();
-
-  };
-
-});
-  botonAdmin.onclick = () => {
-
-  adminPanel.classList.toggle(
-    "abierto"
-  );
-
-};
-
-  botonModo.onclick = () => {
-
-  modoEdicion = !modoEdicion;
-
-  botonModo.classList.toggle("activo");
-
-  if(modoEdicion){
-
-    container.style.cursor = "crosshair";
-
-  }else{
-
-    container.style.cursor = "grab";
-
-  }
-
-};
-botonGuardar.onclick = () => {
-
-  localStorage.setItem(
-    "granSiniestaMapa",
-
-    JSON.stringify({
-
-      lugares,
-      territorios
-
-    })
-
-  );
-
-  alert("Mapa guardado");
-
-};
-  
-botonExportar.onclick = () => {
-
-  const exportable = {
-
-  lugares: lugares.map(lugar => {
-
-    const copia = { ...lugar };
-
-    delete copia._el;
-
-    return copia;
-
-  }),
-
-  territorios
-
-};
-
-  const json =
-    JSON.stringify(exportable, null, 2);
-
-  const blob =
-    new Blob(
-      [json],
-      {type:"application/json"}
-    );
-
-  const url =
-    URL.createObjectURL(blob);
-
-  const enlace =
-    document.createElement("a");
-
-  enlace.href = url;
-  enlace.download = "gran-siniesta.json";
-
-  enlace.click();
-
-  URL.revokeObjectURL(url);
-
-};
-  botonImportar.onclick = () => {
-
-  inputImport.click();
-
-};
-  
-  inputImport.addEventListener(
-  "change",
-  function(e){
-
-    const archivo =
-      e.target.files[0];
-
-    if(!archivo) return;
-
-    const lector =
-      new FileReader();
-
-    lector.onload = function(ev){
-
-      try{
-
-        const datos =
-          JSON.parse(ev.target.result);
-
-        lugares =
-  datos.lugares || [];
-
-// Convertir minerales antiguos (objetos)
-// en minerales de texto
-
-lugares.forEach(lugar => {
-
-  lugar.minerales =
-    (lugar.minerales || []).map(mineral =>
-
-      typeof mineral === "object"
-        ? mineral.nombre
-        : mineral
-
-    );
-
-});
-
-territorios =
-  datos.territorios || {};
-
-        reconstruirMapa();
-
-        localStorage.setItem(
-          "granSiniestaMapa",
-          JSON.stringify({
-            lugares,
-            territorios
-          })
-        );
-
-        alert(
-          "Mapa importado correctamente"
-        );
-
-      }catch(error){
-
-        alert(
-          "JSON inválido"
-        );
-
-      }
-
-    };
-
-    lector.readAsText(
-      archivo
-    );
-
-  }
-);
-
-  // ================= DRAG =================
-  let scale = 1, posX = 0, posY = 0;
-  let isDragging = false, startX, startY;
-  
-  const MIN_ZOOM = 0.5;
-  const MAX_ZOOM = 4;
-  const ZOOM_SPEED = 0.1;
-
-container.onmousedown = (e) => {
-  e.preventDefault();
-  isDragging = true;
-  startX = e.clientX - posX;
-  startY = e.clientY - posY;
-};
-
-  container.onmousemove = (e) => {
-    if (!isDragging) return;
-    posX = e.clientX - startX;
-    posY = e.clientY - startY;
-    updateTransform();
-  };
-
-  container.onmouseup = () => isDragging = false;
-  container.onmouseleave = () => isDragging = false;
-
-  function updateTransform() {
-
-  inner.style.transformOrigin = "0 0";
-
-  inner.style.transform =
-    `translate(${posX}px, ${posY}px) scale(${scale})`;
+.info-imagen{
+  width:100%;
+  max-width:100%;
+  display:block;
+  margin-bottom:10px;
 
 }
 
-  // ================= ZOOM =================
-
-container.onwheel = (e) => {
-
-  e.preventDefault();
-
-  const rect = container.getBoundingClientRect();
-
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-
-  // Coordenadas del punto del mapa bajo el cursor
-  const worldX = (mouseX - posX) / scale;
-  const worldY = (mouseY - posY) / scale;
-
-  // Calcular nuevo zoom
-  const zoom =
-    e.deltaY < 0
-      ? scale + ZOOM_SPEED
-      : scale - ZOOM_SPEED;
-
-  scale = Math.max(
-    MIN_ZOOM,
-    Math.min(MAX_ZOOM, zoom)
-  );
-
-  // Recolocar el mapa para que el punto bajo el cursor no cambie
-  posX = mouseX - worldX * scale;
-  posY = mouseY - worldY * scale;
-
-  updateTransform();
-
-};
-
-  // ================= TOGGLE MAPA =================
-
-
-function reconstruirMapa(){
-
-  // BORRAR MARCADORES
-
-  document
-    .querySelectorAll(".marcador")
-    .forEach(el => el.remove());
-
-  // VOLVER A CREAR
-
-  lugares.forEach(lugar => {
-
-    crearMarcador(lugar);
-
-  });
-
-  // LIMPIAR CUADRÍCULA
-
-  document
-    .querySelectorAll(".grid-cell")
-    .forEach(cell => {
-
-      cell.style.backgroundColor =
-        "transparent";
-
-    });
-
-  // REPINTAR TERRITORIOS
-
-  Object.entries(territorios)
-  .forEach(([clave, color]) => {
-
-    const partes =
-      clave.split("_");
-
-    const x =
-      Number(partes[0]);
-
-    const y =
-      Number(partes[1]);
-
-    const indice =
-      y * 93 + x;
-
-    const cell =
-      document.querySelectorAll(".grid-cell")[indice];
-
-    if(!cell) return;
-
-    cell.style.backgroundColor =
-      color;
-
-    cell.style.opacity = "0.6";
-
-  });
-
-}  
-
-// ================= CREAR MARCADOR =================
-
-  function crearMarcador(lugar) {
-    const marcador = document.createElement("div");
-    marcador.className = "marcador";
-    marcador.style.left = lugar.x + "%";
-    marcador.style.top = lugar.y + "%";
-
-marcador.innerHTML =
-  `<i
-    class="${lugar.icono || "fas fa-map-marker-alt"}"
-    style="
-      color:${lugar.color || "#ffffff"};
-      font-size:${lugar.tamaño || "12px"};
-      text-shadow:
-0 0 2px rgba(0,0,0,.75),
-0 0 6px rgba(0,0,0,.70);
-    "
-  ></i>`;
-
-marcador.onclick = (e) => {
-
-  e.stopPropagation();
-
-  if(
-    ES_ADMIN &&
-    modoEdicion
-  ){
-    abrirFormulario(lugar);
-  }
-  else{
-    mostrarLugar(lugar);
-  }
-
-};
-
-    lugar._el = marcador;
-    inner.appendChild(marcador);
-  }
-
-// ================= CARGAR MARCADORES =================
-
-console.log("Voy a crear", lugares.length, "marcadores");
-
-lugares.forEach(lugar => {
-
-  crearMarcador(lugar);
-
-});
-
-console.log("Marcadores creados");
-
-// ================= CLICK MAPA =================
-
-inner.onclick = function(e) {
-  if(!ES_ADMIN) return;
-
-  // Si se ha clicado una casilla de la cuadrícula,
-  // no crear localización.
-
-  if (
-    e.target.classList.contains("grid-cell")
-  ) {
-    return;
-  }
-
-  if (!modoEdicion) return;
-
-  const rect = inner.getBoundingClientRect();
-
-  const x = ((e.clientX - rect.left) / rect.width) * 100;
-  const y = ((e.clientY - rect.top) / rect.height) * 100;
-
-  const nuevo = { x, y };
-
-  lugares.push(nuevo);
-
-  crearMarcador(nuevo);
-
-  abrirFormulario(nuevo);
-
-};
-
-  // ================= FORMULARIO =================
-
-  function abrirFormulario(lugar) {
-
-    document.querySelectorAll(".form-popup").forEach(e => e.remove());
-
-    const form = document.createElement("div");
-    form.className = "form-popup";
-
-    form.innerHTML = `
-<input placeholder="Nombre" id="f-nombre" value="${lugar.nombre || ""}">
-
-<textarea placeholder="Descripción" id="f-desc">${lugar.descripcion || ""}</textarea>
-
-<input
-  placeholder="URL de imagen"
-  id="f-imagen"
-  value="${lugar.imagen || ""}"
->
-
-<label>Icono:</label>
-
-<div class="icon-grid">
-
-${ICONOS.map(i => `
-  <div
-    class="icon-option ${lugar.icono===i.clase ? 'selected-icon' : ''}"
-    data-clase="${i.clase}"
-  >
-
-    <i class="${i.clase}"></i>
-
-    <span>
-      ${i.nombre}
-    </span>
-
-  </div>
-`).join("")}
-
-</div>
-
-<label>Color:</label>
-
-<div class="color-grid">
-
-<div class="color-option" data-color="#a11011" title="Kal'arch"></div>
-
-<div class="color-option" data-color="#ffa900" title="Reshk'arch"></div>
-
-<div class="color-option" data-color="#a6b7c4" title="Rehgis"></div>
-
-<div class="color-option" data-color="#c93457" title="Blavyr"></div>
-
-<div class="color-option" data-color="#0054ad" title="Vaelekin"></div>
-
-<div class="color-option" data-color="#1e7329" title="Gallarion"></div>
-
-<div class="color-option" data-color="#008791" title="A'Drien"></div>
-
-<div class="color-option" data-color="#6951c9" title="Ve'anor"></div>
-
-<div class="color-option" data-color="#b545de" title="Reden"></div>
-
-<div class="color-option" data-color="#731010" title="Vampiros"></div>
-
-</div>
-
-      ${crearCheckboxes("Vegetación", "veg", LIB.vegetacion, lugar.vegetacion)}
-      ${crearCheckboxes("Monstruos", "mon", LIB.monstruos, lugar.monstruos)}
-      ${crearCheckboxes("Minerales", "min", LIB.minerales, lugar.minerales)}
-      ${crearCheckboxes("Comida", "com", LIB.comida, lugar.comida)}
-
-      <button id="guardar">Guardar</button>
-      <button id="borrar" style="background:#5a0f0f;">Eliminar</button>
-    `;
-
-    document.body.appendChild(form);
-    document
-.querySelectorAll(".editorTag")
-.forEach(tag => {
-
-  tag.onclick = () => {
-
-    tag.classList.toggle(
-      "activo"
-    );
-
-  };
-
-});
-    let iconoSeleccionado =
-  lugar.icono || "fas fa-map-marker-alt";
-
-let colorSeleccionado =
-  lugar.color || "#ffffff";
-
-
-// ICONOS
-
-document.querySelectorAll(".icon-option")
-.forEach(el => {
-
-  el.addEventListener("click", () => {
-
-    document
-      .querySelectorAll(".icon-option")
-      .forEach(i => i.classList.remove("selected-icon"));
-
-    el.classList.add("selected-icon");
-
-    iconoSeleccionado = el.dataset.clase;
-
-  });
-
-});
-
-
-// COLORES
-
-document.querySelectorAll(".color-option")
-.forEach(el => {
-
-  el.style.backgroundColor =
-    el.dataset.color;
-
-  el.addEventListener("click", () => {
-
-    document
-      .querySelectorAll(".color-option")
-      .forEach(c => c.classList.remove("selected-color"));
-
-    el.classList.add("selected-color");
-
-    colorSeleccionado =
-      el.dataset.color;
-
-  });
-
-});
-
-    document.getElementById("guardar").onclick = () => {
-
-      lugar.nombre = val("f-nombre");
-      lugar.descripcion = val("f-desc");
-      lugar.imagen = val("f-imagen");
-      lugar.icono = iconoSeleccionado;
-      const iconoInfo =
-  ICONOS.find(
-    i => i.clase === iconoSeleccionado
-  );
-
-lugar.tamaño =
-  iconoInfo?.tamaño || "12px";
-      lugar.color = colorSeleccionado;
-
-      lugar.vegetacion = getChecks("veg");
-      lugar.monstruos = getChecks("mon");
-      lugar.minerales = getChecks("min");
-      lugar.comida = getChecks("com");
-
-      actualizarMarcador(lugar);
-
-      form.remove();
-    };
-
-document.getElementById("borrar").onclick = () => {
-
-  lugar._el.remove();
-
-  lugares = lugares.filter(
-    l => l !== lugar
-  );
-
-localStorage.setItem(
-  "granSiniestaMapa",
-  JSON.stringify({
-    lugares,
-    territorios
-  })
-);
-
-  form.remove();
-
-};
-  }
-
-  function val(id) {
-    return document.getElementById(id).value;
-  }
-
-function getChecks(prefix){
-  return Array
-  .from(
-    document.querySelectorAll(
-      `.editorTag.activo[data-prefix="${prefix}"]`
-    )
-
-  )
-  .map(tag =>
-    tag.dataset.value
-  );
+#subtituloMapa{
+  text-align:center;
+  font-size:11px;
+  color:var(--gs-textgris);
+  margin-top:2px;
+  margin-bottom:6px;
+  letter-spacing:1px;
+  font-family:var(--font-ui);
+}
+
+#ornamento{
+
+  width:120px;
+  height:1px;
+  background:#6d5731;
+  margin:0 auto 18px auto;
+  position:relative;
 
 }
 
-function crearCheckboxes(
-  titulo,
-  prefix,
-  lista,
-  seleccion = []
-){
+#ornamento::before{
 
-  return `
-    <details>
-
-      <summary>
-        ${titulo}
-        ${
-          seleccion?.length
-          ? `(${seleccion.length})`
-          : ""
-        }
-      </summary>
-
-      <div class="checkbox-grid">
-
-        ${lista.map(item => `
-
-          <div
-            class="filtroTag editorTag ${
-  seleccion.some(s =>
-    typeof s === "string"
-      ? s === item
-      : s.nombre === item
-    )
-      ? "activo"
-      : ""
-}"
-            data-prefix="${prefix}"
-            data-value="${item}"
-          >
-
-            ${item}
-
-          </div>
-
-        `).join("")}
-
-      </div>
-
-    </details>
-  `;
+  content:"◆";
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  color:#c9a96e;
+  font-size:12px;
+  background:#0b0f14;
+  padding:0 6px;
 
 }
 
-  function actualizarMarcador(lugar) {
-    lugar._el.innerHTML =
-  `<i
-    class="${lugar.icono}"
-    style="
-      color:${lugar.color};
-      font-size:${lugar.tamaño || "12px"};
-    "
-  ></i>`;
-  }
-function aplicarFiltros(){
+.info-imagen{
+  width:100%;
+  display:block;
+  box-sizing:border-box;
+}
 
-  lugares.forEach(lugar => {
+*{
+  box-sizing:border-box;
+}
 
-    if(filtrosActivos.size === 0){
-
-      lugar._el.style.display = "block";
-      return;
-
-    }
-
-    const datosLugar = [
-
-  ...(lugar.vegetacion || []),
-
-  ...(lugar.monstruos || []),
-
-  ...(lugar.minerales || []).map(m =>
-    typeof m === "string"
-      ? m
-      : m.nombre
-  ),
-
-  ...(lugar.comida || [])
-
-];
-
-    const cumpleTodos =
-
-      [...filtrosActivos]
-      .every(filtro =>
-        datosLugar.includes(filtro)
-      );
-
-    lugar._el.style.display =
-      cumpleTodos
-      ? "block"
-      : "none";
-
-  });
+.imagen-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+  cursor:pointer;
 
 }
 
-
-// ================= FILTROS ACTIVOS =================
-
-function actualizarFiltrosActivos(){
-
-  const lista =
-  document.getElementById(
-    "listaFiltrosActivos"
-  );
-
-const panel =
-  document.getElementById(
-    "panelFiltrosActivos"
-  );
-
-lista.innerHTML = "";
-
-  lista.innerHTML = "";
-
-  filtrosActivos.forEach(valor => {
-
-    const tag =
-      document.createElement("div");
-
-    tag.className =
-      "filtroActivo";
-
-    tag.innerHTML =
-      valor + " ✕";
-
-    tag.onclick = () => {
-
-      filtrosActivos.delete(valor);
-
-      aplicarFiltros();
-
-      actualizarFiltrosActivos();
-
-      const boton =
-        document.querySelector(
-          `.filtroTag[data-valor="${valor}"]`
-        );
-
-      if(boton){
-
-        boton.classList.remove("activo");
-
-      }
-
-    };
-
-    lista.appendChild(tag);
-
-  });
-
-  document.getElementById(
-  "limpiarFiltros"
-).style.display =
-
-  filtrosActivos.size
-    ? "block"
-    : "none";
-
-panel.style.display =
-
-  filtrosActivos.size
-    ? "block"
-    : "none";
+.imagen-popup-img{
+  max-width:90vw;
+  max-height:90vh;
+  border:2px solid #c9a96e;
 
 }
 
-
-// ================= PANEL =================
-
-function mostrarLugar(lugar) {
-
-  document.getElementById("nombre").innerText = "";
-
-  let cabecera = "";
-  let contenido = "";
-
-  if(lugar.imagen){
-
-    cabecera += `
-      <img
-        src="${lugar.imagen}"
-        class="info-imagen"
-        id="imagenLugar"
-      >
-    `;
-
-  }
-
-  cabecera += `
-    <div class="tituloLugar">
-      ${lugar.nombre || ""}
-    </div>
-  `;
-
-  contenido += `
-    <div class="textoDescripcion">
-      ${(lugar.descripcion || "").replace(/\n/g,"<br>")}
-    </div>
-  `;
-
-  if(lugar.vegetacion?.length){
-
-    contenido +=
-      `<div class="label">VEGETACIÓN</div><br>`
-      + lugar.vegetacion.join(", ")
-      + "<br>";
-
-  }
-
-  if(lugar.monstruos?.length){
-
-    contenido +=
-      `<div class="label">MONSTRUOS</div><br>`
-      + lugar.monstruos.join(", ")
-      + "<br>";
-
-  }
-
-  if(lugar.minerales?.length){
-
-    contenido +=
-      `<div class="label">MINERALES</div><br>`
-      + lugar.minerales
-        .map(m => typeof m === "string" ? m : m.nombre)
-        .join(", ")
-      + "<br>";
-
-  }
-
-  if(lugar.comida?.length){
-
-    contenido +=
-      `<div class="label">COMIDA</div><br>`
-      + lugar.comida.join(", ");
-
-  }
-
-  document.getElementById("descripcion").innerHTML = `
-    <div id="fichaCabecera">
-      ${cabecera}
-    </div>
-
-    <div id="fichaContenido">
-      ${contenido}
-    </div>
-  `;
-
-  const imagen = document.getElementById("imagenLugar");
-
-  if(imagen){
-
-    imagen.onclick = () => {
-
-      const popup = document.createElement("div");
-
-      popup.className = "imagen-popup";
-
-      popup.innerHTML = `
-        <img
-          src="${lugar.imagen}"
-          class="imagen-popup-img"
-        >
-      `;
-
-      popup.onclick = () => {
-
-        popup.remove();
-
-      };
-
-      document.body.appendChild(popup);
-
-    };
-
-  }
+.info-imagen{
+  width:100%;
+  display:block;
+  cursor:pointer;
 
 }
-// ================= LEYENDA =================
-const cabeceraLeyenda =
-  document.getElementById("leyendaCabecera");
 
-const contenidoLeyenda =
-  document.getElementById("leyendaContenido");
-
-const flechaVolver =
-  document.getElementById("volverInicio");
-
-if(cabeceraLeyenda && contenidoLeyenda){
-
-  contenidoLeyenda.style.display = "none";
-
-  flechaVolver.style.right = "110px";
-
-  cabeceraLeyenda.addEventListener("click", () => {
-
-    const visible =
-      getComputedStyle(contenidoLeyenda).display !== "none";
-
-    contenidoLeyenda.style.display =
-      visible ? "none" : "block";
-
-    flechaVolver.style.right =
-      visible
-        ? "110px"
-        : "205px";
-
-  });
-
+/* ================================================== */
+/* DISCORD */
+/* ================================================== */
+#discordBox{
+  margin-top:20px;
+  flex-shrink:0;
+  text-align:center;
+  padding-top:15px;
+  border-top:1px solid #6d5731;
 }
-};
 
-const mapaNombres =
-document.getElementById("mapaNombres");
+#discordTitulo{
+  color:#c9a96e;
+  font-size:10px;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
 
-const btnNombres =
-document.getElementById("toggleNombres");
+#discordLink{
+  color:#c9a96e;
+  font-size:28px;
+  text-decoration:none;
+}
 
-let nombresVisibles = true;
+#discordLink:hover{
+  color:white;
+}
+/* LEYENDA MAPA */
+#leyendaMapa{
+  position:fixed;
+  top:15px;
+  right:15px;
+  background:rgba(0,0,0,0.55);
+  border:1px solid var(--gs-text);
+  padding:6px;
+  z-index:999999;
+  color:#ddd;
+  text-align:center;
+  font-family:var(--font-ui);
+  font-size:13px;
+  backdrop-filter:blur(3px);
+  pointer-events:auto;
+  text-align:center;
+  letter-spacing:3px;
+  font-size:14px;
+}
+.leyendaTitulo{
+  text-align:center;
+  color:var(--gs-text);
+  letter-spacing:2px;
+  margin-bottom:8px;
+  font-family:var(--font-ui);
+  font-size:14px;
+}
+#leyendaMapa div{
+  margin-bottom:6px;
+}
+#leyendaMapa i{
+  width:24px;
+  text-align:center;
+  margin-right:6px;
+}
+#leyendaCabecera{
+  cursor:pointer;
+  color:var(--gs-text);
+  text-align:center;
+  margin-top:8px;
+  letter-spacing:2px;
+  font-size:14px;
+  padding:5px;
+}
+#leyendaContenido{
+  display:none;
+  margin-top:8px;
+  text-align:left;
+  padding:7px;
+}
 
-btnNombres.classList.add("activo");
+#panelFiltrosActivos{
+  display:none;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid #444;
+}
 
-btnNombres.onclick = () => {
+#tituloFiltrosActivos{
+  color:#c9a96e;
+  font-size:11px;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
 
-  nombresVisibles = !nombresVisibles;
+#listaFiltrosActivos{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
 
-  mapaNombres.style.display =
-    nombresVisibles
-    ? "block"
-    : "none";
+.filtroActivo{
+  background:#5a0f0f;
+  border:1px solid #c9a96e;
+  color:white;
+  font-size:11px;
+  padding:4px 8px;
+  cursor:pointer;
+  user-select:none;
+}
 
-  btnNombres.classList.toggle(
-    "activo",
-    nombresVisibles
-  );
+.filtroActivo:hover{
+  background:#732020;
+}
 
-};
+#limpiarFiltros{
+  margin-top:10px;
+  width:100%;
+}
+
+#toggleNombres{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:120px;
+  padding:9px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(3px);
+  border:1px solid var(--gs-textgris);
+  color:var(--gs-text);
+  font-family:var(--font-ui);
+  text-align:center;
+  letter-spacing:5px;
+  font-size:10px;
+  cursor:pointer;
+  z-index:999999;
+  transition:.25s;
+}
+
+#toggleNombres:hover{
+  border-color:var(--gs-text);
+}
+
+#toggleNombres.activo{
+  background:#5a0f0f;
+}
+
+/* ========================================
+   SCROLLBAR GRAN SINIESTRA
+======================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#080808;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gs-accent);
+    border-radius:20px;
+    border:2px solid #080808;
+    transition:.2s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--gs-accent-soft);
+}
+
+::-webkit-scrollbar-corner{
+    background:#080808;
+}
+
+/* ===================================== */
+/* SCROLL INTERNO DE LA FICHA */
+/* ===================================== */
+#sidebar{
+    height:100vh;
+    overflow:hidden;
+}
+
+#infoScroll{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+}
+
+#panelInferior{
+    flex-shrink:0;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:14px;
+    background:var(--gs-bg-soft);
+}
+
+#descripcion{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    overflow:hidden;
+}
+
+#fichaCabecera{
+    flex-shrink:0;
+}
+
+#fichaContenido{
+    flex:1;
+    overflow-y:auto;
+    overflow-x:hidden;
+    min-height:0;
+    padding-right:8px;
+}
+#mapaCasas,
+#mapaNombres{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:block;
+  pointer-events:none;
+}
+
+#mapaCasas{
+  display:none;
+}
