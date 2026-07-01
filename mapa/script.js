@@ -1441,9 +1441,14 @@ const cabeceraLeyenda =
 const contenidoLeyenda =
   document.getElementById("leyendaContenido");
 
+const flechaVolver =
+  document.getElementById("volverInicio");
+
 if(cabeceraLeyenda && contenidoLeyenda){
 
   contenidoLeyenda.style.display = "none";
+
+  flechaVolver.style.right = "110px";
 
   cabeceraLeyenda.addEventListener("click", () => {
 
@@ -1453,7 +1458,13 @@ if(cabeceraLeyenda && contenidoLeyenda){
     contenidoLeyenda.style.display =
       visible ? "none" : "block";
 
+    flechaVolver.style.right =
+      visible
+        ? "110px"
+        : "205px";
+
   });
+
 }
 };
 
