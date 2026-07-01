@@ -455,9 +455,15 @@ document
 
       const btnCasas =
       document.getElementById("toggleCasasPolitica");
-
+      
       const mapaCasas =
-document.getElementById("mapaCasas");
+      document.getElementById("mapaCasas");
+      
+      if(mapaAlt){
+      
+        btnCasas.classList.add("activo");
+      
+      }
 
 btnCasas.onclick = () => {
 
