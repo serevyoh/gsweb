@@ -56,7 +56,7 @@ false = modo público (GitHub Pages)
 ==================================================
 */
 
-const ES_ADMIN = false;
+const ES_ADMIN = true;
 
   // ================= LIBRERÍA COMPLETA =================
 
