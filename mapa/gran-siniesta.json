@@ -1192,7 +1192,7 @@
       "x": 32.61700820148443,
       "y": 30.759454226142758,
       "nombre": "Aguasclaras",
-      "descripcion": "Aguasclaras está levantada sobre las dos mitades de un mismo acantilado agrietado, con los diferentes niveles del pueblo conectados por elegantes puentes de mármol. Es conocido por sus puertos escalonados y sus famosos astilleros, donde se construyen y reparan muchos de los galeones de guerra de la facción.\n\nJunto con su fortificación hermana, Ilmaraen, forma la línea de defensa y acceso al Golfo de Vanalis, donde reside el grueso de la legendaria Flota A'Drien y donde se ubica la capital de la facción.",
+      "descripcion": "Aguasclaras está levantada sobre las dos mitades de un mismo acantilado agrietado, con los diferentes niveles del pueblo conectados por elegantes puentes de mármol. Es conocido por sus puertos escalonados y sus famosos astilleros, donde se construyen y reparan muchos de los galeones de guerra de la facción.\n\nEs hogar de la casa menor Erindir.\n\nJunto con su fortificación hermana, Ilmaraen, forma la línea de defensa y acceso al Golfo de Vanalis, donde reside el grueso de la legendaria Flota A'Drien y donde se ubica la capital de la facción.",
       "imagen": "",
       "icono": "fas fa-chess-rook",
       "tamaño": "12px",
@@ -1204,11 +1204,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Basalto",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Basalto"
       ],
       "comida": [
         "Cebolla",
@@ -1219,7 +1215,7 @@
       "x": 37.618077687799314,
       "y": 33.77303479273703,
       "nombre": "Bastión Alto Viento",
-      "descripcion": "Llamado así por estar ubicado en el punto más alto de la isla, en el acantilado de Alto Viento, donde los vientos procedentes de todas las direcciones acechan incesantes. Este bastión suele ser el punto de entrenamiento para la infantería A'Drien, donde las normas de la facción indican que deben permanecer durante dos años.\n\nJunto al castillo de Thalrisen regula el paso por el Estrecho Dorastil. La zona marítima comprendida entre estas dos defensas e Ilmaraen y Aguasclaras es conocida como «Marea Pesadilla», al ser el punto defensivo más fuerte de los A'Drien. Este Bastión controla, junto con Puerto Plata y Ciudad del Rey, el mar «El Espigón».",
+      "descripcion": "Llamado así por estar ubicado en el punto más alto de la isla, en el acantilado de Alto Viento, donde los vientos procedentes de todas las direcciones acechan incesantes. Este bastión suele ser el punto de entrenamiento para la infantería A'Drien, donde las normas de la facción indican que deben permanecer durante dos años.\n\nLa casa Cee'len reside en Bastión Alto Viento.\n\nJunto al castillo de Thalrisen regula el paso por el Estrecho Dorastil. La zona marítima comprendida entre estas dos defensas e Ilmaraen y Aguasclaras es conocida como «Marea Pesadilla», al ser el punto defensivo más fuerte de los A'Drien. Este Bastión controla, junto con Puerto Plata y Ciudad del Rey, el mar «El Espigón».",
       "imagen": "",
       "icono": "fas fa-chess-rook",
       "tamaño": "12px",
@@ -1230,11 +1226,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Basalto",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Basalto"
       ],
       "comida": [
         "Cebolla",
@@ -1274,7 +1266,7 @@
       "x": 25.740000533734136,
       "y": 23.119746860442255,
       "nombre": "Bosque de Dioses",
-      "descripcion": "Gigantesco bosque ubicado en el centro de la isla que abarca prácticamente toda su superficie. La luz del sol se filtra a través de varias capas de copas de árboles, y los antiguos caminos de piedra, ahora cubiertos por raíces y musgo, se bifurcan hasta perderse entre ruinas olvidadas, estanques cristalinos y senderos más recientes construidos por los A'Drien.\n\nEl aire es agradable, húmedo y silencioso, pues es uno de los pocos lugares donde los fuertes vientos de la isla no consiguen penetrar. Está prohibido talar árboles del corazón del bosque sin permiso, y cuando un A'Drien es admitido en estudios superiores suele plantar un árbol como símbolo de éxito y prosperidad.",
+      "descripcion": "Gigantesco bosque ubicado en el centro de la isla que abarca prácticamente toda su superficie. La luz del sol se filtra a través de varias capas de copas de árboles, y los antiguos caminos de piedra, ahora cubiertos por raíces y musgo, se bifurcan hasta perderse entre ruinas olvidadas, estanques cristalinos y senderos más recientes construidos por los A'Drien.\n\nLa casa Riandriel es la protectora y guardiana del Bosque de Dioses.\n\nEl aire es agradable, húmedo y silencioso, pues es uno de los pocos lugares donde los fuertes vientos de la isla no consiguen penetrar. Está prohibido talar árboles del corazón del bosque sin permiso, y cuando un A'Drien es admitido en estudios superiores suele plantar un árbol como símbolo de éxito y prosperidad.",
       "imagen": "",
       "icono": "fab fa-pagelines",
       "tamaño": "12px",
@@ -1285,11 +1277,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Cuarzo",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Cuarzo"
       ],
       "comida": [
         "Calabaza",
@@ -4644,7 +4632,6 @@
     "46_45": "#1e7329",
     "51_37": "#b545de",
     "50_37": "#b545de",
-    "51_36": "#b545de",
-    "64_11": "#a11011"
+    "51_36": "#b545de"
   }
 }
