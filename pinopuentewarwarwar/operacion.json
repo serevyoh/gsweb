@@ -1,0 +1,59 @@
+{
+    "operacion": {
+        "nombre": "Asalto a Puerto Negro",
+        "objetivo": "Capturar la fortaleza y asegurar el puerto.",
+        "estado": "Preparación",
+        "comandante": "Lord Adrastus Valdyr",
+        "mapa": "img/mapas/1.jpg",
+        "galeria": [
+            "img/mapas/1.jpg",
+            "img/mapas/2.jpg",
+            "img/mapas/3.jpg"
+        ]
+    },
+    "escuadrones": [
+        {
+            "id": 1,
+            "nombre": "Escuadrón I",
+            "especialidad": "Flanco Izquierdo",
+            "capitan": "Adrastus Valdyr",
+            "efectivos": 266,
+            "frase": "Tomaremos la muralla antes del amanecer.",
+            "imagen": "img/personajes/placeholder.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Escuadrón II",
+            "especialidad": "Ataque Principal",
+            "capitan": "Roland Voss",
+            "efectivos": 412,
+            "frase": "",
+            "imagen": "img/personajes/placeholder.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Escuadrón III",
+            "especialidad": "Reserva",
+            "capitan": "Marcus Drenn",
+            "efectivos": 187,
+            "frase": "Esperaremos la señal.",
+            "imagen": "img/personajes/placeholder.jpg"
+        }
+    ],
+    "puntos": [
+        {
+            "id": 1,
+            "x": 25,
+            "y": 40,
+            "titulo": "Escuadrón I",
+            "descripcion": "Flanco izquierdo"
+        },
+        {
+            "id": 2,
+            "x": 70,
+            "y": 55,
+            "titulo": "Escuadrón II",
+            "descripcion": "Ataque principal"
+        }
+    ]
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GS: Mesa de Guerra</title>
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="operation-layout">
+
+        <header class="operation-header gs-card">
+
+            <span class="gs-label">
+                Mesa de Guerra
+            </span>
+
+            <h1
+                class="gs-title"
+                id="operationTitle">
+                Título
+            </h1>
+
+            <p>
+                Preparativos para la recuperación de la ciudad
+            </p>
+
+        </header>
+
+        <section class="war-layout">
+
+    <!-- PANEL IZQUIERDO -->
+
+    <aside class="war-sidebar-left gs-card">
+
+        <div class="war-block">
+
+            <span class="gs-label">
+                Operación
+            </span>
+
+            <h3 id="sidebarOperationName">
+                Operación
+            </h3>
+
+        </div>
+
+        <div class="gs-divider"></div>
+
+        <div class="war-block">
+
+            <span class="gs-label">
+                Objetivo
+            </span>
+
+            <p id="operationObjective">
+                Objetivo
+            </p>
+
+        </div>
+
+        <div class="gs-divider"></div>
+
+        <div class="war-block">
+
+            <span class="gs-label">
+                Estado
+            </span>
+
+            <p id="operationStatus">
+                Estado
+            </p>
+
+        </div>
+
+        <div class="gs-divider"></div>
+
+        <div class="war-block">
+
+            <span class="gs-label">
+                Comandante Supremo
+            </span>
+
+            <p id="operationCommander">
+                Comandante
+            </p>
+        </div>
+
+        <div class="gs-divider"></div>
+
+        <div class="war-block">
+
+            <span class="gs-label">
+                Información Clave
+            </span>
+
+            <p>
+                • Moral alta<br>
+                • Puerta norte vulnerable<br>
+                • Refuerzos esperados en 3 días
+            </p>
+
+        </div>
+
+        <div class="gs-divider"></div>
+
+        <div class="war-block">
+
+            <span class="gs-label">
+                Notas del Plan
+            </span>
+
+            <p>
+                El ataque principal se realizará al amanecer.
+                La distracción inicial buscará forzar el desplazamiento
+                de las tropas enemigas hacia la muralla oriental.
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- CENTRO -->
+
+<section class="war-center">    
+    <section class="map-panel gs-card">
+
+        <div id="positionTools">
+
+            <div id="positionHint">
+
+            📍 Haz clic en cualquier parte del mapa
+            para crear una posición
+
+        </div>
+
+            <div id="positionEditor">
+
+            <h3>
+                Posición Táctica
+            </h3>
+
+            <label>
+                Escuadrón
+            </label>
+
+            <select id="positionSquad">
+
+            </select>
+
+            <label>
+                Observaciones
+            </label>
+
+            <textarea
+                id="positionNotes">
+            </textarea>
+
+            <label>
+                Órdenes
+            </label>
+
+            <textarea
+                id="positionOrders">
+            </textarea>
+
+            <button id="savePositionBtn">
+
+                Guardar Posición
+
+            </button>
+
+        </div>
+
+            <button id="positionMenuBtn">
+                Gestionar Posiciones
+            </button>
+
+            <div id="positionMenu">
+
+                <button id="addPositionBtn">
+                    Añadir Posición
+                </button>
+
+                <button id="addRouteBtn">
+                    Añadir Ruta
+                </button>
+
+            </div>
+
+        </div>
+
+        <div
+            id="battleMap"
+            class="battle-map">
+        </div>
+
+        <div id="mapPointsContainer"></div>
+
+    </section>
+
+        <section class="gallery-panel gs-card">
+
+            <button id="galleryPrev" class="gallery-arrow">
+                ◀
+            </button>
+
+            <div
+                id="galleryImage"
+                class="gallery-image">
+            </div>
+
+            <button id="galleryNext" class="gallery-arrow">
+                ▶
+            </button>
+
+            <div id="galleryDots" class="gallery-dots"></div>
+
+        </section>
+
+    </section>
+
+<!-- PANEL DERECHO -->
+
+<aside class="war-sidebar-right gs-card">
+    <div id="adminPanel" class="admin-panel">
+
+    <h3>
+        Administración
+    </h3>
+
+    <label>
+    Nombre Operación
+    </label>
+
+    <input
+        id="adminOperationName"
+        type="text">
+
+    <label>
+        Objetivo
+    </label>
+
+    <textarea
+        id="adminObjective">
+    </textarea>
+
+    <label>
+        Estado
+    </label>
+
+    <input
+        id="adminStatus"
+        type="text">
+
+    <label>
+        Comandante
+    </label>
+
+    <input
+        id="adminCommander"
+        type="text">
+
+    <button id="adminSaveBtn">
+        Guardar Cambios
+    </button>
+
+            <hr>
+
+        <h3>
+            Escuadrones
+        </h3>
+
+        <div id="adminSquadList">
+        </div>
+
+        <button id="addSquadBtn">
+            + Nuevo Escuadrón
+        </button>
+
+        <div id="adminSquadEditor">
+
+    <hr>
+
+    <h3>
+        Editar Escuadrón
+    </h3>
+
+    <label>
+        Nombre
+    </label>
+
+    <input
+        id="adminSquadName"
+        type="text">
+
+    <label>
+        Especialidad
+    </label>
+
+    <input
+        id="adminSquadRole"
+        type="text">
+
+    <label>
+        Capitán
+    </label>
+
+    <input
+        id="adminSquadCaptain"
+        type="text">
+
+    <label>
+        Efectivos
+    </label>
+
+    <input
+        id="adminSquadStrength"
+        type="number">
+
+    <label>
+        Frase
+    </label>
+
+    <textarea
+        id="adminSquadQuote">
+    </textarea>
+
+    <button id="adminSquadSaveBtn">
+        Guardar Escuadrón
+    </button>
+
+    <button id="deleteSquadBtn">
+        Eliminar Escuadrón
+    </button>
+
+</div>
+
+</div>
+
+    <button id="toggleAdminBtn">
+        ⚙ Admin
+    </button>
+    
+    <button id="saveLocalBtn">
+        Guardar Local
+    </button>
+    
+    <button id="exportJsonBtn">
+        Exportar JSON
+    </button>
+
+    <h2 class="gs-title">
+        Fuerzas
+    </h2>
+
+    <div id="squadContainer"></div>
+</aside>
+</section>
+    </main>
+
+<div id="popupOverlay" class="popup-overlay">
+
+    <div class="popup-window">
+
+        <h2 id="popupTitle">
+            Título
+        </h2>
+
+        <div
+            id="popupSubtitle"
+            class="popup-subtitle">
+        </div>
+
+        <div class="popup-meta">
+
+        <div>
+            <span class="popup-meta-label">
+                Capitán
+            </span>
+
+            <div id="popupCaptain">
+                -
+            </div>
+        </div>
+
+        <div>
+            <span class="popup-meta-label">
+                Efectivos
+            </span>
+
+            <div id="popupStrength">
+                -
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        id="popupQuote"
+        class="popup-quote">
+    </div>
+
+        <div class="popup-section">
+
+            <div class="popup-section-title">
+                OBSERVACIONES
+            </div>
+
+            <div id="popupNotes">
+            </div>
+
+        </div>
+
+        <div class="popup-section">
+
+            <div class="popup-section-title">
+                ÓRDENES
+            </div>
+
+            <div id="popupOrders">
+            </div>
+
+        </div>
+
+        <img
+            id="popupImage"
+            class="popup-image"
+            style="display:none;">
+
+        <button id="popupClose" class="gs-button">
+            Cerrar
+        </button>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

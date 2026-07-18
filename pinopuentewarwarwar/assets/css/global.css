@@ -1,0 +1,157 @@
+/* ========================================
+   FUENTES
+======================================== */
+
+@font-face {
+    font-family: "Medici Text";
+    src: url("../fonts/MediciText.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ========================================
+   VARIABLES GLOBALES
+======================================== */
+
+:root{
+
+    /* Colores principales */
+    --gs-bg: #020202;
+    --gs-bg-soft: #0c0c0c;
+    --gs-text: #d4d4d4;
+    --gs-textgris: #797979;
+    --gs-white-soft: #d4d4d4;
+
+    /* Paleta de colores */
+
+    /* Color PRINCIPAL */
+    --gs-blood: #4e0a09;
+    
+    /* Colores SECUNDARIOS */
+    --gs-accent: #6a1412; 
+    --gs-accent-soft: #8f2220;
+
+    --gs-border-red:
+    rgba(106,20,18,.35);
+
+    /* Bordes */
+    --gs-border: rgba(255,255,255,.08);
+
+    /* Sombras */
+    --gs-shadow: rgba(0,0,0,.45);
+
+    /* Transiciones */
+    --gs-transition: .25s ease;
+
+    /* Tipografías */
+    --font-logo: "Medici Text", serif;
+    --font-ui: "Yanone Kaffeesatz", sans-serif;
+    --font-text: Georgia, serif;
+}
+
+/* ========================================
+   RESET
+======================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ========================================
+   BASE
+======================================== */
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    background:var(--gs-bg);
+    color:var(--gs-text);
+    font-family: var(--font-text);
+    overflow-x:hidden;
+}
+
+/* ========================================
+   TIPOGRAFÍAS
+======================================== */
+.gs-title{
+    font-family: "Medici Text", serif;
+}
+.gs-subtitle{
+    font-family: var(--font-ui);
+}
+
+/* ========================================
+   UTILIDADES
+======================================== */
+.gs-center{
+    text-align:center;
+}
+
+.gs-uppercase{
+    text-transform:uppercase;
+}
+
+.gs-smallcaps{
+    text-transform:uppercase;
+    letter-spacing:.35em;
+}
+
+/* ========================================
+   BOTÓN PRINCIPAL
+======================================== */
+.gs-button{
+    display:inline-block;
+    padding:14px 34px;
+    color:var(--gs-text);
+    text-decoration:none;
+    border:1px solid var(--gs-accent);
+    border-radius:10px;
+    background:rgba(122,116,52,.08);
+    transition:var(--gs-transition);
+}
+
+.gs-button:hover{
+    background:rgba(122,116,52,.18);
+    transform:translateY(-2px);
+}
+
+/* ========================================
+   TARJETA BASE
+======================================== */
+.gs-card{
+    background:rgba(0,0,0,.72);
+    border:1px solid var(--gs-border);
+    box-shadow:0 10px 25px var(--gs-shadow);
+    border-radius:16px;
+}
+
+/* ========================================
+   SEPARADOR SIMPLE
+======================================== */
+.gs-divider{
+
+    width:100%;
+    height:1px;
+    background:
+    linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+}
+
+/* ========================================
+   ETIQUETAS ESTILO FORO
+======================================== */
+.gs-label{
+    font-family:"Yanone Kaffeesatz", sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.5em;
+    font-size:.8rem;
+    color:var(--gs-text);
+    opacity:.8;
+}
