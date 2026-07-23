@@ -202,7 +202,7 @@ if (datosGuardados) {
     datos.territorios || {};
 
 }
-  let modoEdicion = true;
+  let modoEdicion = false;
   
 let colorTerritorio = "#a11011";
 
