@@ -1,302 +1,276 @@
 <!DOCTYPE html>
-
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gran Siniestra</title>
+<title>Mapa - Gran Siniestra</title>
 
-<link rel="stylesheet" href="./assets/css/global.css">
+<link rel="stylesheet" href="../assets/css/global.css">
+<link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
-    
-<style>
 
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    min-height:100vh;
-    font-family: Georgia, serif;
-    color:var(--gs-text);
-    overflow-x:hidden;
-}
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
 
-/* FONDO */
-.background{
-    position:fixed;
-    inset:0;
-    background-image:url("https://2img.net/i.imgur.com/GBzrOwk.jpg");
-    background-size:cover;
-    background-position:center;
-    z-index:-2;
-}
-.background::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    backdrop-filter:blur(2px);
-}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-/* CONTENIDO */
-.container{
-    width:min(1400px, 92%);
-    margin:auto;
-    padding:40px 0 80px;
-}
+<link rel="stylesheet" href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css">
 
-/* HEADER */
-.header{
-    text-align:center;
-    margin-bottom:40px;
-}
-.logo{
-    width:130px;
-    height:130px;
-    object-fit:contain;
-    margin-bottom:18px;
-}
-.title{
-    font-size:1rem, 5vw, 5.2rem;
-    font-weight: normal;
-    letter-spacing:1.0rem;
-    line-height:1;
-    margin-bottom:30px;
-}
-
-.subtitle{
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    font-size:.75rem;
-    font-weight:300;
-    letter-spacing:.85em;
-    text-transform:uppercase;
-    opacity:.85;
-    margin-bottom:24px;
-}
-.discord-btn{
-    display:inline-block;
-    padding:14px 34px;
-    text-decoration:none;
-    color:var(--gs-text);
-    border:1px solid var(--gs-accent);
-    border-radius:10px;
-    background:rgba(106,20,18,.10);
-    transition:.25s;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    letter-spacing:.40em;
-}
-.discord-btn:hover{
-    transform:translateY(-2px);
-    background:rgba(106,20,18,.10);
-}
-
-/* SEPARADOR */
-.divider{
-    width:100%;
-    height:1px;
-    background:linear-gradient(
-        to right,
-        transparent,
-        rgba(255,255,255,.35),
-        transparent
-    );
-    margin:50px 0;
-}
-
-/* GRID */
-.portal-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,380px));
-    justify-content:center;
-    gap:30px;
-    margin-top:50px;
-}
-  
-/* TARJETAS */
-.portal-card{
-    text-decoration:none;
-    color:var(--gs-text);
-    background:var(--gs-card-bg);
-    border:1px solid var(--gs-border);
-    border-radius:16px;
-    overflow:hidden;
-    transition:.25s ease;
-    box-shadow:0 10px 25px var(--gs-shadow);
-}
-.portal-card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(184,155,94,.5);
-}
-.portal-card:hover .card-image img{
-    transform:scale(1.05);
-}
-.card-image{
-    position:relative;
-    aspect-ratio:16/8;
-    overflow:hidden;
-}
-
-/* ========================= */
-/* TARJETAS EN CONSTRUCCIÓN  */
-/* ========================= */
-
-.portal-card.construccion .card-image::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    z-index:2;
-}
-
-.portal-card.construccion .card-image::after{
-    content:"EN CONSTRUCCIÓN";
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    z-index:3;
-    color:white;
-    font-family:var(--font-ui);
-    font-size:1.5rem;
-    letter-spacing:.25em;
-    text-transform:uppercase;
-    text-align:center;
-    text-shadow:0 0 12px black;
-}
-
-.card-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.35s ease;
-}
-.card-title{
-    text-align:center;
-    padding:14px;
-    font-size:.65rem;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    letter-spacing:.85em;
-}
-
-/* MÓVIL */
-@media (max-width:600px){
-    .container{
-        width:95%;
-    }
-    .logo{
-        width:100px;
-        height:100px;
-    }
-    .card-title{
-        font-size:1rem;
-    }
-}
-
-/* ========================================
-   FOOTER LEGAL
-======================================== */
-
-.footer-legal{
-    margin:90px auto 25px;
-    text-align:center;
-    font-size:.78rem;
-    color:var(--gs-textgris);
-    line-height:1.8;
-    opacity:.75;
-}
-
-.footer-legal a{
-    color:var(--gs-textgris);
-    text-decoration:none;
-    transition:.2s;
-}
-
-.footer-legal a:hover{
-    color:var(--gs-text);
-}
-
-.footer-legal img{
-    width:15px;
-    height:15px;
-    margin-left:4px;
-    vertical-align:-2px;
-    opacity:.85;
-}
-
-</style>
 </head>
+
 <body>
+
+<div id="app">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="colapsado">
+
+    <div id="sidebarCabecera">
+
+      <h1>
+        Gran<br>
+        Siniestra
+      </h1>
+
+      <button id="toggleSidebarMovil" aria-label="Mostrar u ocultar panel">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+    <div id="sidebarContenido">
+
+      <div id="ornamento"></div>
+
+<p id="subtituloMapa">
+  Explora el mundo dando click en los iconos del mapa.
+</p>
+
+    <div id="infoScroll" class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="ficha">
+    <span>Lugar</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
+
+  <div id="info">
+      <h2 id="nombre">Selecciona una localización</h2>
+      <div id="descripcion"></div>
+    </div>
+
+  </div>
   
-<div class="background"></div>
-  <div class="container">
-  <header class="header">
-    <img
-        class="logo"
-        src="https://2img.net/i.imgur.com/43eMCwf.png"
-        alt="Gran Siniestra">
-    <h1 class="title gs-title">Gran Siniestra</h1>
-    <p class="subtitle gs-subtitle">
-        PANEL DE HERRAMIENTAS
-    </p>
-    <a class="discord-btn gs-button"
-       href="https://discord.gg/3RP4Jxv9Rh"
-       target="_blank">
-       ÚNETE AL SERVIDOR
-    </a>
-</header>
+  </div>
+
+  <div id="resizeInfoScroll" aria-hidden="true"></div>
   
-<div class="divider"></div>
-<section class="portal-grid">
+  <div id="panelInferior">
   
-    <a class="portal-card gs-card" href="./mapa/">
-        <div class="card-image">
-            <img src="https://i.imgur.com/TNoK0PN.jpeg" alt="Mapa">
-        </div>
-        <div class="card-title">
-            MAPA INTERACTIVO
-        </div>
-    </a>
-  
-    <a
-    class="portal-card construccion"
-    href="javascript:void(0)"
-    onclick="return false;"
-    title="Próximamente">
-        
-        <div class="card-image">
-            <img src="https://i.imgur.com/EcNxKGu.png" alt="Cronología">
-        </div>
-        <div class="card-title">
-            CRONOLOGÍA
-        </div>
-    </a>
-  
-</section>
+  <div id="botones">
+
+<div class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="categorias">
+    <span>Categorías y filtros</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
+
+  <div id="filtrosCategorias">
+
+<div class="categoriaFiltro" data-categoria="politica">
+  <i class="ra ra-castle-flag ra-lg"></i>
 </div>
 
-<footer class="footer-legal">
+<div class="categoriaFiltro" data-categoria="vegetacion">
+  <i class="ra ra-leaf ra-lg"></i>
+</div>
 
-    <a href="https://www.gransiniestra.com">Gran Siniestra</a>
-    © 2020 by
-    <a href="https://www.gransiniestra.com">Nuria Calzada</a>
-    is licensed under
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
-        CC BY-NC-ND 4.0
-    </a>
+<div class="categoriaFiltro" data-categoria="minerales">
+  <i class="ra ra-mining-diamonds ra-lg"></i>
+</div>
 
-    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
-    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
-    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NC">
-    <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="ND">
+<div class="categoriaFiltro" data-categoria="monstruos">
+  <i class="ra ra-bird-claw ra-lg"></i>
+</div>
 
-</footer>
+<div class="categoriaFiltro" data-categoria="comida">
+  <i class="ra ra-apple ra-lg"></i>
+</div>
+
+  </div>
+
+  <div id="panelFiltros"></div>
+
+  </div>
+
+</div>
+  
+  <div id="panelFiltrosActivos" class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="filtrosActivos">
+    <span>Filtros activos</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
+
+  <div id="listaFiltrosActivos"></div>
+
+  <button id="limpiarFiltros">
+    Limpiar filtros
+  </button>
+
+  </div>
+
+</div>
+
+  <button id="toggleAdmin">
+    ⚙ Herramientas administrativas
+  </button>
+
+  <div id="adminPanel">
+
+    <div id="selectorFaccion">
+
+      <h3>Facción activa</h3>
+
+      <div class="faccion" data-color="#a11011">Kal'arch</div>
+      <div class="faccion" data-color="#ffa900">Reshk'arch</div>
+      <div class="faccion" data-color="#a6b7c4">Rehgis</div>
+      <div class="faccion" data-color="#c93457">Blavyr</div>
+      <div class="faccion" data-color="#0054ad">Vaelekin</div>
+      <div class="faccion" data-color="#1e7329">Gallarion</div>
+      <div class="faccion" data-color="#008791">A'Drien</div>
+      <div class="faccion" data-color="#6951c9">Ve'anor</div>
+      <div class="faccion" data-color="#b545de">Reden</div>
+      <div class="faccion" data-color="#731010">Vampiros</div>
+
+    </div>
+
+    <button id="modoEdicion">
+      Modo edición
+    </button>
+
+    <button id="guardarMapa">
+      Guardar
+    </button>
+
+    <button id="exportarMapa">
+      Exportar JSON
+    </button>
+
+    <button id="importarMapa">
+      Importar JSON
+    </button>
+
+    <input
+      type="file"
+      id="importFile"
+      accept=".json"
+      style="display:none;"
+    >
+
+  </div>
+
+</div>
+
+</div>
+
+<div id="discordBox" class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="discord">
+    <span>Únete a Gran Siniestra</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
+
+  <a
+    id="discordLink"
+    href="https://discord.gg/3RP4Jxv9Rh"
+    target="_blank"
+  >
+    <i class="fab fa-discord"></i>
+  </a>
+
+  </div>
+
+</div>
+
+</div> <!-- cierra #sidebarContenido -->
+
+<div id="resizeSidebarMovil" aria-hidden="true"></div>
+
+</div> <!-- cierra #sidebar -->
+
+  <!-- MAPA -->
+<div id="mapa-container">
+
+<!-- LEYENDA -->
+<a id="volverInicio" href="../index.html">
+  <i class="fas fa-arrow-left"></i>
+</a>
+
+<div id="leyendaMapa">
+
+  <div id="leyendaCabecera">
+    LEYENDA
+  </div>
+
+  <div id="leyendaContenido">
+
+    <div><i class="fab fa-fort-awesome" style="margin-left:-5px;"></i> Capital</div>
+    <div><i class="ra ra-capitol"></i> Hiniestra</div>
+    <div><i class="fas fa-chess-rook" style="margin-left:-5px;"></i> Ciudad</div>
+    <div><i class="ra ra-spikeball"></i> Región / Zona</div>
+    <div><i class="fab fa-pagelines" style="margin-left:-5px;"></i> Bosque</div>
+    <div><i class="fas fa-mountain" style="margin-left:-5px;"></i> Montaña</div>
+    <div><i class="ra ra-aquarius"></i> Mar</div>
+
+  </div>
+
+</div>
+
+<div id="toggleNombres">
+  UBICACIONES
+</div>
+
+  <div id="mapa-inner">
+
+  <img
+    src="https://i.imgur.com/UYGHioP.jpeg"
+    id="mapa"
+  >
+
+  <img
+    src="https://i.imgur.com/IPGz3cb.png"
+    id="mapaCasas"
+  >
+
+  <img
+    src="https://i.imgur.com/wIQhFK8.png"
+    id="mapaNombres"
+  >
+
+  <div id="gridOverlay"></div>
+
+</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
