@@ -6,6 +6,164 @@ window.onload = async function() {
   const gridOverlay =
   document.getElementById("gridOverlay");
 
+  // ================= PANEL LATERAL (MÓVIL) =================
+  // Registrado ya mismo, al principio de todo, para que un
+  // posible error más adelante en esta función nunca impida
+  // que el botón de colapsar/expandir quede activo.
+
+  const botonToggleSidebar =
+    document.getElementById("toggleSidebarMovil");
+
+  const sidebarEl =
+    document.getElementById("sidebar");
+
+  const sidebarContenidoEl =
+    document.getElementById("sidebarContenido");
+
+  if(botonToggleSidebar && sidebarEl){
+
+    botonToggleSidebar.addEventListener("click", () => {
+
+      sidebarEl.classList.toggle("colapsado");
+
+      const icono =
+        botonToggleSidebar.querySelector("i");
+
+      icono.className =
+        sidebarEl.classList.contains("colapsado")
+          ? "fas fa-bars"
+          : "fas fa-times";
+
+    });
+
+  }else{
+
+    console.warn(
+      "No se encontró #toggleSidebarMovil o #sidebar en el DOM."
+    );
+
+  }
+
+  // ================= TIRADOR PARA REDIMENSIONAR (MÓVIL) =================
+  // Permite arrastrar verticalmente el borde inferior de la
+  // franja superior para ajustar su altura a mano.
+
+  const tiradorSidebar =
+    document.getElementById("resizeSidebarMovil");
+
+  if(tiradorSidebar && sidebarContenidoEl){
+
+    let arrastrandoAlto = false;
+    let altoInicial = 0;
+    let yInicial = 0;
+
+    const ALTO_MINIMO = 100;
+
+    const altoMaximo = () =>
+      window.innerHeight * 0.75;
+
+    tiradorSidebar.addEventListener("pointerdown", (e) => {
+
+      arrastrandoAlto = true;
+      yInicial = e.clientY;
+
+      altoInicial =
+        sidebarContenidoEl.getBoundingClientRect().height;
+
+      tiradorSidebar.setPointerCapture(e.pointerId);
+
+    });
+
+    tiradorSidebar.addEventListener("pointermove", (e) => {
+
+      if(!arrastrandoAlto) return;
+
+      const delta = e.clientY - yInicial;
+
+      let nuevoAlto = altoInicial + delta;
+
+      nuevoAlto = Math.max(
+        ALTO_MINIMO,
+        Math.min(altoMaximo(), nuevoAlto)
+      );
+
+      sidebarContenidoEl.style.maxHeight =
+        nuevoAlto + "px";
+
+    });
+
+    const terminarArrastreAlto = () => {
+      arrastrandoAlto = false;
+    };
+
+    tiradorSidebar.addEventListener("pointerup", terminarArrastreAlto);
+    tiradorSidebar.addEventListener("pointercancel", terminarArrastreAlto);
+
+  }
+
+  // ================= TIRADOR: FICHA vs RESTO (MÓVIL) =================
+  // Reparte el espacio entre la ficha de información (arriba)
+  // y el resto del contenido: filtros, admin, discord (abajo).
+
+  const tiradorInfoScroll =
+    document.getElementById("resizeInfoScroll");
+
+  const infoScrollEl =
+    document.getElementById("infoScroll");
+
+  if(tiradorInfoScroll && infoScrollEl){
+
+    let arrastrandoInfo = false;
+    let altoInfoInicial = 0;
+    let yInfoInicial = 0;
+
+    const ALTO_INFO_MINIMO = 60;
+
+    const altoInfoMaximo = () =>
+      (sidebarContenidoEl
+        ? sidebarContenidoEl.getBoundingClientRect().height
+        : window.innerHeight * 0.6) - 60;
+        // deja siempre un hueco mínimo para el resto
+
+    tiradorInfoScroll.addEventListener("pointerdown", (e) => {
+
+      arrastrandoInfo = true;
+      yInfoInicial = e.clientY;
+
+      altoInfoInicial =
+        infoScrollEl.getBoundingClientRect().height;
+
+      tiradorInfoScroll.setPointerCapture(e.pointerId);
+
+    });
+
+    tiradorInfoScroll.addEventListener("pointermove", (e) => {
+
+      if(!arrastrandoInfo) return;
+
+      const delta = e.clientY - yInfoInicial;
+
+      let nuevoAlto = altoInfoInicial + delta;
+
+      nuevoAlto = Math.max(
+        ALTO_INFO_MINIMO,
+        Math.min(altoInfoMaximo(), nuevoAlto)
+      );
+
+      infoScrollEl.style.height =
+        nuevoAlto + "px";
+
+    });
+
+    const terminarArrastreInfo = () => {
+      arrastrandoInfo = false;
+    };
+
+    tiradorInfoScroll.addEventListener("pointerup", terminarArrastreInfo);
+    tiradorInfoScroll.addEventListener("pointercancel", terminarArrastreInfo);
+
+  }
+
   let lugares = [];
   let territorios = {};
 
@@ -44,7 +202,7 @@ if (datosGuardados) {
     datos.territorios || {};
 
 }
-  let modoEdicion = false;
+  let modoEdicion = true;
   
 let colorTerritorio = "#a11011";
 
@@ -922,32 +1080,6 @@ container.onwheel = (e) => {
 
   container.addEventListener("touchend", terminarToqueMapa);
   container.addEventListener("touchcancel", terminarToqueMapa);
-
-  // ================= PANEL LATERAL (MÓVIL) =================
-
-  const botonToggleSidebar =
-    document.getElementById("toggleSidebarMovil");
-
-  const sidebarEl =
-    document.getElementById("sidebar");
-
-  if(botonToggleSidebar && sidebarEl){
-
-    botonToggleSidebar.addEventListener("click", () => {
-
-      sidebarEl.classList.toggle("colapsado");
-
-      const icono =
-        botonToggleSidebar.querySelector("i");
-
-      icono.className =
-        sidebarEl.classList.contains("colapsado")
-          ? "fas fa-bars"
-          : "fas fa-times";
-
-    });
-
-  }
 
   // ================= TOGGLE MAPA =================
 

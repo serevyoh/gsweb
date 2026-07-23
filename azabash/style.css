@@ -818,6 +818,10 @@ body {
   display:none;
 }
 
+#resizeInfoScroll{
+  display:none;
+}
+
 /* ===================================== */
 /* EVITAR GESTOS DEL NAVEGADOR EN EL MAPA */
 /* (permite que el pan/zoom táctil propio */
@@ -886,7 +890,45 @@ body {
     display:none;
   }
 
-  /* -------- TIRADOR PARA REDIMENSIONAR -------- */
+  /* -------- DOS ZONAS INDEPENDIENTES: FICHA / RESTO -------- */
+
+  #infoScroll{
+    flex:none;
+    height:38vh;
+    min-height:60px;
+    overflow-y:auto;
+  }
+
+  #panelInferior{
+    flex:1;
+    min-height:60px;
+    overflow-y:auto;
+  }
+
+  #resizeInfoScroll{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:14px;
+    flex-shrink:0;
+    cursor:ns-resize;
+    touch-action:none;
+  }
+
+  #resizeInfoScroll::before{
+    content:"";
+    width:36px;
+    height:4px;
+    border-radius:2px;
+    background:var(--gs-border-red);
+    opacity:.6;
+  }
+
+  #resizeInfoScroll:hover::before{
+    background:var(--gs-accent-soft);
+  }
+
+  /* -------- TIRADOR PARA REDIMENSIONAR (ALTO TOTAL) -------- */
 
   #resizeSidebarMovil{
     display:flex;
@@ -912,6 +954,10 @@ body {
   }
 
   #sidebar.colapsado #resizeSidebarMovil{
+    display:none;
+  }
+
+  #sidebar.colapsado #resizeInfoScroll{
     display:none;
   }
 
