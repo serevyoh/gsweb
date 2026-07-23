@@ -164,6 +164,192 @@ window.onload = async function() {
 
   }
 
+  // ================= LIMPIEZA AL CAMBIAR DE MODO =================
+  // Las alturas que fijan los tiradores son estilos inline, y un
+  // inline pesa más que el CSS de escritorio. Si no se limpian al
+  // cruzar el punto de corte, se quedan "pegadas" y aplastan la
+  // ficha o el panel cuando pasas de móvil a escritorio (o al revés).
+
+  const mqMovil = window.matchMedia("(max-width: 860px)");
+
+  function limpiarAlturasManuales(){
+
+    if(sidebarContenidoEl){
+      sidebarContenidoEl.style.maxHeight = "";
+    }
+
+    if(infoScrollEl){
+      infoScrollEl.style.height = "";
+    }
+
+  }
+
+  mqMovil.addEventListener("change", limpiarAlturasManuales);
+
+  // ================= SUBTÍTULO: TOPBAR vs RESTO =================
+  // En modo topbar, el subtítulo se traslada a la cabecera para
+  // aprovechar el hueco entre el título y el botón toggle. En
+  // escritorio y en el tramo intermedio (sidebar izquierda),
+  // vuelve a su sitio original, bajo el ornamento.
+
+  const cabeceraEl =
+    document.getElementById("sidebarCabecera");
+
+  const ornamentoEl =
+    document.getElementById("ornamento");
+
+  const subtituloEl =
+    document.getElementById("subtituloMapa");
+
+  function colocarSubtitulo(){
+
+    if(!cabeceraEl || !subtituloEl) return;
+
+    if(mqMovil.matches){
+
+      // Topbar: entre el título y el botón de mostrar/ocultar
+      cabeceraEl.insertBefore(
+        subtituloEl,
+        botonToggleSidebar || null
+      );
+
+    }else if(ornamentoEl){
+
+      // Escritorio / sidebar: justo tras el ornamento
+      if(ornamentoEl.nextSibling !== subtituloEl){
+        ornamentoEl.insertAdjacentElement(
+          "afterend",
+          subtituloEl
+        );
+      }
+
+    }
+
+  }
+
+  colocarSubtitulo();
+  mqMovil.addEventListener("change", colocarSubtitulo);
+
+  // ================= SECCIONES PLEGABLES =================
+  // Válido en escritorio, sidebar responsive y topbar responsive.
+  // Recuerda qué secciones tenía el usuario plegadas.
+
+  const CLAVE_SECCIONES = "granSiniestaSeccionesPlegadas";
+  let estadoSecciones = {};
+
+  function cargarEstadoSecciones(){
+
+    let estado = {};
+
+    try{
+
+      estado =
+        JSON.parse(
+          localStorage.getItem(CLAVE_SECCIONES)
+        ) || {};
+
+    }catch(e){
+
+      estado = {};
+
+    }
+
+    estadoSecciones = estado;
+
+    document
+      .querySelectorAll(".seccionCabecera")
+      .forEach(cabecera => {
+
+        const id = cabecera.dataset.seccion;
+        const wrapper = cabecera.closest(".seccionPlegable");
+
+        if(!wrapper) return;
+
+        if(estado[id]){
+          wrapper.classList.add("plegada");
+        }
+
+        cabecera.addEventListener("click", () => {
+
+          wrapper.classList.toggle("plegada");
+
+          // Limpia la altura fijada a mano por su tirador,
+          // para que el CSS "auto" recupere el control
+          if(
+            wrapper.id === "infoScroll" &&
+            wrapper.classList.contains("plegada")
+          ){
+            wrapper.style.height = "";
+          }
+
+          estado[id] =
+            wrapper.classList.contains("plegada");
+
+          localStorage.setItem(
+            CLAVE_SECCIONES,
+            JSON.stringify(estado)
+          );
+
+        });
+
+      });
+
+  }
+
+  cargarEstadoSecciones();
+
+  // En escritorio todas las secciones arrancan abiertas. El usuario
+  // aún puede plegarlas durante la sesión si lo desea.
+  function abrirSeccionesEnEscritorio(){
+
+    if(mqMovil.matches) return;
+
+    document
+      .querySelectorAll(".seccionPlegable")
+      .forEach(seccion => seccion.classList.remove("plegada"));
+
+    Object.keys(estadoSecciones).forEach(id => {
+      delete estadoSecciones[id];
+    });
+    localStorage.setItem(
+      CLAVE_SECCIONES,
+      JSON.stringify(estadoSecciones)
+    );
+
+  }
+
+  abrirSeccionesEnEscritorio();
+  mqMovil.addEventListener("change", abrirSeccionesEnEscritorio);
+
+  function desplegarFichaLugar(){
+
+    const ficha = document.getElementById("infoScroll");
+
+    if(ficha){
+      ficha.classList.remove("plegada");
+      estadoSecciones.ficha = false;
+      localStorage.setItem(
+        CLAVE_SECCIONES,
+        JSON.stringify(estadoSecciones)
+      );
+
+      const contenidoFicha = ficha.querySelector(".seccionContenido");
+      if(contenidoFicha){
+        contenidoFicha.scrollTop = 0;
+      }
+    }
+
+    if(sidebarEl){
+      sidebarEl.classList.remove("colapsado");
+    }
+
+    const icono = botonToggleSidebar?.querySelector("i");
+    if(icono){
+      icono.className = "fas fa-times";
+    }
+
+  }
+
   let lugares = [];
   let territorios = {};
 
@@ -1607,6 +1793,10 @@ panel.style.display =
 // ================= PANEL =================
 
 function mostrarLugar(lugar) {
+
+  // Un marcador siempre revela la ficha, incluso si la secciÃ³n o la
+  // barra superior mÃ³vil estaban plegadas.
+  desplegarFichaLugar();
 
   document.getElementById("nombre").innerText = "";
 

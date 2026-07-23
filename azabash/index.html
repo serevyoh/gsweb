@@ -52,12 +52,21 @@
   Explora el mundo dando click en los iconos del mapa.
 </p>
 
-    <div id="infoScroll">
+    <div id="infoScroll" class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="ficha">
+    <span>Lugar</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
 
   <div id="info">
       <h2 id="nombre">Selecciona una localización</h2>
       <div id="descripcion"></div>
     </div>
+
+  </div>
   
   </div>
 
@@ -66,6 +75,15 @@
   <div id="panelInferior">
   
   <div id="botones">
+
+<div class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="categorias">
+    <span>Categorías y filtros</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
 
   <div id="filtrosCategorias">
 
@@ -92,18 +110,27 @@
   </div>
 
   <div id="panelFiltros"></div>
-  
-  <div id="panelFiltrosActivos">
 
-  <div id="tituloFiltrosActivos">
-    FILTROS ACTIVOS
   </div>
+
+</div>
+  
+  <div id="panelFiltrosActivos" class="seccionPlegable">
+
+  <div class="seccionCabecera" data-seccion="filtrosActivos">
+    <span>Filtros activos</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
+  </div>
+
+  <div class="seccionContenido">
 
   <div id="listaFiltrosActivos"></div>
 
   <button id="limpiarFiltros">
     Limpiar filtros
   </button>
+
+  </div>
 
 </div>
 
@@ -159,11 +186,14 @@
 
 </div>
 
-<div id="discordBox">
+<div id="discordBox" class="seccionPlegable">
 
-  <div id="discordTitulo">
-    ÚNETE A GRAN SINIESTRA
+  <div class="seccionCabecera" data-seccion="discord">
+    <span>Únete a Gran Siniestra</span>
+    <i class="fas fa-chevron-down seccionFlecha"></i>
   </div>
+
+  <div class="seccionContenido">
 
   <a
     id="discordLink"
@@ -172,6 +202,8 @@
   >
     <i class="fab fa-discord"></i>
   </a>
+
+  </div>
 
 </div>
 
