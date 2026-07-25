@@ -249,11 +249,7 @@
         "Kathakano"
       ],
       "minerales": [
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Pólvora"
       ],
       "comida": []
     },
@@ -345,21 +341,9 @@
         "Lisovik"
       ],
       "minerales": [
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Bronce",
+        "Cobre",
+        "Hierro"
       ],
       "comida": []
     },
@@ -503,16 +487,8 @@
         "Vieszcy"
       ],
       "minerales": [
-        {
-          "nombre": "Mercurio",
-          "rareza": "raro",
-          "tirada": "d3"
-        },
-        {
-          "nombre": "Plata",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Mercurio",
+        "Plata"
       ],
       "comida": [
         "Carne de Caza",
@@ -641,11 +617,7 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Hierro"
       ],
       "comida": []
     },
@@ -669,11 +641,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Obsidiana",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Obsidiana"
       ],
       "comida": []
     },
@@ -691,11 +659,7 @@
         "Acantha"
       ],
       "minerales": [
-        {
-          "nombre": "Antimonio",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Antimonio"
       ],
       "comida": []
     },
@@ -714,11 +678,7 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Antimonio",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Antimonio"
       ],
       "comida": []
     },
@@ -737,11 +697,7 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Antimonio",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Antimonio"
       ],
       "comida": []
     },
@@ -760,11 +716,7 @@
         "Vieszcy"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Cobre"
       ],
       "comida": []
     },
@@ -783,16 +735,8 @@
         "Dorgselbur"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Mercurio",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Cobre",
+        "Mercurio"
       ],
       "comida": []
     },
@@ -811,16 +755,8 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Esmeralda",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Bronce",
+        "Esmeralda"
       ],
       "comida": []
     },
@@ -864,21 +800,9 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Haxio",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Obsidiana",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Haxio",
+        "Hierro",
+        "Obsidiana"
       ],
       "comida": []
     },
@@ -894,16 +818,8 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Plomo",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Turquesa",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Plomo",
+        "Turquesa"
       ],
       "comida": []
     },
@@ -919,11 +835,7 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Plata",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Plata"
       ],
       "comida": []
     },
@@ -942,11 +854,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Trozo de Meteorito",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Trozo de Meteorito"
       ],
       "comida": []
     },
@@ -967,11 +875,7 @@
         "Kathakano"
       ],
       "minerales": [
-        {
-          "nombre": "Plomo",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Plomo"
       ],
       "comida": []
     },
@@ -989,11 +893,7 @@
         "Kathakano"
       ],
       "minerales": [
-        {
-          "nombre": "Plomo",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Plomo"
       ],
       "comida": [
         "Lubina",
@@ -1012,11 +912,7 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Hierro"
       ],
       "comida": [
         "Pimiento"
@@ -1038,11 +934,7 @@
         "Narvashji"
       ],
       "minerales": [
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Hierro"
       ],
       "comida": [
         "Avena"
@@ -1063,11 +955,7 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Obsidiana",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Obsidiana"
       ],
       "comida": [
         "Pimiento"
@@ -1108,11 +996,7 @@
         "Grifo"
       ],
       "minerales": [
-        {
-          "nombre": "Viasrion",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Viasrion"
       ],
       "comida": [
         "Fresas",
@@ -1155,11 +1039,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Viasrion",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Viasrion"
       ],
       "comida": [
         "Fresas",
@@ -1251,11 +1131,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Viasrion",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Viasrion"
       ],
       "comida": [
         "Cebolla",
@@ -1301,11 +1177,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Acero",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Acero"
       ],
       "comida": [
         "Dorada"
@@ -1358,11 +1230,7 @@
         "Narvashji"
       ],
       "minerales": [
-        {
-          "nombre": "Basalto",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Basalto"
       ],
       "comida": [
         "Fresas"
@@ -1385,11 +1253,7 @@
         "Lisovik"
       ],
       "minerales": [
-        {
-          "nombre": "Acero",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Acero"
       ],
       "comida": [
         "Calabaza",
@@ -1413,11 +1277,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Basalto",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Basalto"
       ],
       "comida": [
         "Lubina",
@@ -1502,16 +1362,8 @@
         "Nazbag"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Cobre",
+        "Oro"
       ],
       "comida": [
         "Huevo"
@@ -1568,11 +1420,7 @@
         "Gallón"
       ],
       "minerales": [
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Oro"
       ],
       "comida": [
         "Especias"
@@ -1660,11 +1508,7 @@
         "Nazbag"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Cobre"
       ],
       "comida": [
         "Plátano",
@@ -1742,11 +1586,7 @@
         "Nazbag"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Cobre"
       ],
       "comida": []
     },
@@ -1766,16 +1606,8 @@
         "Nazbag"
       ],
       "minerales": [
-        {
-          "nombre": "Ámbar",
-          "rareza": "inusual",
-          "tirada": "d4"
-        },
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Ámbar",
+        "Oro"
       ],
       "comida": [
         "Ajo",
@@ -1818,16 +1650,8 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Haxio",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Haxio",
+        "Hierro"
       ],
       "comida": []
     },
@@ -1846,16 +1670,8 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Haxio",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Haxio",
+        "Hierro"
       ],
       "comida": [
         "Huevo"
@@ -1879,11 +1695,7 @@
         "Vieszcy"
       ],
       "minerales": [
-        {
-          "nombre": "Haxio",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Haxio"
       ],
       "comida": []
     },
@@ -1943,21 +1755,9 @@
         "Vieszcy"
       ],
       "minerales": [
-        {
-          "nombre": "Acero",
-          "rareza": "inusual",
-          "tirada": "d4"
-        },
-        {
-          "nombre": "Haxio",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Acero",
+        "Haxio",
+        "Hierro"
       ],
       "comida": [
         "Avena"
@@ -2043,11 +1843,7 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Plata",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Plata"
       ],
       "comida": []
     },
@@ -2065,16 +1861,8 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Agua Vital",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Arsénico",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Agua Vital",
+        "Arsénico"
       ],
       "comida": [
         "Lechuga",
@@ -2113,11 +1901,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Cebada",
@@ -2146,16 +1930,8 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Cuarzo",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Bronce",
+        "Cuarzo"
       ],
       "comida": [
         "Fresas",
@@ -2222,11 +1998,7 @@
         "Garuba"
       ],
       "minerales": [
-        {
-          "nombre": "Cuarzo",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Cuarzo"
       ],
       "comida": [
         "Cebada",
@@ -2311,11 +2083,7 @@
         "Alto Vampiro"
       ],
       "minerales": [
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Oro"
       ],
       "comida": [
         "Especias",
@@ -2343,11 +2111,7 @@
         "Narvashji"
       ],
       "minerales": [
-        {
-          "nombre": "Cuarzo",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Cuarzo"
       ],
       "comida": [
         "Manzana"
@@ -2367,11 +2131,7 @@
         "Acantha"
       ],
       "minerales": [
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Oro"
       ],
       "comida": []
     },
@@ -2420,11 +2180,7 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Oro"
       ],
       "comida": [
         "Dorada",
@@ -2461,11 +2217,7 @@
         "Nazbag"
       ],
       "minerales": [
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Oro"
       ],
       "comida": []
     },
@@ -2481,11 +2233,7 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Hierro"
       ],
       "comida": [
         "Avena"
@@ -2505,11 +2253,7 @@
         "Kathakano"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Avena",
@@ -2532,16 +2276,8 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Obsidiana",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Hierro",
+        "Obsidiana"
       ],
       "comida": []
     },
@@ -2578,11 +2314,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Arsénico",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Arsénico"
       ],
       "comida": [
         "Ajo"
@@ -2605,11 +2337,7 @@
         "Quimera"
       ],
       "minerales": [
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Bronce"
       ],
       "comida": [
         "Carne de Caza",
@@ -2694,11 +2422,7 @@
         "Wyvern"
       ],
       "minerales": [
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Bronce"
       ],
       "comida": [
         "Carne de Caza",
@@ -2719,11 +2443,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Cebolla",
@@ -2778,11 +2498,7 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Cerezas"
@@ -2822,11 +2538,7 @@
         "Vieszcy"
       ],
       "minerales": [
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Bronce"
       ],
       "comida": [
         "Cebolla"
@@ -2907,11 +2619,7 @@
         "Mamarro"
       ],
       "minerales": [
-        {
-          "nombre": "Esmeralda",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Esmeralda"
       ],
       "comida": [
         "Cerezas",
@@ -2936,11 +2644,7 @@
         "Mamarro"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Cerezas",
@@ -2986,11 +2690,7 @@
         "Alto Vampiro"
       ],
       "minerales": [
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Pólvora"
       ],
       "comida": []
     },
@@ -3057,11 +2757,7 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Pólvora"
       ],
       "comida": [
         "Arroz",
@@ -3082,16 +2778,8 @@
         "Acantha"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Cobre",
+        "Pólvora"
       ],
       "comida": [
         "Carne de Caza"
@@ -3134,11 +2822,7 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Arroz",
@@ -3179,11 +2863,7 @@
         "Gallón"
       ],
       "minerales": [
-        {
-          "nombre": "Mercurio",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Mercurio"
       ],
       "comida": [
         "Arroz",
@@ -3220,11 +2900,7 @@
         "Mamarro"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Tomate"
@@ -3242,16 +2918,8 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Antimonio",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Antimonio",
+        "Pólvora"
       ],
       "comida": [
         "Carne de Caza"
@@ -3274,16 +2942,8 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Esmeralda",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Esmeralda",
+        "Madera"
       ],
       "comida": [
         "Arroz",
@@ -3308,16 +2968,8 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Antimonio",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Antimonio",
+        "Madera"
       ],
       "comida": [
         "Arroz",
@@ -3336,16 +2988,8 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Madera",
+        "Pólvora"
       ],
       "comida": [
         "Arroz",
@@ -3367,11 +3011,7 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Arroz",
@@ -3392,11 +3032,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Esmeralda",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Esmeralda"
       ],
       "comida": []
     },
@@ -3416,11 +3052,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Esmeralda",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Esmeralda"
       ],
       "comida": [
         "Tomate"
@@ -3457,11 +3089,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Pólvora",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Pólvora"
       ],
       "comida": [
         "Cerezas"
@@ -3502,11 +3130,7 @@
       "vegetacion": [],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Mercurio",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Mercurio"
       ],
       "comida": [
         "Tomate"
@@ -3569,11 +3193,7 @@
         "Las'kram"
       ],
       "minerales": [
-        {
-          "nombre": "Ámbar",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Ámbar"
       ],
       "comida": [
         "Dorada",
@@ -3595,11 +3215,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Mercurio",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Mercurio"
       ],
       "comida": [
         "Dorada",
@@ -3669,11 +3285,7 @@
         "Dorgselbur"
       ],
       "minerales": [
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Cobre"
       ],
       "comida": [
         "Carne de Caza",
@@ -3759,26 +3371,10 @@
         "Hombre lobo"
       ],
       "minerales": [
-        {
-          "nombre": "Acero",
-          "rareza": "inusual",
-          "tirada": "d4"
-        },
-        {
-          "nombre": "Ámbar",
-          "rareza": "inusual",
-          "tirada": "d4"
-        },
-        {
-          "nombre": "Arsénico",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Cobre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Acero",
+        "Ámbar",
+        "Arsénico",
+        "Cobre"
       ],
       "comida": [
         "Bayas",
@@ -3826,11 +3422,7 @@
         "Nakkros"
       ],
       "minerales": [
-        {
-          "nombre": "Arsénico",
-          "rareza": "desconocida",
-          "tirada": ""
-        }
+        "Arsénico"
       ],
       "comida": [
         "Tomate"
@@ -3868,11 +3460,7 @@
         "Espina Roja"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Bayas",
@@ -3898,11 +3486,7 @@
         "Nakkros"
       ],
       "minerales": [
-        {
-          "nombre": "Trozo de Meteorito",
-          "rareza": "raro",
-          "tirada": "d3"
-        }
+        "Trozo de Meteorito"
       ],
       "comida": [
         "Cebolla",
@@ -3927,11 +3511,7 @@
         "Lamia"
       ],
       "minerales": [
-        {
-          "nombre": "Ópalo",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Ópalo"
       ],
       "comida": [
         "Patatas",
@@ -3979,11 +3559,7 @@
         "Nakkros"
       ],
       "minerales": [
-        {
-          "nombre": "Ámbar",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Ámbar"
       ],
       "comida": [
         "Bayas"
@@ -4020,11 +3596,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Azufre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Azufre"
       ],
       "comida": [
         "Bayas",
@@ -4048,16 +3620,8 @@
         "Nakkros"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Ópalo",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Madera",
+        "Ópalo"
       ],
       "comida": [
         "Bayas",
@@ -4079,11 +3643,7 @@
       ],
       "monstruos": [],
       "minerales": [
-        {
-          "nombre": "Azufre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Azufre"
       ],
       "comida": [
         "Bayas",
@@ -4107,16 +3667,8 @@
         "Nakkros"
       ],
       "minerales": [
-        {
-          "nombre": "Azufre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        },
-        {
-          "nombre": "Hierro",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Azufre",
+        "Hierro"
       ],
       "comida": [
         "Cebolla"
@@ -4157,16 +3709,8 @@
         "Basilisco"
       ],
       "minerales": [
-        {
-          "nombre": "Acero",
-          "rareza": "inusual",
-          "tirada": "d4"
-        },
-        {
-          "nombre": "Azufre",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Acero",
+        "Azufre"
       ],
       "comida": []
     },
@@ -4251,11 +3795,7 @@
         "Nagkar"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": [
         "Cebolla",
@@ -4281,11 +3821,7 @@
         "Vieszcy"
       ],
       "minerales": [
-        {
-          "nombre": "Acero",
-          "rareza": "inusual",
-          "tirada": "d4"
-        }
+        "Acero"
       ],
       "comida": [
         "Ajo",
@@ -4310,11 +3846,7 @@
         "Sirena"
       ],
       "minerales": [
-        {
-          "nombre": "Madera",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Madera"
       ],
       "comida": []
     },
@@ -4358,16 +3890,8 @@
         "Arpía"
       ],
       "minerales": [
-        {
-          "nombre": "Arsénico",
-          "rareza": "desconocida",
-          "tirada": ""
-        },
-        {
-          "nombre": "Bronce",
-          "rareza": "comun",
-          "tirada": "d6+2"
-        }
+        "Arsénico",
+        "Bronce"
       ],
       "comida": [
         "Cebada",
@@ -4429,12 +3953,24 @@
         "Nazbag"
       ],
       "minerales": [
-        {
-          "nombre": "Oro",
-          "rareza": "muy_raro",
-          "tirada": "1"
-        }
+        "Oro"
       ],
+      "comida": []
+    },
+    {
+      "x": 24.5186136071887,
+      "y": 68.68871017539733,
+      "nombre": "Mar Rojo",
+      "descripcion": "Mar de aguas claras, cálidas y tranquilas. Cuenta la leyenda que sus aguas fueron calentadas por Ixthos, un dragón de las dunas del Sarrak, al ser expulsado por un demonio de la arena, calentó las aguas del Mar Rojo hasta que hirvieron y así pudo adentrarse en sus aguas para hacer de ellas su nuevo hogar.",
+      "imagen": "",
+      "icono": "ra ra-aquarius",
+      "tamaño": "12px",
+      "color": "#ffffff",
+      "vegetacion": [],
+      "monstruos": [
+        "Sirena"
+      ],
+      "minerales": [],
       "comida": []
     }
   ],
