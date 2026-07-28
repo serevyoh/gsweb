@@ -8,6 +8,23 @@ const timeline = document.getElementById("timeline");
 const marcasTiempo =
     document.getElementById("marcas-tiempo");
 
+/* Genera un id que no choque con ninguno ya existente. Un
+   simple Date.now() podría repetirse si se guardan dos
+   eventos en el mismo milisegundo, o si se importa un JSON
+   con ids que coinciden con los de eventos nuevos creados
+   después. */
+function generarIdUnico() {
+
+    let id = Date.now();
+
+    while (eventosGlobales.some(e => e.id === id)) {
+        id++;
+    }
+
+    return id;
+
+}
+
 const eras = {
 
     antigua: {
@@ -152,8 +169,6 @@ function esPuntual(evento) {
 /* ==========================   SCROLL HORIZONTAL CON RUEDA ========================== */
 const timelineWrapper =
     document.querySelector(".timeline-wrapper");
-const navIndicador =
-    document.getElementById("nav-indicador");
 
 fetch("eventos.json")
     .then(r => r.json())
@@ -262,7 +277,7 @@ imagenDetalle.style.backgroundPosition =
     panel.querySelector("#leer-mas");
 
 if (
-    evento.textoCompleto ||
+    textoTieneContenido(evento.textoCompleto) ||
     evento.textoArchivo
 ) {
 
@@ -666,65 +681,270 @@ document
 
     });
 
-/* ==========================   BOTONES DE NAVEGACIÓN   ========================== */
-document
-    .getElementById("nav-izquierda")
-    .addEventListener("click", () => {
-        timelineWrapper.scrollLeft -= 400;
-    });
-document
-    .getElementById("nav-derecha")
-    .addEventListener("click", () => {
-        timelineWrapper.scrollLeft += 400;
-    });
-/* ==========================   INDICADOR DE POSICIÓN   ========================== */
+/* ========================================
+   MINIMAPA
+======================================== */
 
-function actualizarIndicador() {
+function actualizarViewport() {
+
+    const viewport =
+        document.getElementById("minimap-viewport");
+
+    const clone =
+        document.getElementById("minimap-clone");
+
+    const overlayIzq =
+        document.getElementById("minimap-overlay-izq");
+
+    const overlayDch =
+        document.getElementById("minimap-overlay-dch");
+
+    if (!viewport || !clone) return;
 
     const scrollMax =
         timelineWrapper.scrollWidth -
         timelineWrapper.clientWidth;
 
-    const porcentaje =
-        timelineWrapper.scrollLeft /
-        scrollMax;
+    const minimapEl =
+        document.getElementById("timeline-minimap");
 
-    navIndicador.style.left =
-        (porcentaje * 100) + "%";
+    const minimapWidth =
+        minimapEl ? minimapEl.clientWidth : 1000;
+
+    const scroll =
+        document.querySelector(".timeline-scroll");
+
+    const timelineWidth =
+        scroll
+            ? Math.max(scroll.scrollWidth || 4000, 4000)
+            : Math.max(timelineWrapper.scrollWidth, 4000);
+
+    const factor =
+        minimapWidth / timelineWidth;
+
+    if (scrollMax <= 0) {
+
+        const vpWidth =
+            minimapWidth;
+
+        viewport.style.width = vpWidth + "px";
+        viewport.style.left = "0px";
+
+        if (overlayIzq) overlayIzq.style.width = "0px";
+        if (overlayDch) overlayDch.style.width = "0px";
+
+        return;
+
+    }
+
+    const vpWidth =
+        timelineWrapper.clientWidth * factor;
+
+    const vpLeft =
+        timelineWrapper.scrollLeft * factor;
+
+    viewport.style.width = vpWidth + "px";
+    viewport.style.left = vpLeft + "px";
+
+    if (overlayIzq) {
+        overlayIzq.style.left = "0px";
+        overlayIzq.style.width = vpLeft + "px";
+    }
+
+    if (overlayDch) {
+        const dchStart = vpLeft + vpWidth;
+        overlayDch.style.left = dchStart + "px";
+        overlayDch.style.width =
+            (minimapWidth - dchStart) + "px";
+    }
+
 }
 
-timelineWrapper.addEventListener(
-    "scroll",
-    actualizarIndicador
-);
+function reconstruirMinimapa() {
 
-actualizarIndicador();
+    const contenedor =
+        document.getElementById("timeline-minimap");
 
-let arrastrando = false;
+    const clone =
+        document.getElementById("minimap-clone");
 
-navIndicador.addEventListener(
-    "mousedown",
-    () => arrastrando = true
-);
+    if (!contenedor || !clone) return;
+
+    const scroll =
+        document.querySelector(".timeline-scroll");
+
+    if (!scroll) return;
+
+    clone.replaceChildren();
+
+    const clon =
+        scroll.cloneNode(true);
+
+    clon.removeAttribute("id");
+
+    clone.appendChild(clon);
+
+    const minimapWidth =
+        contenedor.clientWidth;
+
+    const scrollMax =
+        timelineWrapper.scrollWidth -
+        timelineWrapper.clientWidth;
+
+    const referenceWidth =
+        Math.max(scroll.scrollWidth || 4000, 4000);
+
+    const factor =
+        minimapWidth / referenceWidth;
+
+    clon.style.transform = "";
+
+    clon.style.width = referenceWidth + "px";
+    clon.style.height = "460px";
+
+    contenedor.style.height = "60px";
+
+    clone.style.transform =
+        "scale(" + factor + ")";
+
+    clone.style.height =
+        (460 * factor) + "px";
+
+    clone.style.width = referenceWidth + "px";
+
+    clone.style.top =
+        (30 - 160 * factor) + "px";
+
+    if (scrollMax <= 0) {
+
+        let minLeft = Infinity;
+        let maxRight = -Infinity;
+
+        clon.querySelectorAll(".evento").forEach(ev => {
+
+            const l =
+                parseFloat(ev.style.left) || 0;
+
+            const w =
+                parseFloat(ev.style.width) || 200;
+
+            if (l < minLeft) minLeft = l;
+            if (l + w > maxRight) maxRight = l + w;
+
+        });
+
+        if (minLeft < Infinity && maxRight > minLeft) {
+
+            const contentCenter =
+                (minLeft + maxRight) / 2;
+
+            const shift =
+                referenceWidth / 2 - contentCenter;
+
+            clon.style.transform =
+                "translateX(" + shift + "px)";
+
+        }
+
+        clone.style.left = "0px";
+
+    } else {
+
+        clone.style.left = "0px";
+
+    }
+
+    clone.style.pointerEvents = "none";
+
+    clon.style.pointerEvents = "none";
+
+    clone
+        .querySelectorAll(
+            ".evento, .punto, .conector"
+        )
+        .forEach(el => {
+
+            el.style.pointerEvents = "none";
+
+        });
+
+    actualizarViewport();
+
+}
+
+const contenedorMinimapa =
+    document.getElementById("timeline-minimap");
+
+if (contenedorMinimapa) {
+
+    contenedorMinimapa.addEventListener(
+        "click",
+        (e) => {
+
+            const rect =
+                contenedorMinimapa
+                    .getBoundingClientRect();
+
+            const porcentaje =
+                (e.clientX - rect.left)
+                / rect.width;
+
+            const scrollMax =
+                timelineWrapper.scrollWidth -
+                timelineWrapper.clientWidth;
+
+            timelineWrapper.scrollLeft =
+                porcentaje * scrollMax;
+
+        }
+    );
+
+}
+
+let arrastrandoMinimapa = false;
+
+if (contenedorMinimapa) {
+
+    contenedorMinimapa.addEventListener(
+        "mousedown",
+        (e) => {
+
+            arrastrandoMinimapa = true;
+
+            const rect =
+                contenedorMinimapa
+                    .getBoundingClientRect();
+
+            const porcentaje =
+                (e.clientX - rect.left)
+                / rect.width;
+
+            const scrollMax =
+                timelineWrapper.scrollWidth -
+                timelineWrapper.clientWidth;
+
+            timelineWrapper.scrollLeft =
+                porcentaje * scrollMax;
+
+        }
+    );
+
+}
 
 document.addEventListener(
     "mouseup",
-    () => arrastrando = false
+    () => arrastrandoMinimapa = false
 );
 
 document.addEventListener(
     "mousemove",
     (e) => {
 
-        if (!arrastrando) return;
-
-        const barra =
-            document.querySelector(
-                ".nav-barra"
-            );
+        if (!arrastrandoMinimapa) return;
 
         const rect =
-            barra.getBoundingClientRect();
+            contenedorMinimapa
+                .getBoundingClientRect();
 
         let x =
             e.clientX - rect.left;
@@ -743,35 +963,26 @@ document.addEventListener(
 
         timelineWrapper.scrollLeft =
             porcentaje * scrollMax;
+
+    }
+);
+
+timelineWrapper.addEventListener(
+    "scroll",
+    actualizarViewport
+);
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        reconstruirMinimapa();
+        actualizarViewport();
+
     }
 );
 
 document
-    .querySelector(".nav-barra")
-    .addEventListener(
-        "click",
-        (e) => {
-
-            const barra =
-                e.currentTarget;
-
-            const rect =
-                barra.getBoundingClientRect();
-
-            const porcentaje =
-                (e.clientX - rect.left)
-                / rect.width;
-
-            const scrollMax =
-                timelineWrapper.scrollWidth -
-                timelineWrapper.clientWidth;
-
-            timelineWrapper.scrollLeft =
-                porcentaje * scrollMax;
-        }
-    );
-
-    document
     .getElementById("cerrar-detalle")
     .addEventListener("click", () => {
 
@@ -873,7 +1084,7 @@ eventosGlobales
     .filter(
         e =>
             e.era === eraActual &&
-            e.colecciones.includes(coleccionActual)
+            (e.colecciones || []).includes(coleccionActual)
     )
     .sort(
         (a, b) => {
@@ -994,6 +1205,10 @@ document.querySelector(".timeline-line")
 
         const div = document.createElement("div");
         div.classList.add("evento");
+        if (!esPuntual(evento)) {
+            div.classList.add("periodo");
+        }
+        div.dataset.id = evento.id;
 
 const {
     left,
@@ -1028,7 +1243,10 @@ const centroX =
     );
 
     marca.style.left =
-        centroX + "px";
+        (esPuntual(evento)
+            ? centroX
+            : obtenerX(evento.inicio) + 10)
+        + "px";
 
     marca.innerHTML = `
         <div class="anio">
@@ -1039,6 +1257,35 @@ const centroX =
     marcasTiempo.appendChild(
         marca
     );
+}
+
+        if (!esPuntual(evento)
+            && evento.fin
+            && !aniosMostrados.has(evento.fin)) {
+
+    aniosMostrados.add(evento.fin);
+
+    const marcaFin =
+        document.createElement("div");
+
+    marcaFin.classList.add(
+        "marca-tiempo"
+    );
+
+    marcaFin.style.left =
+        (obtenerX(evento.fin) - 10)
+        + "px";
+
+    marcaFin.innerHTML = `
+        <div class="anio">
+            ${evento.fin}
+        </div>
+    `;
+
+    marcasTiempo.appendChild(
+        marcaFin
+    );
+
 }
 
         div.style.backgroundImage =
@@ -1072,6 +1319,18 @@ const centroX =
             "click",
             () => {
 
+                if (div.classList.contains("activo")) {
+
+                    div.classList.remove("activo");
+
+                    document
+                        .getElementById("detalle-evento")
+                        .classList.add("oculto");
+
+                    return;
+
+                }
+
                 document
                     .querySelectorAll(".evento")
                     .forEach(e =>
@@ -1085,62 +1344,122 @@ const centroX =
                 );
 
                 mostrarDetalle(evento);
-                console.log(evento.personajes);
-console.log(evento.reinos);
-console.log(evento.lugares);
-console.log(evento.consecuencias);
 
             }
         );
 
-        const punto =
-            document.createElement(
-                "div"
+        const xInicio =
+            obtenerX(evento.inicio);
+
+        const xFin =
+            obtenerX(
+                evento.fin || evento.inicio
             );
 
-        punto.classList.add(
-            "punto"
-        );
+        if (!esPuntual(evento)) {
 
-        punto.style.left =
-            (centroX - 7) + "px";
+            const margenPunto = 10;
 
-        punto.style.top =
-            "245px";
+            const xPuntoInicio =
+                xInicio + margenPunto;
 
-        timeline.appendChild(
-            punto
-        );
+            const xPuntoFin =
+                xFin - margenPunto;
 
-        const conector =
-            document.createElement(
-                "div"
+            const puntoInicio =
+                document.createElement("div");
+            puntoInicio.classList.add("punto");
+            puntoInicio.style.left =
+                (xPuntoInicio - 7) + "px";
+            puntoInicio.style.top = "245px";
+            timeline.appendChild(puntoInicio);
+
+            const puntoFin =
+                document.createElement("div");
+            puntoFin.classList.add("punto");
+            puntoFin.style.left =
+                (xPuntoFin - 7) + "px";
+            puntoFin.style.top = "245px";
+            timeline.appendChild(puntoFin);
+
+            const conectorInicio =
+                document.createElement("div");
+            conectorInicio.classList.add("conector");
+            conectorInicio.style.left =
+                xPuntoInicio + "px";
+            conectorInicio.style.top =
+                (topEvento + 48) + "px";
+            conectorInicio.style.height =
+                (257 - topEvento - 48) + "px";
+            timeline.appendChild(conectorInicio);
+
+            const conectorFin =
+                document.createElement("div");
+            conectorFin.classList.add("conector");
+            conectorFin.style.left =
+                xPuntoFin + "px";
+            conectorFin.style.top =
+                (topEvento + 48) + "px";
+            conectorFin.style.height =
+                (257 - topEvento - 48) + "px";
+            timeline.appendChild(conectorFin);
+
+            const marcadorInicio =
+                document.createElement("div");
+            marcadorInicio.classList.add(
+                "marcador-periodo"
             );
+            marcadorInicio.style.left =
+                (xPuntoInicio - left) + "px";
+            div.appendChild(marcadorInicio);
 
-        conector.classList.add(
-            "conector"
-        );
+            const marcadorFin =
+                document.createElement("div");
+            marcadorFin.classList.add(
+                "marcador-periodo"
+            );
+            marcadorFin.style.left =
+                (xPuntoFin - left) + "px";
+            div.appendChild(marcadorFin);
 
-        conector.style.left =
-            centroX + "px";
+        } else {
 
-        conector.style.top =
-            (topEvento + 48)
-            + "px";
+            const punto =
+                document.createElement("div");
+            punto.classList.add("punto");
+            punto.style.left =
+                (centroX - 7) + "px";
+            punto.style.top = "245px";
+            timeline.appendChild(punto);
 
-        conector.style.height =
-            (257 - topEvento - 48)
-            + "px";
+            const conector =
+                document.createElement("div");
+            conector.classList.add("conector");
+            conector.style.left =
+                centroX + "px";
+            conector.style.top =
+                (topEvento + 48) + "px";
+            conector.style.height =
+                (257 - topEvento - 48) + "px";
+            timeline.appendChild(conector);
 
-        timeline.appendChild(
-            conector
-        );
+        }
 
         timeline.appendChild(
             div
         );
 
     });
+
+    const inputBuscadorActivo =
+        document.getElementById("buscador");
+
+    if (inputBuscadorActivo) {
+        aplicarResaltadoBusqueda(inputBuscadorActivo.value);
+    }
+
+    reconstruirMinimapa();
+
 }
 /* ========================================
    DRAG SCROLL TIMELINE
@@ -1526,6 +1845,21 @@ document
    EDITOR · REINOS
 ======================================== */
 
+/* En eventos.json los reinos se guardan como objetos
+   {nombre, escudo} con el nombre "bonito" (p.ej. "A'Drien"),
+   pero los botones del editor usan slugs sencillos
+   (p.ej. "adrien"). Esta tabla traduce entre ambos mundos. */
+const REINOS = {
+    adrien: "A'Drien",
+    blavyr: "Blavyr",
+    gallarion: "Gallarion",
+    kalarch: "Kal'arch",
+    rehgis: "Rehgis",
+    reshkarch: "Reshk'arch",
+    vaelekin: "Vaelekin",
+    veanor: "Ve'anor"
+};
+
 const reinosSeleccionados = [];
 
 document
@@ -1577,8 +1911,202 @@ document
 });
 
 /* ========================================
+   EDITOR · LISTAS SIMPLES
+   (lugares, consecuencias, consecuencias destacadas)
+   Las tres funcionan igual: un input + botón "Añadir" que
+   mete un texto en un array, y una lista de chips con una
+   "×" para quitarlo. crearListaEditable() monta ese
+   comportamiento una vez por cada lista y devuelve la
+   función de redibujado, para poder llamarla también desde
+   rellenarFormularioEditor()/limpiarFormularioEditor().
+======================================== */
+
+function crearListaEditable({ idInput, idBoton, idLista, array }) {
+
+    const input = document.getElementById(idInput);
+    const boton = document.getElementById(idBoton);
+    const lista = document.getElementById(idLista);
+
+    function redibujar() {
+
+        lista.innerHTML = "";
+
+        array.forEach((valor, indice) => {
+
+            const chip =
+                document.createElement("div");
+
+            chip.className = "chip-editable";
+
+            chip.innerHTML = `
+                <span></span>
+                <button type="button" class="chip-quitar">×</button>
+            `;
+
+            chip.querySelector("span")
+                .textContent = valor;
+
+            chip.querySelector(".chip-quitar")
+                .addEventListener("click", () => {
+                    array.splice(indice, 1);
+                    redibujar();
+                });
+
+            lista.appendChild(chip);
+
+        });
+
+    }
+
+    function anadir() {
+
+        const valor = input.value.trim();
+
+        if (!valor) return;
+
+        array.push(valor);
+        input.value = "";
+
+        redibujar();
+
+    }
+
+    boton.addEventListener("click", anadir);
+
+    input.addEventListener("keydown", e => {
+
+        if (e.key === "Enter") {
+            e.preventDefault();
+            anadir();
+        }
+
+    });
+
+    return redibujar;
+
+}
+
+const lugaresSeleccionados = [];
+const consecuenciasSeleccionadas = [];
+const consecuenciasDestacadasSeleccionadas = [];
+
+const redibujarLugares = crearListaEditable({
+    idInput: "nuevo-lugar",
+    idBoton: "anadir-lugar",
+    idLista: "lista-lugares",
+    array: lugaresSeleccionados
+});
+
+const redibujarConsecuencias = crearListaEditable({
+    idInput: "nueva-consecuencia",
+    idBoton: "anadir-consecuencia",
+    idLista: "lista-consecuencias",
+    array: consecuenciasSeleccionadas
+});
+
+const redibujarConsecuenciasDestacadas = crearListaEditable({
+    idInput: "nueva-consecuencia-destacada",
+    idBoton: "anadir-consecuencia-destacada",
+    idLista: "lista-consecuencias-destacadas",
+    array: consecuenciasDestacadasSeleccionadas
+});
+
+/* ========================================
+   EDITOR · FIGURAS CLAVE (PERSONAJES)
+   Igual que las listas simples, pero cada entrada tiene dos
+   datos (nombre e imagen) en vez de uno solo.
+======================================== */
+
+const personajesSeleccionados = [];
+
+function redibujarPersonajes() {
+
+    const lista =
+        document.getElementById("lista-personajes");
+
+    lista.innerHTML = "";
+
+    personajesSeleccionados.forEach((personaje, indice) => {
+
+        const chip =
+            document.createElement("div");
+
+        chip.className = "chip-editable";
+
+        chip.innerHTML = `
+            <span></span>
+            <button type="button" class="chip-quitar">×</button>
+        `;
+
+        chip.querySelector("span")
+            .textContent = personaje.nombre;
+
+        chip.querySelector(".chip-quitar")
+            .addEventListener("click", () => {
+                personajesSeleccionados.splice(indice, 1);
+                redibujarPersonajes();
+            });
+
+        lista.appendChild(chip);
+
+    });
+
+}
+
+document
+.getElementById("anadir-personaje")
+.addEventListener("click", () => {
+
+    const nombreInput =
+        document.getElementById("nuevo-personaje-nombre");
+
+    const imagenInput =
+        document.getElementById("nuevo-personaje-imagen");
+
+    const nombre = nombreInput.value.trim();
+    const imagen = imagenInput.value.trim();
+
+    if (!nombre) return;
+
+    personajesSeleccionados.push({ nombre, imagen });
+
+    nombreInput.value = "";
+    imagenInput.value = "";
+
+    redibujarPersonajes();
+
+});
+
+/* ========================================
    EDITORES QUILL
 ======================================== */
+
+/* Quill nunca guarda un string realmente vacío: un editor
+   "sin escribir nada" produce "<p><br></p>", que para
+   JavaScript es un texto no vacío (truthy). Esta función
+   quita las etiquetas y comprueba si queda texto de verdad,
+   para poder distinguir "no hay relato" de "hay un párrafo
+   vacío". También sirve para eventos ya guardados antes de
+   este arreglo, que podrían tener ese HTML vacío en el JSON. */
+function textoTieneContenido(html) {
+
+    if (!html)
+        return false;
+
+    /* Una imagen (u otro contenido incrustado) sin texto
+       alrededor también cuenta como "hay contenido" */
+    if (/<img|<iframe|<video/i.test(html))
+        return true;
+
+    const textoPlano =
+        html
+            .replace(/<[^>]*>/g, "")
+            .replace(/&nbsp;/g, " ")
+            .trim();
+
+    return textoPlano.length > 0;
+
+}
 
 const editorDescripcion = new Quill(
     "#editor-descripcion",
@@ -1587,7 +2115,9 @@ const editorDescripcion = new Quill(
         placeholder: "Escribe una descripción breve del evento...",
         modules: {
             toolbar: [
+                [{ header: [1, 2, 3, false] }],
                 ["bold", "italic", "underline"],
+                [{ align: [] }],
                 [{ list: "bullet" }, { list: "ordered" }],
                 ["blockquote"],
                 ["link"],
@@ -1604,7 +2134,9 @@ const editorContinuacion = new Quill(
         placeholder: "Escribe aquí el relato completo...",
         modules: {
             toolbar: [
+                [{ header: [1, 2, 3, false] }],
                 ["bold", "italic", "underline"],
+                [{ align: [] }],
                 [{ list: "bullet" }, { list: "ordered" }],
                 ["blockquote"],
                 ["link"],
@@ -1657,13 +2189,29 @@ function rellenarFormularioEditor(evento) {
 
     });
 
-    /* Reinos: sincronizamos el array que usa el editor con
-       los reinos guardados en el evento. */
+    /* Reinos: el evento guarda {nombre, escudo}, así que
+       traducimos el nombre de vuelta a su slug para poder
+       marcar el chip correspondiente como activo. */
     reinosSeleccionados.length = 0;
 
-    (evento.reinos || []).forEach(reino =>
-        reinosSeleccionados.push(reino)
-    );
+    (evento.reinos || []).forEach(reino => {
+
+        const nombre =
+            typeof reino === "object"
+                ? reino.nombre
+                : reino;
+
+        const slug =
+            Object.keys(REINOS).find(
+                clave =>
+                    REINOS[clave].toLowerCase() ===
+                    (nombre || "").toLowerCase()
+            );
+
+        if (slug)
+            reinosSeleccionados.push(slug);
+
+    });
 
     document
     .querySelectorAll(".editor-reino")
@@ -1677,6 +2225,35 @@ function rellenarFormularioEditor(evento) {
         );
 
     });
+
+    /* Lugares, consecuencias y figuras clave */
+    lugaresSeleccionados.length = 0;
+    (evento.lugares || []).forEach(l =>
+        lugaresSeleccionados.push(l)
+    );
+    redibujarLugares();
+
+    consecuenciasSeleccionadas.length = 0;
+    (evento.consecuencias || []).forEach(c =>
+        consecuenciasSeleccionadas.push(c)
+    );
+    redibujarConsecuencias();
+
+    consecuenciasDestacadasSeleccionadas.length = 0;
+    (evento.consecuenciasDestacadas || []).forEach(c =>
+        consecuenciasDestacadasSeleccionadas.push(c)
+    );
+    redibujarConsecuenciasDestacadas();
+
+    personajesSeleccionados.length = 0;
+    (evento.personajes || []).forEach(p =>
+        personajesSeleccionados.push(
+            typeof p === "object"
+                ? { ...p }
+                : { nombre: p, imagen: "" }
+        )
+    );
+    redibujarPersonajes();
 
     /* Relato: la descripción breve (la que aparece bajo el
        título en el panel de detalle) va en el editor
@@ -1739,6 +2316,18 @@ function limpiarFormularioEditor() {
         boton.classList.remove("activo")
     );
 
+    lugaresSeleccionados.length = 0;
+    redibujarLugares();
+
+    consecuenciasSeleccionadas.length = 0;
+    redibujarConsecuencias();
+
+    consecuenciasDestacadasSeleccionadas.length = 0;
+    redibujarConsecuenciasDestacadas();
+
+    personajesSeleccionados.length = 0;
+    redibujarPersonajes();
+
     editorDescripcion.setText("");
     editorContinuacion.setText("");
 
@@ -1762,11 +2351,26 @@ document
 
         const evento = eventoEditando || {};
 
-        evento.titulo =
-            document.getElementById("ev-titulo").value;
+        const titulo =
+            document.getElementById("ev-titulo").value.trim();
+
+        const inicio =
+            document.getElementById("ev-inicio").value;
+
+        if (!titulo || inicio === "") {
+
+            alert(
+                "El evento necesita al menos un título y un año de inicio."
+            );
+
+            return;
+
+        }
+
+        evento.titulo = titulo;
 
         evento.inicio =
-            Number(document.getElementById("ev-inicio").value);
+            Number(inicio);
 
         evento.fin =
             Number(document.getElementById("ev-fin").value);
@@ -1785,7 +2389,9 @@ document
             editorDescripcion.root.innerHTML;
 
         evento.textoCompleto =
-            editorContinuacion.root.innerHTML;
+            textoTieneContenido(editorContinuacion.root.innerHTML)
+                ? editorContinuacion.root.innerHTML
+                : "";
 
         /* Colecciones: las que estén marcadas como "activa".
            Si no hay ninguna marcada, cae en "general" para
@@ -1798,8 +2404,23 @@ document
             evento.colecciones = ["general"];
         }
 
-        /* Reinos */
-        evento.reinos = [...reinosSeleccionados];
+        /* Reinos: traducimos cada slug a su nombre "bonito" */
+        evento.reinos =
+            reinosSeleccionados.map(slug => ({
+                nombre: REINOS[slug],
+                escudo: ""
+            }));
+
+        /* Lugares, consecuencias y figuras clave. Copiamos
+           los arrays (con spread / map) en vez de asignarlos
+           directamente, para que cada evento tenga su propia
+           lista y no comparta referencia con el formulario. */
+        evento.lugares = [...lugaresSeleccionados];
+        evento.consecuencias = [...consecuenciasSeleccionadas];
+        evento.consecuenciasDestacadas =
+            [...consecuenciasDestacadasSeleccionadas];
+        evento.personajes =
+            personajesSeleccionados.map(p => ({ ...p }));
 
         /* Imagen: según el origen seleccionado. El origen
            "subida" no se guarda (es una vista previa local,
@@ -1823,27 +2444,62 @@ document
 
         }
 
+        /* Posición del encuadre: aquí es donde antes se
+           perdía el ajuste que hacías arrastrando/haciendo
+           zoom en el editor — se guardaba la ruta de la
+           imagen, pero nunca el encuadre elegido. Solo tiene
+           sentido guardarlo si la imagen llegó a cargar de
+           verdad en el editor (naturalWidth > 0); si no hay
+           imagen, o el origen es "subida" (no persistente),
+           se limpia para que el detalle caiga en su valor
+           por defecto (centrado). */
+        if (evento.imagen && editorPanel.imagen.naturalWidth) {
+
+            const fondoPanel =
+                editorPanel.obtenerFondoCSS();
+
+            evento.imagenPosX = fondoPanel.x;
+            evento.imagenPosY = fondoPanel.y;
+
+        } else {
+
+            delete evento.imagenPosX;
+            delete evento.imagenPosY;
+
+        }
+
+        if (evento.imagen && editorCard.imagen.naturalWidth) {
+
+            const fondoCard =
+                editorCard.obtenerFondoCSS();
+
+            evento.cardPosX = fondoCard.x;
+            evento.cardPosY = fondoCard.y;
+
+        } else {
+
+            delete evento.cardPosX;
+            delete evento.cardPosY;
+
+        }
+
         if (esNuevo) {
 
-            evento.id = Date.now();
-
-            evento.lugares = [];
-            evento.personajes = [];
-            evento.consecuencias = [];
-            evento.consecuenciasDestacadas = [];
+            evento.id = generarIdUnico();
 
             eventosGlobales.push(evento);
 
         }
 
-        eventoEditando = null;
-
         renderizarTimeline();
 
-        document
-            .getElementById("editor-evento")
-            .classList
-            .remove("abierto");
+        /* Actualización en vivo: si el panel de detalle está
+           abierto (o si acabamos de crear un evento nuevo),
+           lo refrescamos con los datos recién guardados en
+           vez de obligar a cerrar y volver a abrir la
+           tarjeta. mostrarDetalle() ya se encarga de dejar
+           eventoEditando apuntando a este evento. */
+        mostrarDetalle(evento);
 
     });
 
@@ -1882,3 +2538,735 @@ document
         URL.revokeObjectURL(url);
 
     });
+
+/* ========================================
+   BOTÓN IMPORTAR JSON
+   Carga un eventos.json desde el disco y sustituye los
+   eventos que hay en memoria. Útil para retomar un archivo
+   que ya tenías exportado, o para pegar eventos escritos a
+   mano. Antes de sustituir nada, se valida y se rellenan los
+   campos que falten, para que un JSON incompleto no rompa el
+   render de la cronología (ver generarPosiciones / el filtro
+   de renderizarTimeline, que ya esperan estos campos).
+======================================== */
+
+function sanearEventoImportado(evento, idsUsados) {
+
+    const saneado = { ...evento };
+
+    if (
+        typeof saneado.titulo !== "string" ||
+        !saneado.titulo.trim()
+    ) {
+        return null;
+    }
+
+    if (
+        typeof saneado.inicio !== "number" ||
+        Number.isNaN(saneado.inicio)
+    ) {
+        return null;
+    }
+
+    if (
+        !["antigua", "clasica", "actual"].includes(saneado.era)
+    ) {
+        saneado.era = "actual";
+    }
+
+    if (
+        typeof saneado.fin !== "number" ||
+        Number.isNaN(saneado.fin)
+    ) {
+        saneado.fin = saneado.inicio;
+    }
+
+    if (
+        !Array.isArray(saneado.colecciones) ||
+        saneado.colecciones.length === 0
+    ) {
+        saneado.colecciones = ["general"];
+    }
+
+    saneado.lugares =
+        Array.isArray(saneado.lugares) ? saneado.lugares : [];
+
+    saneado.reinos =
+        Array.isArray(saneado.reinos) ? saneado.reinos : [];
+
+    saneado.personajes =
+        Array.isArray(saneado.personajes) ? saneado.personajes : [];
+
+    saneado.consecuencias =
+        Array.isArray(saneado.consecuencias) ? saneado.consecuencias : [];
+
+    saneado.consecuenciasDestacadas =
+        Array.isArray(saneado.consecuenciasDestacadas)
+            ? saneado.consecuenciasDestacadas
+            : [];
+
+    saneado.color = saneado.color || "#4e0a09";
+
+    /* Id: lo conservamos si existe y todavía no se ha usado
+       dentro de este mismo archivo importado; si falta o está
+       repetido, se genera uno nuevo para evitar que dos
+       eventos distintos acaben compartiendo id. */
+    if (
+        typeof saneado.id !== "number" ||
+        idsUsados.has(saneado.id)
+    ) {
+        let nuevoId = Date.now() + idsUsados.size;
+        while (idsUsados.has(nuevoId)) nuevoId++;
+        saneado.id = nuevoId;
+    }
+
+    idsUsados.add(saneado.id);
+
+    return saneado;
+
+}
+
+document
+    .querySelector(".editor-importar")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("editor-import-file")
+            .click();
+
+    });
+
+document
+    .getElementById("editor-import-file")
+    .addEventListener("change", (e) => {
+
+        const archivo = e.target.files[0];
+
+        e.target.value = "";
+
+        if (!archivo)
+            return;
+
+        const lector = new FileReader();
+
+        lector.onload = () => {
+
+            let datos;
+
+            try {
+
+                datos = JSON.parse(lector.result);
+
+            } catch (error) {
+
+                alert(
+                    "Ese archivo no es un JSON válido. Revisa el formato e inténtalo de nuevo."
+                );
+
+                return;
+
+            }
+
+            if (!Array.isArray(datos)) {
+
+                alert(
+                    "El JSON debe ser una lista de eventos (un array), como el que genera \"Exportar JSON\"."
+                );
+
+                return;
+
+            }
+
+            const confirmado = confirm(
+                `Vas a importar ${datos.length} eventos. Esto sustituirá ` +
+                `todos los eventos que tienes cargados ahora mismo (los ` +
+                `que no hayas exportado se perderán). ¿Continuar?`
+            );
+
+            if (!confirmado)
+                return;
+
+            const idsUsados = new Set();
+
+            const eventosSaneados =
+                datos
+                    .map(evento =>
+                        sanearEventoImportado(evento, idsUsados)
+                    )
+                    .filter(evento => evento !== null);
+
+            const descartados =
+                datos.length - eventosSaneados.length;
+
+            eventosGlobales = eventosSaneados;
+            eventoEditando = null;
+
+            document
+                .getElementById("detalle-evento")
+                .classList.add("oculto");
+
+            renderizarTimeline();
+
+            if (descartados > 0) {
+
+                alert(
+                    `Se importaron ${eventosSaneados.length} eventos. ` +
+                    `${descartados} se descartaron por no tener al menos ` +
+                    `un título y un año de inicio válidos.`
+                );
+
+            }
+
+        };
+
+        lector.onerror = () => {
+
+            alert(
+                "No se pudo leer el archivo. Inténtalo de nuevo."
+            );
+
+        };
+
+        lector.readAsText(archivo);
+
+    });
+
+/* ========================================
+   REDIMENSIONAR EL PANEL DEL EDITOR
+   Arrastrando el tirador del borde izquierdo se puede
+   ensanchar o estrechar el panel, entre un mínimo (para que
+   los campos sigan siendo legibles) y un máximo (para que no
+   se coma toda la pantalla). El ancho se guarda en
+   localStorage para que se recuerde entre visitas.
+======================================== */
+
+(function () {
+
+    const panel =
+        document.getElementById("editor-evento");
+
+    const tirador =
+        document.getElementById("editor-resize-handle");
+
+    if (!panel || !tirador)
+        return;
+
+    const CLAVE_ANCHO = "granSiniestraAnchoEditor";
+    const ANCHO_MINIMO = 360;
+
+    const anchoMaximo = () =>
+        Math.min(900, window.innerWidth * 0.9);
+
+    /* Restaura el último ancho usado, si había uno guardado */
+    const anchoGuardado =
+        Number(localStorage.getItem(CLAVE_ANCHO));
+
+    if (anchoGuardado) {
+
+        panel.style.width =
+            Math.max(
+                ANCHO_MINIMO,
+                Math.min(anchoMaximo(), anchoGuardado)
+            ) + "px";
+
+    }
+
+    let arrastrando = false;
+    let anchoInicial = 0;
+    let xInicial = 0;
+
+    tirador.addEventListener("pointerdown", (e) => {
+
+        arrastrando = true;
+        xInicial = e.clientX;
+
+        anchoInicial =
+            panel.getBoundingClientRect().width;
+
+        panel.classList.add("redimensionando");
+        tirador.classList.add("arrastrando");
+
+        tirador.setPointerCapture(e.pointerId);
+
+        e.preventDefault();
+
+    });
+
+    tirador.addEventListener("pointermove", (e) => {
+
+        if (!arrastrando)
+            return;
+
+        /* El tirador está en el borde izquierdo de un panel
+           anclado a la derecha de la pantalla: arrastrar
+           hacia la izquierda (delta negativo respecto al
+           punto de partida) tiene que ENSANCHAR el panel. */
+        const delta =
+            xInicial - e.clientX;
+
+        let nuevoAncho =
+            anchoInicial + delta;
+
+        nuevoAncho = Math.max(
+            ANCHO_MINIMO,
+            Math.min(anchoMaximo(), nuevoAncho)
+        );
+
+        panel.style.width =
+            nuevoAncho + "px";
+
+    });
+
+    function terminarArrastre() {
+
+        if (!arrastrando)
+            return;
+
+        arrastrando = false;
+
+        panel.classList.remove("redimensionando");
+        tirador.classList.remove("arrastrando");
+
+        localStorage.setItem(
+            CLAVE_ANCHO,
+            Math.round(
+                panel.getBoundingClientRect().width
+            )
+        );
+
+    }
+
+    tirador.addEventListener("pointerup", terminarArrastre);
+    tirador.addEventListener("pointercancel", terminarArrastre);
+
+})();
+
+
+/* ========================================
+   BÚSQUEDA
+   Es GLOBAL: mira en todas las eras y colecciones a la vez,
+   no solo en la que tienes abierta ahora mismo. Un resultado
+   fuera de la vista actual se puede abrir directamente desde
+   el desplegable — eso cambia de pestaña por ti, así que no
+   hace falta adivinar antes dónde vive cada cosa.
+======================================== */
+
+const NOMBRES_ERA_BUSQUEDA = {
+    antigua: "Historia Antigua",
+    clasica: "Historia Clásica",
+    actual: "Actualidad"
+};
+
+function nombreColeccionBusqueda(slug) {
+
+    if (!slug || slug === "general")
+        return "General";
+
+    return REINOS[slug] || slug;
+
+}
+
+/* Quita etiquetas HTML y deja solo el texto legible, para
+   poder buscar dentro de "descripción" y "relato
+   continuación" sin que las etiquetas cuenten como texto. */
+function textoPlanoDe(html) {
+
+    if (!html)
+        return "";
+
+    return html
+        .replace(/<[^>]*>/g, " ")
+        .replace(/&nbsp;/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+function escaparHTML(str) {
+
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+
+}
+
+/* Envuelve en <mark> cada aparición del término dentro del
+   texto, escapando el resto para no introducir HTML sin
+   querer. */
+function resaltarTermino(texto, termino) {
+
+    if (!termino)
+        return escaparHTML(texto);
+
+    const escapadoRegex =
+        termino.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    const regex = new RegExp(`(${escapadoRegex})`, "gi");
+
+    return texto
+        .split(regex)
+        .map((parte, i) =>
+            i % 2 === 1
+                ? `<mark>${escaparHTML(parte)}</mark>`
+                : escaparHTML(parte)
+        )
+        .join("");
+
+}
+
+/* Recorta un fragmento de texto centrado en la primera
+   aparición del término, para mostrar contexto sin volcar
+   el relato entero en el resultado. */
+function extraerFragmentoBusqueda(texto, termino) {
+
+    const indice =
+        texto.toLowerCase().indexOf(termino);
+
+    if (indice === -1)
+        return texto.slice(0, 120);
+
+    const inicio = Math.max(0, indice - 40);
+    const fin = Math.min(texto.length, indice + termino.length + 60);
+
+    let fragmento = texto.slice(inicio, fin);
+
+    if (inicio > 0) fragmento = "…" + fragmento;
+    if (fin < texto.length) fragmento = fragmento + "…";
+
+    return fragmento;
+
+}
+
+function buscarEventos(query) {
+
+    const termino = query.trim().toLowerCase();
+
+    if (termino.length < 2)
+        return [];
+
+    const resultados = [];
+
+    eventosGlobales.forEach(evento => {
+
+        const titulo = evento.titulo || "";
+        const descripcion = textoPlanoDe(evento.descripcion);
+        const continuacion = textoPlanoDe(evento.textoCompleto);
+
+        const enTitulo = titulo.toLowerCase().includes(termino);
+        const enDescripcion = descripcion.toLowerCase().includes(termino);
+        const enContinuacion = continuacion.toLowerCase().includes(termino);
+
+        if (!enTitulo && !enDescripcion && !enContinuacion)
+            return;
+
+        let fuente = "titulo";
+        let textoFuente = "";
+
+        if (!enTitulo) {
+
+            if (enDescripcion) {
+                fuente = "descripcion";
+                textoFuente = descripcion;
+            } else {
+                fuente = "continuacion";
+                textoFuente = continuacion;
+            }
+
+        }
+
+        resultados.push({
+            evento,
+            fuente,
+            fragmento:
+                fuente === "titulo"
+                    ? ""
+                    : extraerFragmentoBusqueda(textoFuente, termino)
+        });
+
+    });
+
+    /* Los que coinciden en el título primero — es la
+       coincidencia más directa. */
+    resultados.sort((a, b) => {
+        if (a.fuente === "titulo" && b.fuente !== "titulo") return -1;
+        if (a.fuente !== "titulo" && b.fuente === "titulo") return 1;
+        return 0;
+    });
+
+    return resultados.slice(0, 15);
+
+}
+
+function mostrarResultadosBusqueda(resultados, termino) {
+
+    const contenedor =
+        document.getElementById("resultados-busqueda");
+
+    if (resultados.length === 0) {
+
+        contenedor.innerHTML = `
+            <div class="resultado-vacio">
+                Sin resultados para «${escaparHTML(termino)}»
+            </div>
+        `;
+
+        contenedor.classList.remove("oculto");
+        return;
+
+    }
+
+    contenedor.innerHTML =
+        resultados.map(r => `
+            <button class="resultado-busqueda" data-id="${r.evento.id}">
+                <div class="resultado-cabecera">
+                    <span class="resultado-titulo">
+                        ${resaltarTermino(r.evento.titulo || "", termino)}
+                    </span>
+                    <span class="resultado-tag">
+                        ${NOMBRES_ERA_BUSQUEDA[r.evento.era] || r.evento.era}
+                        ·
+                        ${nombreColeccionBusqueda((r.evento.colecciones || [])[0])}
+                    </span>
+                </div>
+                ${
+                    r.fragmento
+                        ? `<div class="resultado-fragmento">${resaltarTermino(r.fragmento, termino)}</div>`
+                        : ""
+                }
+            </button>
+        `).join("");
+
+    contenedor.classList.remove("oculto");
+
+    contenedor.querySelectorAll(".resultado-busqueda").forEach(boton => {
+
+        boton.addEventListener("click", () => {
+
+            const evento =
+                eventosGlobales.find(
+                    e => e.id === Number(boton.dataset.id)
+                );
+
+            if (evento) irAEvento(evento);
+
+            contenedor.classList.add("oculto");
+
+            const inputBuscador =
+                document.getElementById("buscador");
+
+            inputBuscador.value = "";
+
+            aplicarResaltadoBusqueda("");
+
+        });
+
+    });
+
+}
+
+/* Cambia de era/colección (si hace falta) para que el evento
+   pase a estar visible, sincroniza el estado visual de las
+   pestañas correspondientes, y abre su detalle directamente. */
+function irAEvento(evento) {
+
+    eraActual = evento.era;
+
+    const coleccion =
+        (evento.colecciones || []).includes("general")
+            ? "general"
+            : (evento.colecciones || [])[0] || "general";
+
+    coleccionActual = coleccion;
+
+    document
+        .querySelectorAll(".era-btn")
+        .forEach(b =>
+            b.classList.toggle(
+                "activo",
+                b.dataset.era === eraActual
+            )
+        );
+
+    if (coleccion === "general") {
+
+        casaActiva = null;
+
+        document
+            .querySelectorAll(".casa-btn")
+            .forEach(b => b.classList.remove("activa"));
+
+        cronologiaGeneralAbierta = true;
+
+        erasGeneral.classList.remove("oculto");
+
+        document
+            .getElementById("flecha-cronologia")
+            .classList.remove("abierta");
+
+    } else {
+
+        casaActiva = coleccion;
+
+        document
+            .querySelectorAll(".casa-btn")
+            .forEach(b =>
+                b.classList.toggle(
+                    "activa",
+                    b.dataset.casa === coleccion
+                )
+            );
+
+        cronologiaGeneralAbierta = false;
+
+        erasGeneral.classList.add("oculto");
+
+        document
+            .getElementById("flecha-cronologia")
+            .classList.add("abierta");
+
+    }
+
+    renderizarTimeline();
+
+    /* Esperamos al siguiente frame para que la tarjeta ya
+       exista en el DOM antes de intentar centrarla. */
+    requestAnimationFrame(() => {
+
+        const tarjeta =
+            timeline.querySelector(
+                `.evento[data-id="${evento.id}"]`
+            );
+
+        if (tarjeta) {
+
+            timelineWrapper.scrollLeft =
+                tarjeta.offsetLeft
+                - (timelineWrapper.clientWidth / 2)
+                + (tarjeta.offsetWidth / 2);
+
+        }
+
+        mostrarDetalle(evento);
+
+    });
+
+}
+
+/* Resalta (o difumina) las tarjetas YA visibles en la
+   cronología actual según coincidan o no con la búsqueda —
+   complementa al desplegable, que es el que de verdad
+   permite saltar a resultados de otras eras/colecciones. */
+function aplicarResaltadoBusqueda(query) {
+
+    const termino = query.trim().toLowerCase();
+
+    document.querySelectorAll(".evento").forEach(div => {
+
+        if (!termino) {
+
+            div.classList.remove(
+                "buscado-coincide",
+                "buscado-difuminado"
+            );
+
+            return;
+
+        }
+
+        const evento =
+            eventosGlobales.find(
+                e => String(e.id) === div.dataset.id
+            );
+
+        if (!evento)
+            return;
+
+        const coincide =
+            (evento.titulo || "").toLowerCase().includes(termino) ||
+            textoPlanoDe(evento.descripcion).toLowerCase().includes(termino) ||
+            textoPlanoDe(evento.textoCompleto).toLowerCase().includes(termino);
+
+        div.classList.toggle("buscado-coincide", coincide);
+        div.classList.toggle("buscado-difuminado", !coincide);
+
+    });
+
+}
+
+const inputBuscador = document.getElementById("buscador");
+const resultadosBusqueda = document.getElementById("resultados-busqueda");
+const btnClear = document.getElementById("buscador-clear");
+const wrapperBuscador = inputBuscador
+    ? inputBuscador.closest(".buscador-wrapper")
+    : null;
+
+function toggleClearBtn() {
+
+    if (!wrapperBuscador) return;
+
+    if (inputBuscador.value.length > 0) {
+
+        wrapperBuscador.classList.add("con-texto");
+
+    } else {
+
+        wrapperBuscador.classList.remove("con-texto");
+
+    }
+
+}
+
+if (btnClear) {
+
+    btnClear.addEventListener("click", () => {
+
+        inputBuscador.value = "";
+        toggleClearBtn();
+        aplicarResaltadoBusqueda("");
+        resultadosBusqueda.classList.add("oculto");
+        inputBuscador.focus();
+
+    });
+
+}
+
+inputBuscador.addEventListener("input", () => {
+
+    const termino = inputBuscador.value;
+
+    toggleClearBtn();
+    aplicarResaltadoBusqueda(termino);
+
+    if (termino.trim().length < 2) {
+        resultadosBusqueda.classList.add("oculto");
+        return;
+    }
+
+    mostrarResultadosBusqueda(
+        buscarEventos(termino),
+        termino.trim()
+    );
+
+});
+
+inputBuscador.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+
+        inputBuscador.value = "";
+        toggleClearBtn();
+        aplicarResaltadoBusqueda("");
+        resultadosBusqueda.classList.add("oculto");
+        inputBuscador.blur();
+
+    }
+
+});
+
+document.addEventListener("click", (e) => {
+
+    if (!e.target.closest(".cronologia-busqueda")) {
+        resultadosBusqueda.classList.add("oculto");
+    }
+
+});

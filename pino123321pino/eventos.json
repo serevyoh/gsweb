@@ -5,18 +5,19 @@
         "colecciones": [
             "general"
         ],
-        "titulo": "Siniestra, el Viejo Continente",
-        "inicio": 1738,
-        "fin": 1738,
+        "titulo": "Siniestra",
+        "inicio": 1238,
+        "fin": 1,
         "tipo": "Leyenda",
         "color": "#852929",
         "imagen": "",
-        "descripcion": "<div>La casa <b>Ve'anor </b>controla toda su expansión desde siglos atrás, cuando todos los otros reinos del continente decidieron nombrarla como la casa real para unificar <b>Siniestra</b>.</div><div>Entre los reinos más influentes están:</div><div><br></div><div>El reino <b>Dellëria</b>, con las casas A'Drien, Erindir, Riandriel.</div><div>El reino <b>Borghild</b>, con las casas Rehgis, Agnium, Nashir.</div><div>El reino <b>Lorentia</b>, con las casas Kal'Arch y Reshk'Arch.</div><div>El reino <b>Rod'eär</b>, con las casas Gallarion, Raendim, Dris'lor.</div><div>El reino <b>Assarion</b>, con las casas Vaelekin, Blavyr, Galadhea.</div>",
+        "descripcion": "<h3 class=\"ql-align-center\"><strong>El Viejo Continente</strong></h3><p>Fue en el siglo V que se encontraron los primeros registros que nombran al contienente como Siniestra.</p><p><br></p><p>Los reinos se repartían el territorio en guerras y disputas, y los que antes eran clanes empezaron a ser conocidos por sus apellidos y crear las casas que gobernarían el continente.</p><p><br></p><p>De entre todos los reinos que existieron, estos fueron los más relevantes:</p><p><br></p><p>El reino <strong>Dellëria</strong>, con las casas A'Drien, Erindir, Riandriel y Cee'len.</p><p>El reino <strong>Borghild</strong>, con las casas Rehgis, Agnium, Nashir.</p><p>El reino <strong>Lorentia</strong>, con las casas Kal'arch, Rahdun, Reshk'arch, Nas'thae.</p><p>El reino <strong>Rod'eär</strong>, con las casas Gallarion, Raendim, Dris'lor.</p><p>El reino <strong>Assarion</strong>, con las casas Vaelekin, Blavyr, Galadhea, Vahgyr, Ojo Negro y Dar’Zahlan.</p><p><br></p><p>Alrededor del siglo X la casa <strong>Ve'anor</strong>, tras una gran campaña llevada a cabo por <strong>Kaelen Ve'anor</strong>, tomaron el control del continente, poniendo bajo una única corona el control de todos los reinos y unificando todo el territorio.</p><p>Esta unificación se pudo llevar a cabo gracias a décadas de tratados, campañas y una estratégica contienda militar y diplomática por parte de los <strong>Ve'anor </strong>gracias a la cual muchos reinos acabaron cayendo en una relación de necesidad para con sus nuevos reyes.</p><p><br></p><p>El reinado de los <strong>Ve'anor </strong>ser caracterizaba por sus grandes alianzas con el resto de casas del continente. Poseían muchas alianzas matrimoniales y comerciales, lo que les brindaba sustento económico y estratégico siempre que lo necesitaban. Además, la casa <strong>Ve'anor </strong>contaba con una estructura de poder muy marcada y sólida. Sumado a sus alianzas, entrar en conflicto bélico con los <strong>Ve'anor</strong>, incluso antes de ser reyes del continente, resultaba en un fracaso absoluto.</p><p><br></p><p>Tanto era así que por aquel entonces se empezaba a usar la frase <em>\"nada salpica a un Ve'anor\"</em>.</p><p><br></p><p>A partir de este momento, <strong>Hiniestra </strong>pasó a ser la capital del Reino de Siniestra. Ubicada en el centro del continente y rodeada por las tierras más fértiles que había, la ciudad era la mayor fortaleza que habían construido los hombres y donde, en el futuro, generación tras generación de reyes ocuparon el trono y gobernaron sus tierras.</p>",
         "lugares": [],
         "consecuencias": [],
         "consecuenciasDestacadas": [],
         "reinos": [],
-        "personajes": []
+        "personajes": [],
+        "textoCompleto": ""
     },
     {
         "id": 1781894364429,
@@ -167,16 +168,22 @@
             "general"
         ],
         "titulo": "El Libro de Tasmabia",
-        "imagenPosX": "65%",
-        "imagenPosY": "50%",
-        "cardPosX": "15%",
-        "cardPosY": "10%",
-        "inicio": 927,
-        "fin": 927,
+        "imagenPosX": "50.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "50.0%",
+        "inicio": 314,
+        "fin": 314,
         "tipo": "Descubrimiento",
         "color": "#40205e",
         "imagen": "img/eventos/tasmabia.jpg",
-        "descripcion": "Al norte de Menesa, en uno de los lagos de la zona, se encontraron unos extraños y antiguos pergaminos, tildados como los Pergaminos de la Magia o el Libro de Tasmabia. Estos escritos fueron encontrados gracias a la carta de un esqueleto encontrado en las ruinas de Jhielel tras una de las guerras del norte. Según la misma, en esos documentos se reveló lo que hasta entonces era un secreto de la magia; la Kael'entia."
+        "descripcion": "<p>En las montañas del Valle del Lir, en uno de los lagos de la zona, se encontró un pesado libro lleno de acotaciones, incisos y documentos; este tomo fue bautizado como <strong>el Libro de Tasmabia, </strong>en reconocimiento al reino donde su autor, Abiel, realizó la gran mayoría de descubrimientos.</p><p><br></p><p>Según este libro, Abiel era uno de los XX Muras al servicio del rey Vekryl III Ve'anor que, por razones aún desconocidas y no recogidas en el libro, no acompañó al monarca en su exilio. Este libro recoge innumerables descubrimientos sobre la magia en todas sus formas. Es también el primer documento donde se revela de forma clara lo que hasta entonces era un secreto de la magia; la<strong> Kael'entia. </strong>Este libro registra, además, <strong>sus efectos, consecuencias </strong>y la posterior conversión de Abiel en <strong>Kaer'lohr</strong>.  El contenido restante del libro sigue encriptado, y el peligro que puede desentrañar el resto de conocimientos es considerado un secreto de estado, razón por la que el libro está cerrado con cadenas de Viasrion en un lugar desconocido.</p><p><br></p><p>La localización, así como el resto del conocimiento descifrado de este libro,<strong> es privado y únicamente conocido por el Monarca y los líderes de las Siete Grandes Casas</strong>, y la principal razón por la que se fundó el Registro Real de Lohres y la persecucción de los lohres ilegales y Kaer'lohres.</p><p><br></p><p>La ubicación del Libro de Tasmabia es uno de los procesos internos y privados que efectúa el líder de una Gran Casa cuando nombra y elige a su sucesor.</p>",
+        "textoCompleto": "",
+        "reinos": [],
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "personajes": []
     },
     {
         "id": 1781896583213,

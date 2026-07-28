@@ -25,14 +25,6 @@ class ImageEditor{
         this.reset =
             document.querySelector(config.reset);
 
-        this.estado = {
-
-            posX:0,
-            posY:0,
-            scale:1
-
-        };
-
         this.posX = 0;
         this.posY = 0;
         this.scale = 1;
@@ -66,6 +58,11 @@ inicializar(){
     document.addEventListener(
         "mouseup",
         this.finalizarDrag.bind(this)
+    );
+
+    this.reset.addEventListener(
+        "click",
+        () => this.centrarImagen()
     );
 
 this.zoom.addEventListener(
@@ -145,15 +142,6 @@ finalizarDrag(){
 actualizarTransform(){
 
     this.limitarMovimiento();
-
-    this.estado.posX =
-        this.posX;
-
-    this.estado.posY =
-        this.posY;
-
-    this.estado.scale =
-        this.scale;
 
     this.imagen.style.transform = `
         translate(
@@ -254,21 +242,86 @@ this.zoom.value = escalaBase;
 
 }
 
-cargarEstado(posX,posY,scale){
+/* Convierte la posición/zoom actuales del editor en el
+   formato que usa CSS (background-position en %) para poder
+   guardarlo y reutilizarlo en CUALQUIER contenedor, no solo
+   en este editor — la tarjeta y el panel de detalle tienen
+   proporciones distintas al recuadro de este editor, así que
+   guardar píxeles concretos no serviría de nada fuera de
+   aquí. El porcentaje, en cambio, representa "qué punto de
+   la imagen queda anclado" y se traduce razonablemente bien
+   a cualquier proporción de contenedor. */
+obtenerFondoCSS(){
 
-    if(
-        posX === undefined ||
-        posY === undefined ||
-        scale === undefined
+    const anchoMarco =
+        this.preview.clientWidth;
+
+    const altoMarco =
+        this.preview.clientHeight;
+
+    const anchoImagen =
+        this.imagen.naturalWidth * this.scale;
+
+    const altoImagen =
+        this.imagen.naturalHeight * this.scale;
+
+    const excesoX = anchoImagen - anchoMarco;
+    const excesoY = altoImagen - altoMarco;
+
+    const porcentajeX =
+        excesoX > .5
+            ? (-this.posX / excesoX) * 100
+            : 50;
+
+    const porcentajeY =
+        excesoY > .5
+            ? (-this.posY / excesoY) * 100
+            : 50;
+
+    return {
+        x: Math.max(0, Math.min(100, porcentajeX)).toFixed(1) + "%",
+        y: Math.max(0, Math.min(100, porcentajeY)).toFixed(1) + "%"
+    };
+
+}
+
+/* La operación inversa: a partir de un porcentaje guardado,
+   recoloca la imagen dentro de ESTE editor (con las
+   dimensiones que tenga en este momento). Se usa al abrir
+   "Editar evento" en un evento que ya tenía una posición
+   guardada. */
+cargarFondoCSS(porcentajeX, porcentajeY){
+
+    if (
+        porcentajeX === undefined ||
+        porcentajeY === undefined
     ){
+        this.centrarImagen();
         return;
     }
 
-    this.posX = posX;
-    this.posY = posY;
-    this.scale = scale;
+    this.centrarImagen();
 
-    this.zoom.value = scale;
+    const anchoMarco =
+        this.preview.clientWidth;
+
+    const altoMarco =
+        this.preview.clientHeight;
+
+    const anchoImagen =
+        this.imagen.naturalWidth * this.scale;
+
+    const altoImagen =
+        this.imagen.naturalHeight * this.scale;
+
+    const excesoX = anchoImagen - anchoMarco;
+    const excesoY = altoImagen - altoMarco;
+
+    const px = parseFloat(porcentajeX) || 50;
+    const py = parseFloat(porcentajeY) || 50;
+
+    this.posX = excesoX > 0 ? -(excesoX * px / 100) : 0;
+    this.posY = excesoY > 0 ? -(excesoY * py / 100) : 0;
 
     this.actualizarTransform();
 
@@ -368,19 +421,19 @@ function actualizarPreviewImagen(){
 
 editorPanel.imagen.onload = ()=>{
 
-    if(editorPanel.estado.scale === 1){
+    if(
+        eventoEditando &&
+        eventoEditando.imagenPosX !== undefined
+    ){
 
-        editorPanel.centrarImagen();
+        editorPanel.cargarFondoCSS(
+            eventoEditando.imagenPosX,
+            eventoEditando.imagenPosY
+        );
 
     }else{
 
-        editorPanel.cargarEstado(
-
-            editorPanel.estado.posX,
-            editorPanel.estado.posY,
-            editorPanel.estado.scale
-
-        );
+        editorPanel.centrarImagen();
 
     }
 
@@ -388,19 +441,19 @@ editorPanel.imagen.onload = ()=>{
 
 editorCard.imagen.onload = ()=>{
 
-    if(editorCard.estado.scale === 1){
+    if(
+        eventoEditando &&
+        eventoEditando.cardPosX !== undefined
+    ){
 
-        editorCard.centrarImagen();
+        editorCard.cargarFondoCSS(
+            eventoEditando.cardPosX,
+            eventoEditando.cardPosY
+        );
 
     }else{
 
-        editorCard.cargarEstado(
-
-            editorCard.estado.posX,
-            editorCard.estado.posY,
-            editorCard.estado.scale
-
-        );
+        editorCard.centrarImagen();
 
     }
 

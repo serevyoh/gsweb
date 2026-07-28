@@ -112,11 +112,23 @@
         <i class="fas fa-arrow-left"></i>
     </a>
 
-    <input
-        type="text"
-        placeholder="Buscar evento..."
-        id="buscador"
-    >
+    <div class="buscador-wrapper">
+        <input
+            type="text"
+            placeholder="Buscar evento..."
+            id="buscador"
+        >
+        <button
+            class="buscador-clear"
+            id="buscador-clear"
+            aria-label="Limpiar búsqueda"
+        >&times;</button>
+    </div>
+
+    <div
+        id="resultados-busqueda"
+        class="resultados-busqueda oculto">
+    </div>
 
 </div>
 
@@ -208,7 +220,7 @@
             <button
                 id="leer-mas"
                 class="leer-mas oculto">
-             Leer relato completo →
+             Leer más sobre este Evento →
 </button>
 
         <div
@@ -300,22 +312,12 @@
 
 </section>
 
-    <div class="timeline-nav">
-    <button class="nav-btn" id="nav-izquierda">
-    <i class="fas fa-chevron-left"></i>
-</button>
-    <div class="nav-centro">
-        <div class="nav-barra">
-            <div class="nav-indicador" id="nav-indicador"></div>
-        </div>
-        <span>
-            Arrastra para explorar la línea temporal
-        </span>
-    </div>
-    <button class="nav-btn" id="nav-derecha">
-    <i class="fas fa-chevron-right"></i>
-</button>
-</div>    
+    <div class="timeline-minimap" id="timeline-minimap">
+        <div class="minimap-timeline-clone" id="minimap-clone"></div>
+        <div class="minimap-overlay-izq" id="minimap-overlay-izq"></div>
+        <div class="minimap-overlay-dch" id="minimap-overlay-dch"></div>
+        <div class="minimap-viewport" id="minimap-viewport"></div>
+    </div>    
 
     </main>
 
@@ -324,6 +326,12 @@
 ======================================== -->
 
 <aside id="editor-evento" class="editor-evento">
+
+    <div
+        id="editor-resize-handle"
+        class="editor-resize-handle"
+        aria-hidden="true">
+    </div>
 
     <button id="cerrar-editor" class="cerrar-editor">
         <i class="fas fa-times"></i>
@@ -664,7 +672,31 @@
             </button>
             <div class="editor-contenido oculto">
 
-        <!-- Aquí irán los campos de figuras clave -->
+        <label>Figuras clave</label>
+
+        <div class="editor-fila-doble">
+            <input
+                id="nuevo-personaje-nombre"
+                type="text"
+                placeholder="Nombre del personaje">
+
+            <input
+                id="nuevo-personaje-imagen"
+                type="text"
+                placeholder="img/personajes/nombre.png">
+        </div>
+
+        <button
+            type="button"
+            id="anadir-personaje"
+            class="editor-anadir">
+            + Añadir figura
+        </button>
+
+        <div
+            id="lista-personajes"
+            class="editor-lista-chips">
+        </div>
 
     </div>
 
@@ -680,7 +712,26 @@
             </button>
             <div class="editor-contenido oculto">
 
-        <!-- Aquí irán los campos de lugares -->
+        <label>Lugares</label>
+
+        <div class="editor-fila-simple">
+            <input
+                id="nuevo-lugar"
+                type="text"
+                placeholder="Nombre del lugar">
+
+            <button
+                type="button"
+                id="anadir-lugar"
+                class="editor-anadir">
+                + Añadir
+            </button>
+        </div>
+
+        <div
+            id="lista-lugares"
+            class="editor-lista-chips">
+        </div>
 
     </div>
 
@@ -696,7 +747,54 @@
             </button>
             <div class="editor-contenido oculto">
 
-        <!-- Aquí irán los campos de consecuencias -->
+        <label>Consecuencias</label>
+
+        <div class="editor-fila-simple">
+            <input
+                id="nueva-consecuencia"
+                type="text"
+                placeholder="Describe una consecuencia">
+
+            <button
+                type="button"
+                id="anadir-consecuencia"
+                class="editor-anadir">
+                + Añadir
+            </button>
+        </div>
+
+        <div
+            id="lista-consecuencias"
+            class="editor-lista-chips">
+        </div>
+
+        <label style="margin-top:24px;">
+            Consecuencias destacadas
+        </label>
+
+        <p class="editor-ayuda">
+            Aparecen resaltadas arriba del todo, en el propio
+            panel de detalle.
+        </p>
+
+        <div class="editor-fila-simple">
+            <input
+                id="nueva-consecuencia-destacada"
+                type="text"
+                placeholder="Describe una consecuencia destacada">
+
+            <button
+                type="button"
+                id="anadir-consecuencia-destacada"
+                class="editor-anadir">
+                + Añadir
+            </button>
+        </div>
+
+        <div
+            id="lista-consecuencias-destacadas"
+            class="editor-lista-chips">
+        </div>
 
     </div>
 
@@ -713,6 +811,16 @@
         <button class="editor-exportar">
             Exportar JSON
         </button>
+
+        <button class="editor-importar">
+            Importar JSON
+        </button>
+
+        <input
+            type="file"
+            id="editor-import-file"
+            accept=".json"
+            style="display:none;">
 
     </div>
 
