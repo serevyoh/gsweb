@@ -1,0 +1,50 @@
+{
+    "veclar ve'anor": {
+        "imagen": "img/personajes/veclar.jpeg",
+        "avatarScale": 1.06,
+        "avatarPosX": "100.0%",
+        "avatarPosY": "17.4%"
+    },
+    "narvi a'drien": {
+        "imagen": "img/personajes/narvi.jpg",
+        "avatarScale": 2.16,
+        "avatarPosX": "47.9%",
+        "avatarPosY": "20.6%"
+    },
+    "kin'ne ve'anor": {
+        "imagen": "img/personajes/kinne.jpg",
+        "avatarScale": 2.36,
+        "avatarPosX": "37.8%",
+        "avatarPosY": "9.6%"
+    },
+    "krylden ve'anor": {
+        "imagen": "img/personajes/krylden.jpg",
+        "avatarScale": 2.37,
+        "avatarPosX": "51.1%",
+        "avatarPosY": "2.7%"
+    },
+    "u'shax": {
+        "imagen": "img/personajes/ushax.png",
+        "avatarScale": 1.18,
+        "avatarPosX": "70.1%",
+        "avatarPosY": "11.9%"
+    },
+    "ukaz ve'anor": {
+        "imagen": "img/personajes/ukaz.jpg",
+        "avatarScale": 5.97,
+        "avatarPosX": "49.3%",
+        "avatarPosY": "2.8%"
+    },
+    "ovel alger blavyr": {
+        "imagen": "img/personajes/ovel.png",
+        "avatarScale": 1,
+        "avatarPosX": "50.0%",
+        "avatarPosY": "0.0%"
+    },
+    "ness": {
+        "imagen": "img/personajes/ness.jpg",
+        "avatarScale": 1.3,
+        "avatarPosX": "54.0%",
+        "avatarPosY": "19.9%"
+    }
+}
