@@ -1,4 +1,4 @@
-const ADMIN = true;
+const ADMIN = false;
 
 let eraActual = "actual";
 let coleccionActual = "general";
