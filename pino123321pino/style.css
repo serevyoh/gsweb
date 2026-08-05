@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     background:
         linear-gradient(
@@ -39,6 +43,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    min-width: 0;
 }
 
 .buscador-clear {
@@ -496,6 +501,7 @@ body {
     gap: 8px;
     justify-self:end;
     position: relative;
+    min-width: 0;
 }
 
 .resultados-busqueda {
@@ -2497,21 +2503,44 @@ b {
    RESPONSIVE
 ======================================== */
 
-/* ── TABLET / LANDSCAPE ────────────────── */
-@media (max-width: 900px) {
+/* ── HEADER EN DESKTOP ESTRECHO (1001–1240px) ──
+   La cabecera de escritorio (350px 1fr 350px) se desborda
+   por la derecha cuando falta sitio para las eras: el buscador
+   se sale del límite y el centro queda descentrado. Aquí se usa
+   la cabecera responsiva (marca más pequeña) sin tocar el resto
+   del layout de escritorio (panel de evento, popups, etc.). */
+@media (min-width: 1001px) and (max-width: 1240px) {
 
     .cronologia-top {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: minmax(0,auto) minmax(0,1fr) minmax(0,auto);
         gap: 12px;
         padding: 15px 16px 8px;
     }
 
     .cronologia-brand h1 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
     }
 
     .cronologia-brand p {
-        font-size: .9rem;
+        font-size: .78rem;
+    }
+}
+
+/* ── TABLET / LANDSCAPE ────────────────── */
+@media (max-width: 1000px) {
+
+    .cronologia-top {
+        grid-template-columns: minmax(0,auto) minmax(0,1fr) minmax(0,auto);
+        gap: 12px;
+        padding: 15px 16px 8px;
+    }
+
+    .cronologia-brand h1 {
+        font-size: 2.2rem;
+    }
+
+    .cronologia-brand p {
+        font-size: .78rem;
     }
 
     .cronologia-general {
@@ -2540,6 +2569,9 @@ b {
     }
 
     .detalle-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
         border-left: none;
         border-top: 1px solid rgba(78,10,9,.15);
         padding: 20px 24px;
@@ -2563,11 +2595,30 @@ b {
     }
 }
 
+/* ── CABECERA EN DOS FILAS (tablet estrecha) ── */
+@media (max-width: 900px) {
+
+    .cronologia-top {
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "brand . busqueda"
+            "filtros filtros filtros";
+    }
+
+    .cronologia-brand { grid-area: brand; }
+    .cronologia-filtros { grid-area: filtros; }
+    .cronologia-busqueda { grid-area: busqueda; }
+}
+
 /* ── MOBILE / PORTRAIT ─────────────────── */
 @media (max-width: 640px) {
 
     .cronologia-top {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "brand"
+            "busqueda"
+            "filtros";
         gap: 10px;
         padding: 12px 12px 6px;
     }
@@ -2608,6 +2659,12 @@ b {
         width: 36px;
         height: 36px;
         flex-shrink: 0;
+    }
+
+    .cronologia-cabecera span,
+    .casas-cabecera span {
+        font-size: .9rem;
+        letter-spacing: .4em;
     }
 
     .eras-caja {
@@ -2674,7 +2731,7 @@ b {
     }
 
     .detalle-contenido h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .detalle-contenido p {
@@ -2682,6 +2739,7 @@ b {
     }
 
     .detalle-meta {
+        grid-template-columns: 1fr;
         padding: 16px;
     }
 
@@ -2744,6 +2802,11 @@ b {
         font-size: 1rem;
     }
 
+    .popup-texto p {
+        font-size: .92rem;
+        line-height: 1.5;
+    }
+
     .popup-personaje-contenido {
         width: min(320px, 90vw);
     }
@@ -2782,12 +2845,24 @@ b {
         height: 44px;
     }
 
+    .evento-contenido {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+    }
+
     .evento-anio {
         font-size: .65rem;
+        margin-bottom: 0;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .evento-titulo {
         font-size: .75rem;
+        flex: 1;
+        min-width: 0;
     }
 
     .marca-tiempo .anio {
@@ -2802,12 +2877,24 @@ b {
         font-size: 1.4rem;
     }
 
+    .cronologia-top {
+        padding: 8px 10px 4px;
+    }
+
+    .eras-caja {
+        gap: 8px;
+    }
+
+    .era-btn {
+        padding: 5px 10px;
+    }
+
     .detalle-evento {
         margin: -20px 6px 0;
     }
 
     .detalle-contenido h2 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 
     .popup-contenido {
@@ -2819,9 +2906,23 @@ b {
         font-size: 1.3rem;
     }
 
+    .popup-texto p {
+        font-size: .9rem;
+    }
+
     .evento {
         width: 150px;
         height: 40px;
+    }
+
+    .evento-titulo {
+        font-size: .68rem;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+    }
+
+    .evento-cero .evento-titulo {
+        font-size: 1rem;
     }
 
     .timeline-minimap {
