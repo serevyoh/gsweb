@@ -1,0 +1,1251 @@
+[
+    {
+        "id": 1781893155262,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Siniestra, el Viejo Continente",
+        "inicio": 1238,
+        "fin": 1,
+        "tipo": "",
+        "color": "#4a050c",
+        "imagen": "img/eventos/siniestra.png",
+        "descripcion": "<p>Fue en el siglo V que se encontraron los primeros registros que nombran al contienente como Siniestra.</p><p><br></p><p>Los reinos se repartían el territorio en guerras y disputas, y los que antes eran clanes empezaron a ser conocidos por sus apellidos y crear las casas que gobernarían el continente.</p><p><br></p><p>De entre todos los reinos que existieron, estos fueron los más relevantes:</p><p><br></p><p>El reino <strong>Dellëria</strong>, con las casas A'Drien, Erindir, Riandriel y Cee'len.</p><p>El reino <strong>Borghild</strong>, con las casas Rehgis, Agnium, Nashir.</p><p>El reino <strong>Lorentia</strong>, con las casas Kal'arch, Rahdun, Reshk'arch, Nas'thae.</p><p>El reino <strong>Rod'eär</strong>, con las casas Gallarion, Raendim, Dris'lor.</p><p>El reino <strong>Assarion</strong>, con las casas Vaelekin, Blavyr, Galadhea, Vahgyr, Ojo Negro y Dar’Zahlan.</p><p><br></p><p>Alrededor del siglo X la casa <strong>Ve'anor</strong>, tras una gran campaña llevada a cabo por <strong>Kaelen Ve'anor</strong>, tomaron el control del continente, poniendo bajo una única corona el control de todos los reinos y unificando todo el territorio. Esta unificación se pudo llevar a cabo gracias a décadas de tratados, campañas y una estratégica contienda militar y diplomática por parte de los <strong>Ve'anor </strong>gracias a la cual muchos reinos acabaron cayendo en una relación de necesidad para con sus nuevos reyes.</p><p><br></p><p>El reinado de los <strong>Ve'anor </strong>ser caracterizaba por sus grandes alianzas con el resto de casas del continente. Poseían muchas alianzas matrimoniales y comerciales, lo que les brindaba sustento económico y estratégico siempre que lo necesitaban. Además, la casa <strong>Ve'anor </strong>contaba con una estructura de poder muy marcada y sólida. Sumado a sus alianzas, entrar en conflicto bélico con los <strong>Ve'anor</strong>, incluso antes de ser reyes del continente, resultaba en un fracaso absoluto.</p><p><br></p><p>Tanto era así que por aquel entonces se empezaba a usar la frase <em>\"nada salpica a un Ve'anor\"</em>.</p><p><br></p><p>A partir de este momento, <strong>Hiniestra </strong>pasó a ser la capital del Reino de Siniestra. Ubicada en el centro del continente y rodeada por las tierras más fértiles que había, la ciudad era la mayor fortaleza que habían construido los hombres y donde, en el futuro, generación tras generación de reyes ocuparon el trono y gobernaron sus tierras.</p>",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [],
+        "personajes": [],
+        "textoCompleto": "",
+        "imagenPosX": "50.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "12.7%"
+    },
+    {
+        "id": 1781894364429,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "El Ascenso Mágico",
+        "inicio": 0,
+        "fin": 0,
+        "tipo": "",
+        "color": "#4a050c",
+        "imagen": "img/eventos/ascensomagico.png",
+        "descripcion": "<p>Desde los orígenes de <strong>Siniestra</strong>, la magia existía como recurso para chamanes y curanderos mientras que la magia simple se utilizaba en pequeños ritos cotidianos como la mejora de las cosechas y similares.</p><p><br></p><p>Sin embargo, todo eso cambió cuando, de forma inesperada, la magia cobró más fuerza. Las personas comenzaron a ser capaces de realizar hechizos mucho más potentes, y los poderes de las familias comenzaron a volverse más fuertes. Paralelamente, y aún más notorio, comenzaron a aparecer monstruos y criaturas nuevas que causaron el desequilibrio del continente, entre ellos los Sangrientos.</p><p><br></p><p>Con la amplificación de la magia, los <strong>Ve'anor </strong>iniciaron un estratégico aumento de sus fuerzas de poder. Hasta ese momento, la Corona tenía bajo su servicio el ejército real y la guardia real, pero ninguno de los dos estaba preparado para hacer frente a los nuevos lohres que empezaban a alcanzar grandes cuotas de poder, ni a las aberrantes criaturas que empezaban a poblar la tierra. Así fue como nacieron los <strong>Mura </strong>y los <strong>Beliar</strong>.</p><p><br></p><p>Los <strong>Mura </strong>eran la élite mágica. Cada Mura era experto en un campo, y tal era su conocimiento que era reconocido como el mayor exponente del mismo. En esta época había 7 Muras. Uno se dedicaba a la Magia en su forma más general; estudiaba las runas y sus efectos. Otro se dedicaba a la Sanación, siendo capaz de curar las mayores afecciones con solo un barrido con la mano. Otro Mura para la Deídica, dedicado en cuerpo y alma al Mazo de la Triada. Otro dedicado a la Alquimia y sus diferentes aplicaciones. Otro a los Sangrientos, otro a los Monstruos y por último el Mura de lo Arcano, aquel dedicado al conocimiento que aún debía descubrirse o que ya había sido olvidado.</p><p><br></p><p>Los <strong>Beliar </strong>eran la élite militar. Sus más fieros y fieles soldados, expertos en el uso de todas las armas creadas en el continente. Soldados <strong>Ve'anor </strong>que, tras mostras sus amplias dotes en combate, pasaban a formar parte de este grupo de élite al servicio directo del rey, siendo los encargados de las operaciones más delicadas.</p><p><br></p><p>Debido a su trascendencia, este suceso es adoptado como el eje cronológico de la historia del continente, con todo lo acontecido anteriormente registrándose como <em>antes del Ascenso Mágico</em> <strong>(a.DM)</strong>, y todo lo sucedido desde entonces, como <em>después del Ascenso Mágico </em><strong><em>(d.DM)</em></strong><em>.</em></p>",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [],
+        "personajes": [],
+        "textoCompleto": "",
+        "imagenPosX": "67.9%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "60.6%"
+    },
+    {
+        "id": 1781894751429,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Gran Siniestra",
+        "inicio": 305,
+        "fin": 749,
+        "tipo": "Historia",
+        "color": "#4a050c",
+        "imagen": "img/eventos/caida_gransiniestra.png",
+        "descripcion": "<p>La magia sirvió para contener el mal que había caído sobre el mundo. Durante tres breves siglos se utilizó la magia libremente para tratar de volver a la antigua normalidad, y la quimera de haberla conseguido cegó a los hombres.</p><p><br></p><p>Tener tanto poder hizo que los antiguos reinos dejaran de ver la necesidad de estar bajo la protección de la casa <strong>Ve'anor </strong>y todos, uno tras de otro, comenzaron a emanciparse de la casa real, formando así un gran continente formado por 15 reinos independientes, convirtiendo a Siniestra en Gran Siniestra.</p><p><br></p><p>El reino <strong>Dellëria</strong>, con las casas <em>A'Drien</em>, <em>Erindir</em>, <em>Riandriel </em>y <em>Cee'len</em>.</p><p>El reino <strong>Borghild</strong>, con las casas <em>Rehgis</em>, <em>Agnium</em>, <em>Nashir</em>.</p><p>El reino <strong>Lorentia</strong>, con las casas <em>Kal'Arch</em>, <em>Reshk'Arch</em>.</p><p>El reino de <strong>Issjord</strong>, con las casas <em>Ancen</em>, <em>Fortinorah </em>y <em>Andja</em>.</p><p>El reino de <strong>Fjord</strong>, con las casas <em>Ard </em>y <em>Fortingard</em>.</p><p>El reino de <strong>Tasmabia</strong>, con las casas <em>Nashir</em>, <em>Garda </em>y <em>Venley</em>.</p><p>El reino <strong>Edhror</strong>, con las casas <em>Vallza</em>, <em>Kev'red </em>y <em>Rahdun</em>.</p><p>El reino <strong>Finore</strong>, con las casas <em>Nas'thae </em>y <em>Baldgrim</em>.</p><p>El reino <strong>Rod'eär</strong>, con las casas <em>Gallarion </em>y <em>Dris'lor</em>.</p><p>El reino de <strong>Balkhash</strong>, con la casa <em>Ansung</em>.</p><p>El reino <strong>Bishaat</strong>, con las casas <em>Anken </em>y <em>Raendim</em>.</p><p>El reino <strong>Sushan</strong>, con la casa <em>Cheng</em>.</p><p>El reino <strong>Assarion</strong>, con las casas <em>Vaelekin</em>, <em>Ojo Negro </em>y <em>Tomka</em>.</p><p>El reino <strong>Nargila</strong>, con las casas <em>Egar </em>y <em>Basan</em>.</p><p>El reino <strong>Sarrayah</strong>, con las casas <em>Blavyr</em>, <em>Vahgyr </em>y <em>Dar’Zahlan</em>.</p><p><br></p><p>Las guerras por los recursos, las demostraciones de poder mágico, y una <em>Corona </em>ya desgastada por tantos siglos de reinado derivaron en la caída de la casa <strong>Ve'anor</strong>, siendo <strong>Vekryl III Ve'anor</strong> el último rey de todo el continente. Desde ese momento la gran capital de <em>Hiniestra </em>quedó abandonada y el mayor bastión de poder de la humanidad pasó a convertirse en las ruinas más impresionantes del continente.</p><p><br></p><p>Por su parte, los <strong>Ve'anor </strong>desaparecieron de la faz de la tierra. Cuenta la leyenda que el aún entonces rey <strong>Ve'anor </strong>estaba esperando pacientemente a que todos los reinos proclamaran su independencia y, una vez hecho, lanzar una represalia mediante sus <strong>Mura </strong>que acabara de un único golpe con todos los falsos reyes sublevados. Sin embargo, se rumorea que una guerra interna entre los <strong>Mura </strong>en <strong>Hiniestra </strong>arruinó dicha ofensiva, lo que obligó a <strong>Vekryl III Ve'anor</strong> a huir antes de ser encarcelado por sus detractores.</p>",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [],
+        "personajes": [],
+        "textoCompleto": "",
+        "imagenPosX": "67.4%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "46.0%"
+    },
+    {
+        "id": 1,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "La caída del continente",
+        "inicio": 520,
+        "fin": 520,
+        "tipo": "",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/caidacontinente.png",
+        "descripcion": "<p>Durante siglos, la magia no tenía como única función aquella relacionada con la guerra; se utilizaba en tratamientos curativos, para acelerar los tiempos y enriquecer las cosecha de los cultivos, para forzar la lluvia y hasta la empleaban en construcciones, paliando la falta de materiales con otros de peor calidad, que luego transmutaban mediante runas. Se convirtió en una herramienta tan útil como el martillo y en una tan peligrosa como una espada, pues creó una dependencia excesiva para el pueblo.</p><p><br></p><p>Siglos después del Ascenso Mágico fue inevitable aceptar la realidad. La magia había perdido eficacia. Seguía siendo muy poderosa, pero ya no tenía la misma efectividad frente a las horribles criaturas que acechaban en las sombras.</p><p>A partir de este momento, las personas capaces de emplear la magia empezaron a reducirse paulatinamente.</p><p><br></p><p>El uso de la magia había pasado factura a la tierra, que empezó a resentirse. El verde de los árboles dejó de brillar, y la tierra parecía apagarse con el paso de los días. La comida escaseaba y pocos territorios estaban libres de monstruos, lo que llevó a los reinos de <strong>Gran Siniestra </strong>a la guerra por los recursos durante varios siglos.</p>",
+        "lugares": [],
+        "reinos": [],
+        "personajes": [],
+        "consecuencias": [],
+        "textoCompleto": "",
+        "consecuenciasDestacadas": [],
+        "imagenPosX": "50.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "61.8%"
+    },
+    {
+        "id": 1781896211800,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Los Pactos de Sangre",
+        "inicio": 10,
+        "fin": 10,
+        "tipo": "Alianzas",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/sangrientos.png",
+        "descripcion": "<p>Fue durante es <strong>Ascenso Mágico</strong> que aparecieron los primeros Sangrientos, terroríficas criaturas que aparecían de repente y arrasaban ciudades enteras en cuestión de minutos. Nada les hacía frente. Ejércitos enteros quedaban reducidos sin causarles un solo arañazo. Algunas desaparecían tan rápido como habían aparecido. Otras, sin embargo, campaban a sus anchas por las tierras de Siniestra durante semanas o meses, hasta que volvían al olvido.</p><p><br></p><p>La primera victoria para la humanidad llegó con la victoria de la Casa <strong>Vaelekin</strong>. <strong>Serzanna</strong>, en el 010 d.AM. La habían apodado la <em>Reina de las Tinieblas</em> la primera vez que apareció. Varios pueblos desaparecieron bajo su poder destructor. En esta ocasión apareció cerca de Menesa, y los guerreros y lohres más poderosos no dudaron en ir a por ella.</p><p><br></p><p>No derrotaron a <strong>Serzanna</strong>, pero consiguieron algo mucho más valioso: la encerraron. Consiguieron sellarla en uno de los suyos. Era algo que nadie más podía hacer; usaron el poder de la casa <strong>Vaelekin </strong>para encontrar el remedio perfecto a la problemática de los Sangrientos. El siguiente en ser sellado fue <strong>Eyzaa,</strong> seguido de <strong>Chizoku</strong>.</p><p><br></p><p>Y entonces el resto de Casas se dieron cuenta de la desventaja que eso les daba. Los <strong>Vaelekin </strong>no solo habían conseguido frenar a los tan temidos Sangrientos, se habían hecho con el poder de ellos y podían usarlo cuando quisieran.</p><p><br></p><p>En acto de buena fe, los <strong>Vaelekin </strong>cedieron a <strong>Chizoku</strong> a los <strong>Blavyr</strong>. Tras sufrir una derrota por parte de los <strong>Kal'arch</strong>, y en arrepentimiento por un intento fallido de conquista de sus tierras, sellaron en uno de los suyos a <strong>Drauh'lun</strong>.</p><p><br></p><p>Para tratar de estabilizar las tensiones, se realizaron <strong>Los Pactos de Sangre</strong>, donde los <strong>Vaelekin </strong>proporcionaron un sangriento a cada una de las casas restantes. Estos sangrientos pasarían a ser sellados en el interior de un miembro de las diferentes casas, convirtiéndose en <strong>Kolosso</strong>, un hombre o mujer capaz de liberar el sello, convirtiendo su cuerpo en el recipiente del sangriento y liberando su poder.</p>",
+        "textoCompleto": "<p>Durante el primer siglo del Ascenso Mágico, todas estas Casas contaban con un Sangriento:</p><p>— Casa <strong>Kal’arch</strong>: <em>Drauh'lun, la máscara blanca.</em></p><p>— Casa <strong>Reshk’arch</strong>: <em>Zaa'thel</em>.</p><p>— Casa <strong>A’Drien</strong>: <em>Teliusa, el caballero.</em></p><p>— Casa <strong>Gallarion</strong>: <em>Bleriel</em>.</p><p>— Casa <strong>Rehgis</strong>: <em>Ze'entch</em>.</p><p>— Casa <strong>Vaelekin</strong>: <em>Serzanna, la Reina de las Tinieblas.</em></p><p>— Casa <strong>Blavyr</strong>: <em>Chizoku</em>.</p><p>— Casa <strong>Erindir</strong>: <em>Adar</em> <em>Gnash</em>.</p><p>— Casa <strong>Riandriel</strong>: <em>Falco</em>.</p><p>— Casa <strong>Cee'len</strong>: <em>Jassor, el Abismo.</em></p><p>— Casa <strong>Agnium</strong>: <em>Qesmir</em>.</p><p>— Casa <strong>Nashir</strong>: <em>La Doncella de Hierro</em>.</p><p>— Casa <strong>Rahdun</strong>: <em>Zelmar</em>.</p><p>— Casa <strong>Nas'thae</strong>: <em>Cuna de Yorvik.</em></p><p>— Casa <strong>Raendim</strong>: <em>Veliel</em>.</p><p>— Casa <strong>Dris'lor</strong>: <em>Bel Uri.</em></p><p>— Casa <strong>Galadhea</strong>: <em>Kish'kish.</em></p><p>— Casa <strong>Vahgyr</strong>: <em>Qashzatu.</em></p><p>— Casa <strong>Ojo Negro</strong>: <em>Sombra.</em></p><p>— Casa <strong>Dar’Zahlan</strong>: <em>Akhzim.</em></p><p>Con el paso de los siglos y antes de la muerte de cada Kolosso, las casas han realizado numerosos rituales para sellar nuevamente a los sangrientos en otros cuerpos más jóvenes, protegiendo así el legado de Los Pactos de Sangre para asegurar, mediante armas con gran capacidad destructiva, la paz entre las casas. La identidad de los Kolosso es desconocida para así evitar poner en peligro la posesión del sangriento con la muerte prematura de su recipiente.</p><p>Pese a que las casas se comprometieron a no sellar nuevos sangrientos, no hay forma de saber si cumplieron la promesa.</p><p>La nula aparición de los Sangrientos Reales en la Gran Guerra sembró la duda sobre los kolossos, y muchos opinan que el haber pasado el poder durante tantos siglos ha diluido la capacidad de control del sangriento hasta hacerlo desaparecer por completo, por lo que se sospecha que los rituales de cambio de control han pasado a ser más una ceremonia que algo útil y con valor.</p>",
+        "reinos": [],
+        "personajes": [],
+        "lugares": [],
+        "consecuencias": [
+            "Los Sangrientos comienzan a ser sellados en personas, denominadas Kolossos.",
+            "Los Vaelekin entregan un Sangriento a diferentes Casas."
+        ],
+        "consecuenciasDestacadas": [],
+        "imagenPosX": "52.3%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "0.0%"
+    },
+    {
+        "id": 1781895111737,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Las Siete Casas",
+        "inicio": 750,
+        "fin": 750,
+        "tipo": "",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/sietecasas.png",
+        "descripcion": "<p>Tras todas las guerras de <strong>Gran Siniestra</strong>, finalmente el continente se redujo a siete territorios, cada uno gobernado únicamente por una casa, que pasaron a denominarse <strong>Grandes Casas</strong>.</p><p><br></p><p>Durante este tiempo se redujeron las guerras e incrementaron las alianzas entre casas para intentar combatir los malos tiempos mediante unidad, pero la tensión bélica por el control de las tierras más fértiles seguía siendo muy alta. La población había sido mermada, y de las incontables casas que habitaron Gran Siniestra, ahora sólo quedaban siete que conservaran sus poderes.</p><p><br></p><p>Gran Casa <strong>Kal'arch</strong>.</p><p>Gran Casa <strong>Reshk'arch</strong>.</p><p>Gran Casa <strong>Rehgis</strong>.</p><p>Gran Casa <strong>Gallarion</strong>.</p><p>Gran Casa <strong>A'Drien</strong>.</p><p>Gran Casa <strong>Vaelekin</strong>.</p><p>Gran Casa <strong>Blavyr</strong>.</p><p><br></p><p>Las casas que antaño formaban parte de los quince reinos de Gran Siniestra fueron viendo mermadas sus fuerzas hasta pasar a ser casas menores vasallas de una de estas siete.</p>",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            },
+            {
+                "nombre": "Gallarion",
+                "escudo": "../assets/img/gallarion.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            }
+        ],
+        "personajes": [],
+        "textoCompleto": "",
+        "imagenPosX": "35.3%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "50.0%"
+    },
+    {
+        "id": 2,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "El Libro de Tasmabia",
+        "imagenPosX": "50.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "50.0%",
+        "inicio": 314,
+        "fin": 314,
+        "tipo": "Descubrimiento",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/tasmabia.jpg",
+        "descripcion": "<p>En las montañas del <em>Valle del Lir</em>, en uno de los lagos de la zona, se encontró un pesado libro lleno de acotaciones, incisos y documentos; este tomo fue bautizado como <strong>el Libro de Tasmabia, </strong>en reconocimiento al reino donde su autor, <strong>Abiel</strong>, realizó la gran mayoría de descubrimientos.</p><p><br></p><p>Según este libro, <strong>Abiel </strong>era uno de los siete Muras al servicio del rey <strong>Vekryl III Ve'anor</strong> que, por razones aún desconocidas y no recogidas en el libro, no acompañó al monarca en su exilio. Este libro recoge innumerables descubrimientos sobre la magia en todas sus formas. Es también el primer documento donde se revela de forma clara lo que hasta entonces era un secreto de la magia; la<strong> Kael'entia. </strong>Este libro registra, además, <strong>sus efectos, consecuencias </strong>y la posterior conversión de <strong>Abiel </strong>en <strong>Kaer'lohr</strong>. El contenido restante del libro sigue encriptado, y el peligro que puede desentrañar el resto de conocimientos es considerado un secreto de estado, razón por la que el libro está cerrado con cadenas de Viasrion en un lugar desconocido.</p><p><br></p><p>La localización, así como el resto del conocimiento descifrado de este libro,<strong> es privado y únicamente conocido por el Monarca y los líderes de las Siete Grandes Casas</strong>, y la principal razón por la que se fundó el Registro Real de Lohres y la persecución de los lohres ilegales y Kaer'lohres.</p><p><br></p><p>La ubicación del <strong>Libro de Tasmabia </strong>es uno de los procesos internos y privados que efectúa el líder de una Gran Casa cuando nombra y elige a su sucesor.</p>",
+        "textoCompleto": "",
+        "reinos": [],
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "personajes": []
+    },
+    {
+        "id": 1781896583213,
+        "era": "antigua",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Punto de Ruptura",
+        "inicio": 1115,
+        "fin": 1130,
+        "tipo": "",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/puntoruptura.png",
+        "descripcion": "<p>Tras un periodo de aparente estabilidad, la ambición de los hombres volvió a imponerse, comenzando así una época marcada por la inestabilidad entre las <strong>Grandes Casas</strong>, durante la cual las <em>Casas Vasallas</em> libraron constantes guerras entre sí.  Durante aquellos años sucedieron numerosas disputas territoriales, con conquistas y reconquistas que deterioraron las relaciones políticas a lo largo del continente.</p><p><br></p><p>Con el propósito de consolidar su influencia en el norte, los <strong>A'Drien </strong>y los <strong>Reshk'arch </strong>concertaron un enlace matrimonial entre <strong>Narvi</strong> <strong>A'Drien</strong>, miembro de la rama principal <strong>A'Drien</strong>, y <strong>Erketu Reshk'arch</strong>, perteneciente a la rama principal <strong>Reshk'arch </strong>y segundo en la línea de sucesión, Esta unión no solo habría levantado un sólido bloque de poder septentrional, sino que también habría permitido a ambas casas (a las que se les sumaba la Gran Casa <strong>Kal'arch </strong>debido a su estrecha relación con los <strong>Reshk'arch</strong>) hacer frente a sus enemigos comunes: los <strong>Rehgis </strong>en el caso <strong>A'Drien </strong>y <strong>Kal'arch</strong>, y los <strong>Gallarion </strong>en el de los <strong>Reshk'arch</strong>.</p><p><br></p><p>Sin embargo, a finales del año 1.115, <strong>Erketu </strong>enfermó y falleció pocos meses después en su lecho. Los <strong>Reshk'arch </strong>intentaron sustituirlo por otro miembro de su familia para mantener el compromiso con <strong>Narvi </strong>y los <strong>A'Drien</strong>, pero la Gran Casa del Mar rechazó la propuesta. A partir de entonces, las relaciones entre ambas casas se enfriaron progresivamente hasta que el acuerdo matrimonial terminó por disolverse.</p><p><br></p><p>Años de conflicto después, cuando la tensión entre las Grandes Casas había alcanzado su punto más crítico, una nueva pieza apareció en el tablero justo cuando nadie la esperaba: la Gran Casa <strong>Ve'anor </strong>se reveló al continente. Autoproclamándose <em>la Corona</em> y defendiendo un ideal utópico de unificación, <strong>Ivran Ve'anor </strong>llegó acompañado por los <strong>Rehgis</strong>, quienes demostraron una lealtad sin precedentes al cederles incluso las regiones de <em>Baletia </em>y <em>Bel'aite</em>, rebautizando la primera como <em>Ciudad del Rey</em>. Junto a <strong>Ivran </strong>llegaron también varios miembros de la Casa <strong>Ve'anor</strong>, entre ellos <strong>Ukaz </strong>y <strong>Krylden</strong>, heredero de la casa. Este último apareció acompañado de <strong>Narvi A'Drien</strong>, algo que despertó la ira de los <strong>Reshk'arch</strong>.</p><p><br></p><p>Fueron los <strong>A'Drien</strong>, precisamente, quienes convocaron a las Grandes Casas en <em>isla Dorastil</em> para debatir los términos de una posible alianza. Sin embargo, durante la reunión <strong>Erdene </strong>acusó a los <strong>Ve'anor </strong>de haber provocado la muerte de su hermano <strong>Erketu</strong>. Acto seguido declaró la guerra a la facción y asesinó a <strong>Ivran </strong>allí mismo.</p><p><br></p><p>Las Grandes Casas <strong>Blavyr </strong>y <strong>Vaelekin</strong>, facciones que habían sufrido históricamente la opresión de los <strong>Ve'anor </strong>durante la existencia del reino de <strong>Assarion</strong> y cuya memoria seguía viva a través de la herencia cultura y de la sangre, se hicieron a las armas al conocer la aparición de la autodenominada <em>Corona </em>y sus primos actos. Declararon entonces su intención de apoyar a los <strong>Reshk'arch </strong>y, con las alianzas ya definidas, los acontecimientos posteriores desembocaron en el conflicto que pasaría a la historia como <strong><em>la Gran Guerra</em></strong>.</p>",
+        "textoCompleto": "",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [],
+        "personajes": [],
+        "imagenPosX": "48.5%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "52.3%"
+    },
+    {
+        "id": 1781896842231,
+        "era": "actual",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Reinado Ve'anor",
+        "inicio": 1142,
+        "fin": 1145,
+        "tipo": "Fin de la guerra",
+        "color": "#4a050c",
+        "imagen": "img/eventos/reinadoveanor.png",
+        "descripcion": "<p>Tras ganar la guerra, la casa <strong>Ve'anor</strong> vuelve a reinar en <strong>Gran Siniestra</strong>. El cabeza de familia <strong>Krylden II <em>El Serio</em> </strong>se impone como único rey de todo el continente, junto con su reina <strong>Narvi A’Drien</strong>.</p><p><br></p><p>Además, el nuevo monarca cumplió una de sus promesas, liberando a los <strong>Monteadores </strong>y<strong> </strong>nombrándolos como facción independiente dedicada al continente en lugar de a las Grandes Casas, para que así pudieran seguir cumpliendo su noble propósito. Debido a sus logros en la Gran Guerra, se les entregó la fortaleza de <em>Ati Kairan</em>, en territorio <strong>Vaelekin</strong>; una de las pocas decisiones que contó con el beneplácito de las Siete Grandes Casas.</p><p><br></p><p>Además, y partir de este momento, se impusieron las <strong>nuevas leyes</strong> en <strong>Gran Siniestra</strong>, de entre ellas cabe destacar:</p><p><br></p><p><strong>— La ley del silencio</strong>: Como medida excepcional se instaura la Ley del Silencio, ley por la cual todo habitante del continente está obligado a, además de denunciar, llevar a cabo un vacío social y económico a todo criminal que encuentre, principalmente a los <strong>Kael'Lohres</strong>. No se les habla, no se les ofrece cama, ni comida, ni comercio ni empleo, entre otros.</p><p><br></p><p><strong>— Magia prohibida</strong>: Se estable que todos los lohres del reino deben estar registrados como tal, siempre dispuestos al servicio de la corona. Todo lohr debe ser autorizado por la corona a emplear la magia, de lo contrario se le considerará un criminal.</p><p><br></p><p><strong>— Unificación de la religión</strong>: Desde épocas inmemoriales se ha mantenido una religión politeísta con diversos miembros que variaban según las regiones del continente. Con la llegada de los <strong>Ve'anor </strong>se establece la nueva religión oficial del continente, la religión de la <strong>Llama Eterna</strong>, que únicamente reza a un solo Dios, <strong>Serevignita</strong>.</p>",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [],
+        "personajes": [],
+        "textoCompleto": "",
+        "imagenPosX": "70.1%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "21.0%"
+    },
+    {
+        "id": 1781785209154,
+        "era": "actual",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Winds of Change",
+        "inicio": 1144,
+        "fin": 1144,
+        "tipo": "Acontecimiento",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/winds_of_change.jpg",
+        "descripcion": "<p>Se creía que, tras la guerra civil y la intervención heroica para algunos, oportunista para otros, de <strong>Krylden II Ve’anor</strong>, la paz acamparía por las noches en Gran Siniestra. No pudimos estar más equivocados.</p><p><br></p><p>El secuestro del perfecto heredero al trono desató las cadenas de la desconfianza, cambios de bando y, por sobre todo, vientos de cambio. Vientos de guerra.</p><p><br></p><p>Lo que parecía ser un enfrentamiento seguro entre casas históricamente enemistadas, terminó en barro y sangre tras un giro inesperado de sucesos.</p><p><br></p><p>Todo terminó con la incursión bélica a la ciudad neutral de <strong>Reden </strong>y la cabeza del heredero rodando por un suelo escarchado de sueños rotos. Y de todo ello, el responsable tenía un nombre, y una promesa. El Kaer’lohr, llamado <strong>U’shax</strong>, cumplió, y hundió a <em>Gran Siniestra</em> en una crisis asfixiante que desembocó en la ausencia del rey <strong>Krylden II </strong>y <em>Reden </em>prácticamente reducida a cenizas.</p><p><br></p><p>Actualmente, la corona descansa sobre la cabeza de la reina <strong>Narvi</strong>, que afirma la indisposición del rey tras la muerte de su amado primogénito. Todo <em>Gran Siniestra</em> se ha visto empujado a reconsiderar alianzas y liderazgos. Todo mundo se ha visto acorralado por la amenaza de una nueva ola de monstruos desatados por todos los rincones, debido al extremo uso de magia en la trágica caída de <em>Reden</em>.</p>",
+        "lugares": [
+            "Reden"
+        ],
+        "consecuencias": [
+            "El heredero Kin'ne Ve'anor es asesinado por U'shax.",
+            "U'shax obtiene el título de Regicida y se convierte en un criminal buscado.",
+            "Narvi se convierte en Reina Regente ante la repentina ausencia de Krylden.",
+            "Gran parte de Reden es arrasada por las tropas Ve'anor."
+        ],
+        "consecuenciasDestacadas": [],
+        "reinos": [
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "personajes": [
+            {
+                "nombre": "Kin'ne Ve'anor",
+                "imagen": "img/personajes/kinne.jpg"
+            },
+            {
+                "nombre": "U'Shax",
+                "imagen": "img/personajes/ushax.png"
+            },
+            {
+                "nombre": "Krylden Ve'anor",
+                "imagen": "img/personajes/krylden.jpg"
+            },
+            {
+                "nombre": "Narvi A'Drien",
+                "imagen": "img/personajes/narvi.jpg"
+            }
+        ],
+        "textoCompleto": "",
+        "imagenPosX": "50.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "50.0%"
+    },
+    {
+        "id": 1781907991472,
+        "era": "actual",
+        "colecciones": [
+            "general"
+        ],
+        "titulo": "Crying of Bells",
+        "inicio": 1144,
+        "fin": 1144,
+        "tipo": "Evento Narrativo",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/crying_of_bells.jpg",
+        "descripcion": "<p>Llegó la primavera y con ello la reina <strong>Narvi A'Drien</strong> celebró un festival lleno de lujos y distracciones, invitando a sus jardines de <em>Ciudad del Rey</em> a todas las casas que quisieran unirse a ella para celebrar la llegada de tan esperada fecha.</p><p><br></p><p>Primavera. La tierra fecunda y las lluvias nutren de vida los sueños de cada familia en <em>Gran Siniestra</em>.</p><p>Reyes, líderes, condes, duques, lores, soldados. Nobles y plebeyos, han hecho uso de esta, su primavera, para sembrar rumores, discordia; para sembrar miedo e incertidumbre. Otros, han cosechado el fruto de su propio odio, o su propia vergüenza. Hay también quienes han cosechado traición; y la más vergonzosa de todas las cosechas: cobardía.</p><p><br></p><p>En esta primavera, tras las revelaciones que hizo la reina camufladas de buenas intenciones, <strong>Esra K. Blavyr</strong>, sublíder de la casa Blavyr, acusó a la regente de mentir, siendo por ello encarcelado a espera de juicio por injurias a la Corona.</p><p><br></p><p>Tras el juicio a Esra, el día acabó con ocho campanadas, una para cada castigo hacia el sublíder Blavyr.</p><p>Mientras el joven recibía ocho latigazos y sujetaba la Espada de la Justicia en ascuas en la <em>Plaza del Rey</em>, la <strong>Arteria Negra</strong> actuaba quemando el templo donde había tenido lugar el juicio, dibujando en las paredes \"¿Quién es <strong>Narvi</strong>?\".</p>",
+        "textoCompleto": "<h2 class=\"ql-align-center\">​​Información revelada</h2><p>Los secretos de <strong>Ruda'er</strong> volverán por lo que es suyo. Cobrarán en sangre y deseo cada uno de los errores que cometió, y cada una de las madres que abandonó volverán para verlo llorar sangre; los falsos herederos temblarán ante aquellos que portan la sangre del lider. ¿La herencia es de la sangre o del mérito?</p><p><br></p><p>Se mantuvo en secreto por mucho tiempo, pero Ruda'er fue un <strong>mujeriego </strong>de cuidado en sus años mozos (y algunos dicen que sigue siéndolo). Debido a sus influencias y actos, se ha cree que existe una línea de sangre directa del <strong>líder Gallarion</strong> que está trabajando en secreto para <strong>deshacerse </strong>de aquellos que no son descendientes de Ruda'er e incluso del propio veterano para que la casa cambie de liderazgo. Nadie sabe quién es el \"heredero\" del que se habla, pero hay rumores de que es adulto y que lidera en las sombras el levantamiento civil.</p><p><br></p><p><br></p><p>Una leyenda volverá a caminar, sus pasos nos harán temblar y en su sombra muchos habrán de quedar. La casa que prometió vigilar sus poderes faltó a su palabra; los caezir susurran sobre el regreso de la mítica <strong>Zigheria Reghis</strong>. ¿Volverán sus pasos a dejar una marca como lo hizo previamente? ¿O la nueva generación asegurará su olvido?</p><p><br></p><p>Han mantenido estudios necrománticos secretos hace mucho tiempo, con el fin de encontrar la fórmula correcta para la resurrección completa. Según fuentes, están buscando resucitar a una mujer que marcó a la casa <strong>Rehgis </strong>en el pasado para siempre, por el descomunal poder que tenía, siendo la <strong>Rehgis </strong>más poderosa de la historia según registros de la propia casa, y el liderazgo que mantuvo durante su vida.</p><p><br></p><p><br></p><p>Se dijo que los <strong>Reshk'arch </strong>llevan desde hace varios años experimentando con niños, que secuestran de distintas casas, para con ello ver qué tan lejos evoluciona su poder. Cuentan con un grupo militar de elite, hasta ahora secreto, llamado <strong>Tarsh'ar </strong>y se dedica a captura de niños (para ser comidos y/o experimentar con su poder) y además callan a aquellas personas que busquen revelar al mundo las atrocidades que allí se gestan.</p><p><br></p><p>Junto a los <strong>Kal'arch</strong>: llevan aproximadamente dos años conspirando para reunificar el reino de <strong>Lorentia</strong>. En secreto, tienen planes para reactivar portales a lo largo del continente, y con ello poner en jaque a los <strong>Ve'anor</strong> y reclamar independencia.</p><p>En su territorio ha surgido, hace un par de años, un grupo separatista llamado <strong>la Consigna de Finur</strong> que predican las antiguas consignas de los Kal, apuntando a Alvarl como una líder inoperante que ha dividido al pueblo de los <strong>Kal </strong>y que se ha aprovechado de las riquezas de Finur, que pertenecen al verdadero pueblo. Por ello están en contra de cualquier aspiración a restaurar el viejo Reino de <strong>Lorentia</strong>, y en su lugar, quieren fundar el Reino de <strong>Edhen</strong>, reclamando tierras desde tal lugar hasta el fin de las tierras del norte.</p><p><br></p><p>Junto a los <strong>Reshk'arch</strong>: llevan aproximadamente dos años conspirando para reunificar el reino de <strong>Lorentia</strong>. En secreto, tienen planes para reactivar portales a lo largo del continente, y con ello poner en jaque a los <strong>Ve'anor </strong>y reclamar independencia.</p><p><br></p><p><br></p><p>Se ha descubierto que una facción de los <strong>Vaelekin </strong>inició conversaciones con los <strong>Kal’arch </strong>para un <strong>intercambio de tierras</strong>, cediéndole parte de la <strong>Costa Dorada</strong>, a cambio de unas minas de <strong>haxio</strong>.</p><p>Esto ha provocado una sisma dentro de la casa de las bestias, debido a las repercusiones que tendría tal acuerdo, y las ventajas logísticas de los Kal’arch frente a los <strong>Ve’anor </strong>en un eventual enfrentamiento bélico. Hay quienes están dispuestos a traicionar a la corona y otros se mantienen fieles; por ello este conflicto interno se ha mantenido en secreto.</p><p><br></p><p><br></p><p><strong>Ovel Alger Blavyr </strong>ha intentado callar y ocultar la división del pueblo de <strong>Blavyr</strong>, debido a que rumores indican que él mismo <strong>traicionó </strong>a <strong>Lilia Blavyr</strong>, anterior líder de la casa, para ascender al poder, durante la antigua guerra.</p><p><br></p><p>Eso no es todo, sino que además, se sabe que <strong>Lilia Blavyr</strong> pretendía llegar a un <strong>acuerdo diplomático con los Ve’anor</strong>, donde acordaban obtener más autonomía, manteniéndose como aliados de la corona, y a su vez entregar tierras en el sur, para la fundación de una <strong>ciudad embajada de los Ve’anor.</strong></p><p>Actualmente existe división entre aquellos que quieren la total independencia y los que ven en los planes de la fallecida Lilia Blavyr, una salida pacífica y racional al antiguo conflicto.</p><p><br></p><p><br></p><p>Los elfos son más antiguos de lo que se cree.</p><p>Los secretos de su origen son la respuesta de todo lo demás. Y entre la sorpresa y la decepción con las revelaciones en la corte, se ha encontrado una llave.</p><p>La inscripción apunta claramente a que abre alguna puerta en la ciudad de <strong>Vanalis</strong>.</p><p><br></p><p><br></p><p>Un grupo radical, compuesto por <strong>caezires</strong>, llamado <strong>la Arteria Negra</strong>, está apuntando a <strong>la reina Narvi como caezir</strong>; si bien ella lo ha desmentido, el rumor ahora corre por el continente como el agua tras una sequía.</p><p><br></p><p>Este grupo ha sembrado la semilla de la discordia con secretos acerca de la naturaleza de la reina y que, según ellos, está aliada con un antiguo criminal, antropófago. Simplemente en la búsqueda de más poder y la destrucción de la humanidad.</p>",
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "reinos": [],
+        "personajes": [],
+        "imagenPosX": "50%",
+        "imagenPosY": "50%",
+        "cardPosX": "50%",
+        "cardPosY": "50%"
+    },
+    {
+        "id": 4,
+        "era": "actual",
+        "colecciones": [
+            "general",
+            "blavyr"
+        ],
+        "titulo": "House of Blood",
+        "imagenPosX": "65%",
+        "imagenPosY": "50%",
+        "cardPosX": "15%",
+        "cardPosY": "10%",
+        "inicio": 1144,
+        "fin": 1144,
+        "tipo": "Catástrofe",
+        "color": "#1e2a3b",
+        "imagen": "img/eventos/house_of_blood.jpg",
+        "descripcion": "<p>Un gran banquete fue dispuesto en la mansión de <strong>Lord Craig</strong>, aristócrata y amigo íntimo del mismísimo rey. Fiel amigo en la intimidad y en los negocios, pues lord <strong>Craig </strong>había ayudado a financiar parte del ejército <strong>Ve'anor </strong>a cambio de un bonito palacio a las afueras de la nueva capital. En agradecimiento, anualmente se celebraba un festín en su morada. Aquel año no fue diferente.</p><p><br></p><p>Lo que en un inicio comenzó como una velada agradable entre música, charlas, alianzas e invitados ilustres, escondía bajo los iluminados salones susurros de traición, miradas calculadoras y presencias hasta ahora desconocidas. De un momento a otro, las puertas del palacete se cerraron y la noche dejó de ser una celebración, convirtiéndose en una masacre.</p><p><br></p><p>Gran parte de los invitados desveló, entonces, una verdad escondida durante siglos: los caezires siempre existieron en el continente, y era hora de reclamarlo como propio: el Triunvirato había dado el primer paso. Pero no todos los inmortales estaban reunidos bajo el mismo estandarte. Escondidos en las sombras, la <strong>Arteria Negra</strong> se movía con la misma energía pero diferente determinación: la coexistencia era posible, pero siempre bajo su mandato.</p><p><br></p><p>Entre las víctimas, la muerte de la heredera <strong>Rehgis</strong>, <strong>Daleth</strong>, marcó un punto de no retorno para su madre, que respondió con furia mandando un batallón al palacete.</p><p><br></p><p>El edificio, dañado por la violencia desatada, se derrumbó sobre sus propios cimientos, revelando un amanecer humeante que presagiaba un nuevo episodio en el continente:</p><p><br></p><p>La era de los humanos tenía fecha límite, y así se demostró en <em>Meneurien</em>.</p><p><br></p><p>La Casa <strong>Blavyr </strong>ya había mandado aquella misma noche una pequeña comitiva a investigar los temblores que llevaban acosando a la ciudad desde hacía un tiempo. Y mientras en territorio <strong>Ve'anor</strong> corría la sangre en la noche que pasaría a ser conocida como la <strong><em>Noche de los Cuchillos</em></strong>, en <em>Meneurien </em>ocurrió otra calamidad de aún mayor magnitud. El desierto sangró, dejando la cicatriz punzante de una ciudad que se vino abajo, desplomándose en las profundidades de la tierra, permitiendo que otra brotase sin permiso, <strong><em>Nueva Meneurien</em></strong>, el bastión que los caezires acababan de fundar. Un golpe directo al corazón de la humanidad.</p><p><br></p><p>Durante la tragedia, donde murieron miles de personas, el sublíder <strong>Esra Blavyr</strong> se batió contra el sublíder <strong>Levius Rehgis</strong>, que reveló su verdadera identidad como caezir, quedando ambos heridos y el segundo en paradero desconocido.</p><p><br></p><p>Los poblados de alrededores fueron evacuados por orden del <strong>Blavyr</strong>, y un cordón militar se instaló en <em>Tirione</em> para tener controlada la zona.</p>",
+        "textoArchivo": "relatos/house_of_blood.html",
+        "lugares": [
+            "Meneurien, Sarraken",
+            "Mansión de Van Vlod"
+        ],
+        "reinos": [
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            },
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            }
+        ],
+        "personajes": [
+            {
+                "nombre": "Ness",
+                "imagen": "img/personajes/ness.jpg"
+            },
+            {
+                "nombre": "Esra K. Blavyr",
+                "imagen": "img/personajes/esra.jpg"
+            },
+            {
+                "nombre": "Levius Rehgis",
+                "imagen": "img/personajes/levi.png"
+            }
+        ],
+        "consecuenciasDestacadas": [],
+        "consecuencias": [
+            "Los caezires se revelan públicamente.",
+            "Nace el Triunvirato Caezir.",
+            "Aparece la Arteria Negra, grupo separatista caezir.",
+            "Daleth Rehgis es asesinada.",
+            "Meneurien cae y surge Nueva Meneurien.",
+            "La monteadora Azaria Vaelekin desactiva una bomba rúnica en Ciudad del Rey. Es considerada una heroína.",
+            "El bardo Ness salva a la princesa Kayla Ve'anor. Se une a los A'Drien.",
+            "Meneurien cae, alzándose Nueva Meneurien como capital caezir.",
+            "Tirione es evacuado y convertido en campamento militar."
+        ],
+        "textoCompleto": "<h2 class=\"ql-align-center\">Tiregond</h2><h3 class=\"ql-align-center\">Castillo Rehgis</h3><p class=\"ql-align-justify\">La oscuridad de las catacumbas del castillo <strong>Rehgis</strong>, era solo interrumpida por las antorchas que portaban los soldados de la guardia privada de <strong>Cora Sybel</strong>. Los ojos de la líder, hinchados y enrojecidos por tanto llorar, esta vez denotaban decisión… también ira. Frente a ella y a los soldados y lohres que la acompañaban, estaban los cadáveres de todo el batallón <strong>Rehgis </strong>que había ido al encuentro de la princesa <strong>Daleth </strong>en la mansión de <strong>Van Vlod</strong>.</p><p class=\"ql-align-justify\">Se presumía muerta, como mínimo desaparecida, pues todos quienes habían ido a salvarle de las garras de la <strong>Arteria Negra</strong>, habían sido asesinados. <strong><em>La Noche de los Cuchillos</em></strong>, sería un recuerdo amargo para aquella casa.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>¿Están seguros que con esto funcionará?</em> <strong>—</strong>preguntó <strong>Cora Sybel</strong>, acercándose un poco más a la seguidilla de cadáveres. Era una fila de soldados mutilados, perforados, y con semblantes evidentes de una muerte sangrienta y dolorosa. Tras ellos, había un altar gigante, donde descansaba un cuerpo envuelto en telas grises. Este estaba rodeado por velas negras con llamas azules.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>Estamos seguros, mi señora. Son doscientos cincuenta y cuatro cadáveres, que equivalen a una persona con vitalidad suficiente para el intercambio</em> <strong>—</strong>respondió uno de los lohres, vestido de ropas negras, elegantes, y sus cabellos iban adornados por tiras grises que contrastaban con su oscuro atuendo. <strong>Cora Sybel </strong>asintió.</p><p class=\"ql-align-justify\"><strong>—</strong><em>Procedan. Lo que sea para recuperar a mi hija</em> <strong>—</strong>tragó saliva, mientras se abrazaba a sí misma, temerosa de la decisión que había tomado<strong>—</strong>. <em>Aun cuando deba despertar al mismo demonio para ello. </em><strong><em>Zigheria</em></strong><em>… por favor, por favor… regresa y ayúdame.</em> <strong>—</strong>susurró la líder <strong>Rehgis</strong>, sintiendo el frío de la propia muerte, que era llamada en ese momento por los hechiceros nigrománticos, en torno al cadáver de una de las más grandes leyendas de todo Gran Siniestra.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\">Las palabras fueron declaradas. Los cadáveres consumidos y las runas activadas. Las velas de fuego azul se apagaron y el brillo de las antorchas extinguido. Pero <strong>Cora Sybel</strong> tuvo lo que quería. El cuerpo de la leyenda se estremeció… y alzó una mano.</p><h2 class=\"ql-align-center\">En algún lugar de Gran Siniestra</h2><p class=\"ql-align-justify\"><strong>Dragomir </strong>caminaba, tranquilamente, mientras <strong>Seprionis </strong>bebía agua. Este último parecía estar más cansado que su compañero albino.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>Tendremos que liderar ahora, </em><strong><em>Seprionis</em></strong><em>. Debemos buscar un escondite; una guerra se avecina</em> <strong>—</strong>dijo <strong>Dragomir</strong>, a lo que <strong>Seprionis </strong>arrugó la nariz e hizo un gesto despectivo.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>Primero quiero dormir, luego hablaremos de nuestros próximos pasos</em> <strong>—</strong>lanzó la cantimplora improvisada hacia un lado del camino. Esta dio algunos botes antes de dar en la pierna de una persona que les seguía a ambos. <strong>Seprionis </strong>le miró con ceño fruncido.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>¿Hasta cuándo piensas tenerlas contigo?</em> <strong>—</strong>preguntó, mirando de mala gana a los cuerpos reanimados de <strong>Daleth Rehgis</strong> y <strong>Ariana Gallarion</strong>, quienes seguían a <strong>Dragomir </strong>como si este fuera su amo.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>Hasta que encuentre la manera de regresarlas por completo</em> <strong>—</strong>respondió. <strong>Seprionis </strong>bufó y luego rio, negando con la cabeza. Los cuatro continuaron su rumbo, dos vivos y dos reanimados. La <strong>Arteria Negra</strong> no había muerto por completo, sino que buscaría más adeptos para, entonces, entrar de lleno en la guerra que venía. ¿De qué lado estarían? Solo el futuro lo diría.</p><h2 class=\"ql-align-center\">Sepúlveda</h2><p class=\"ql-align-justify\">Fue el propio <strong>Ovel </strong>quien recibió a las tropas <strong>Ve’anor</strong>, prometidas por <strong>Veclar Ve’anor</strong> a<strong> Esra Blavyr</strong>. De aquella forma, el líder de los rosas se enteraba de la alianza entre su hijo postizo y el príncipe de <em>Ciudad del Rey.</em></p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\">Acogieron a todo aquel quien necesitase ayuda, y fue el mismo pueblo quien reconoció en una mujer, el liderazgo y valentía en cuidar de ellos.<strong> Killari Liupin</strong>, no solo había logrado obtener un libro histórico acerca de los caezires, sino también el reconocimiento de su pueblo; aunque no estuviera con ellos allí, ya que se había desviado del camino, según algunos sobrevivientes.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\">Así, y junto al apoyo de las tropas venidas del norte, se formó un cordón de seguridad por tres batallones, los cuales resguardarían las fronteras entre <em>Sepúlveda </em>y <em>Nueva Meneurie</em>n, listos para la batalla, de ser necesario.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\">El sur había sido golpeado, y sangraba en su herida con el dolor de quién sabe puede morir en cualquier momento. Pero, aun así, el desierto era orgulloso, y por mucho doliese, no se dejaría intimidar, ni por humanos, ni por caezires. Por nadie. Ellos, tal vez, serían los primeros en caer, pues eran la primera defensa en contra de la amenaza para la humanidad. Pero bien lo había dicho <strong>Ovel</strong> en su discurso a toda su gente en aquella mañana:</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\"><strong>—</strong><em>¡Sangrará el desierto, pero no será nuestra sangre la que lo cubra! ¡Será la de ellos!</em> <strong>—</strong>la isla flotante sobre <em>Nueva Meneurien</em> podía ser vista desde allí, justo hacia donde apuntó el dedo de <strong>Ovel</strong>, lleno de furia. Vengaría cada muerte de su gente, sobre todo, la de su hijo, si es que este no había sobrevivido. Por lo pronto, las búsquedas habían comenzado.</p><p class=\"ql-align-justify\"><br></p><p class=\"ql-align-justify\">Todas las casas, desde la más sureña hasta la más norteña, y desde este a oeste, sería notificada del nuevo escenario en el continente. No era un asunto tan solo de los <strong>Blavyr</strong>, era algo que afectaba a toda la humanidad. Pronto, esta tendría su prueba más importante, ¿lograrían los humanos unirse en pos de su propia salvación? Porque en momentos de peligro y angustia, en días de inestabilidad política y bajo cielos grises anunciando guerras y muerte, no es que la unión y lealtad sea precisamente lo que más destaca… sino la avaricia, el egoísmo, la traición y la maldad.</p>"
+    },
+    {
+        "titulo": "Las Espadas de Dragón",
+        "inicio": 217,
+        "fin": 216,
+        "era": "antigua",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Los dragones eran leyendas contadas por viejos documentos rescatados de las ruinas élficas de la <strong>isla Dorastil</strong>. Sin embargo, en el 217 a.AM los ojos de los humanos vieron por primera vez uno cruzando los cielos de <strong>Siniestra</strong>. Ellos, que había leído aquellos relatos con fascinación, reconocieron de inmediato a la bestia: roja, gigante, con grandes escamas que acababan retorciéndose en pinchos y cuernos a lo largo de todo su cuerpo. Era <strong>Vhastarr</strong>. Desde ese día los hombres se obsesionaron con él. Iniciaron partidas para localizarlo, lanzaron recompensas y anuncios ofreciendo grandísimas sumas de dinero para hacerse con cualquier pedazo de su cuerpo.</p><p><br></p><p>Años después la humanidad volvió a ver a la criatura. Ahora preparados, lanzaron al cielo una gran ofensiva que hizo bajar a <strong>Vhastarr</strong> hasta la meseta de <strong>Khangai Sairan</strong>, donde el fiero dragón arrasó las tropas humanas que se creyeron capaces de hacer frente a su poder. El fuego que dejó el dragón duró meses activo, y ante tal despliegue de poder, uno de los herreros más importantes del momento viajó hasta allí para aprovechar las llamas. Con una forja improvisada, el herrero <strong>Vresmur </strong>se puso manos a la obra.</p><p><br></p><p>Así, forjadas con el propio fuego de <strong>Vhastarr </strong>se crearon 24 espadas.</p><p><br></p><p>Estas espadas, forjadas con complejas aleaciones, mostraron características imposibles de conseguir con fuego ordinario, por lo que las casas del continente ofrecieron grandes sumas de dinero para hacerse con una de ellas. Muchas fueron compradas por la Corona, que las usó como regalo a aquellas casas que más méritos acumularon a favor de los <strong>Ve'anor</strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [],
+        "lugares": [],
+        "consecuencias": [
+            "Se forjan 24 Espadas de Dragón"
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/espadas.png",
+        "id": 1785255803279,
+        "imagenPosX": "50.0%",
+        "imagenPosY": "7.6%",
+        "cardPosX": "50.0%",
+        "cardPosY": "46.5%"
+    },
+    {
+        "titulo": "El último dragón",
+        "inicio": 10,
+        "fin": 5,
+        "era": "antigua",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>En el año 5 antes del Ascenso Mágico fue avistado por última vez <strong>Vhastarr</strong>, el dragón más fiero y temido del continente. Su viaje por el continente dejó varios registros a lo largo de los reinos humanos. Este dragón pocas veces había tenido contacto con el continente, pero cada siglo dejaba verse por sus tierras, como si reclamara lo que es suyo y que aquellos humanos solo estaban de prestado.</p><p><br></p><p><strong>Vhastarr </strong>fue el último y (casi) único dragón que vieron los ojos humanos. Antes que él, los registros élficos ya hablan sobre la desaparición de <strong>Rhueyr</strong>, a quien vieron volar hacia el sureste y no volvieron a ver jamás. Aquella bestia, gigantesca como un lagarto viejo, había atemorizado a los navegantes élficos.</p><p><br></p><p>Su habló en el pasado también de <strong>Aeyr</strong>, el dragón que dejó su tesoro en los <em>Montes Deus</em>, creando así la semilla que más adelante se convertiría en el banco de <em>Vinyanmar</em>, Rumores son también el último avistamiento del dragón de la arena, <strong>Ixthos</strong>, que calentó el <em>Mar Rojo</em> para convertirlo en su hogar y no volver a surcar los cielos.</p><p><br></p><p>Sea como fuere, y aunque <strong>Vhastarr </strong>quedó en el imaginario como el último dragón que cruzó el firmamento, los norteños del continente aseguran que fue en el año 002 cuando vieron volar hacia el norte un dragón azul como el cristal de hielo, un dragón que nunca antes habían visto y al que apodaron \"dragón de invierno\", pues desde aquel momento que cruzó su cielo, el norte nunca más vivió un verano.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [],
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/dragon.png",
+        "id": 1785255878828,
+        "imagenPosX": "50.0%",
+        "imagenPosY": "28.8%",
+        "cardPosX": "50.0%",
+        "cardPosY": "19.8%"
+    },
+    {
+        "titulo": "Inicio",
+        "inicio": 1130,
+        "fin": 1130,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Los <strong>Rehgis </strong>ceden el territorio de <em>Balaite </em>y <em>Bel'aite </em>a los <strong>Ve'anor</strong> y estos toman <em>la Corona</em> de <strong>Gran Siniestra</strong>. Se funda <em>Ciudad del Rey</em> en el territorio de <em>Balaite</em>, que anteriormente era solo un poblado de pescadores. </p><p><br></p><p>Los <strong>Ve'anor </strong>mandan reformar el castillo y a ampliar las tierras, y en aras de buscar una buena vida, muchos ciudadanos se mudan hasta allí en busca de nuevas oportunidades y, sobre todo, en busca de una de las posiciones más seguras durante la guerra.</p><p><br></p><p>Los <strong>A'Drien </strong>reciben a diferentes emisarios de todas las <strong>Grandes Casas</strong> para negociar con cada uno de ellos y entender sus necesidades en un intento por lograr un acuerdo que evite la guerra. En la reunión el representante <strong>Reshk'arch </strong>asesina a <strong>Ivran Ve'anor</strong>, provocando el inicio de la <strong><em>Gran Guerra</em></strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/gg30.png",
+        "imagenPosX": "50.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "50.0%",
+        "id": 1785613798697
+    },
+    {
+        "titulo": "Campaña del Lobo I: La Batalla del Desollado",
+        "inicio": 1134,
+        "fin": 1134,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Cuatro años después de la autocoronación de <strong>Krylden II Ve'anor</strong>, los <strong>Kal'arch </strong>tuvieron su primera batalla en<em> el Desollado</em>, donde frenaron las tropas <strong>Rehgis </strong>y las hicieron retroceder hasta <em>Jhiliel</em>, donde volvieron a atacarles para acabar con lo poco que quedaba de la hueste enemiga. Enorgullecidos por su victoria, tomaron también la ciudad de <em>Huéspeda</em>, quedando a puertas de <em>Tiregond</em>.</p><p><br></p><p>Tras perder en <em>el Desollad</em>o y en <em>Jhiliel </em>contra los <strong>Kal'arch</strong>, una parte de las tropas <strong>Rehgis</strong>, que había permanecido escondida esperando órdenes de atacar a los rojos, atacaron finalmente <em>Torre del Oso </em>y <em>Piedrafría</em>, pequeñas aldeas <strong>Reshk'arch </strong>que cayeron sin demasiada oposición.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            }
+        ],
+        "lugares": [
+            "El Desollado",
+            "Jhiliel",
+            "Huéspeda",
+            "Torre del Oso",
+            "Piedrafría"
+        ],
+        "consecuencias": [
+            "Los Kal'arch conquistan Jhiliel y Huéspeda.",
+            "Los Rehgis conquistan Torre del Oso y Piedrafría."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/gg34.png",
+        "imagenPosX": "87.2%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "42.9%",
+        "id": 1785614355746
+    },
+    {
+        "titulo": "El Serio",
+        "inicio": 1130,
+        "fin": 1131,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#4a050c",
+        "descripcion": "<p>Tras el asesinato de <strong>Ivran, </strong>su hijo <strong>Krylden Ve'anor</strong> tomó el control total de los <strong>Ve'anor</strong>. Junto a él, además del ejército <strong>Rehgis</strong> y el suyo propio, también aparecieron los <strong>Monteadores</strong>, un pelotón de élite con un trabajo que iba más allá de la Guerra. Esta unidad estaba especializada y dedicada casi en exclusivo a la erradicación de monstruos.</p><p><br></p><p>Los <strong>Monteadores</strong>, siguiendo instrucciones explícitas de <strong>Krylden</strong>, comenzaron a traspasar las fronteras de los territorios colindantes a los <strong>Ve'anor </strong>independientemente de su posicionamiento en el conflicto armado, empezando a incursionar sin permiso en tierras <strong>Gallarion, Vaelekin</strong> y <strong>Rehgis</strong>. Sin embargo, en lugar de atacar poblados, los <strong>Monteadores</strong> comenzaron a limpiar los monstruos que amenazaban las zonas de paso, los cultivos y las costas. Estas zonas, comúnmente habitadas por la clase baja, fueron convertidas en zonas seguras que permitieron a los más vulnerables continuar con sus importantes labores.</p><p><br></p><p>La forma de actuar de <strong>Krylden</strong>, ignorando las amenazas de enemigos y las advertencias de aliados en pos de un propósito mayor y alineado con las intenciones de los <strong>Ve'anor </strong>en su aparición, provocó que las clases más vulnerables vieran en él la figura de un héroe, ganándose el favor de los mismos, que comenzaron a emigrar hacia los nuevos terrenos <strong>Ve'anor</strong>, entregándole de paso el apodo que le acompañaría durante el resto de los años, <strong><em>el Serio</em></strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "lugares": [],
+        "consecuencias": [
+            "Los Monteadores comienzan a limpiar los monstruos de zonas vulnerables.",
+            "Los ciudadanos vulnerables ven en Krylden la figura de un héroe y emigran a territorio Ve'anor."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [
+            {
+                "nombre": "Krylden Ve'anor",
+                "imagen": "img/personajes/krylden.jpg"
+            }
+        ],
+        "imagen": "img/eventos/elserio.png",
+        "id": 1785758790204,
+        "imagenPosX": "50.0%",
+        "imagenPosY": "0.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "17.2%"
+    },
+    {
+        "titulo": "Las Guerras de Dorje",
+        "inicio": 1132,
+        "fin": 1136,
+        "era": "clasica",
+        "tipo": "Guerra",
+        "color": "#4a050c",
+        "descripcion": "<p>Los <strong>Gallarion </strong>iniciaron una ofensiva que abarcó varios años contra los <strong>Reshk'arch</strong>, atacando <em>Costa Ceniza</em> y los diferentes asentamientos de la zona, sin éxito.</p><p><br></p><p>En represalia a la casa <strong>Gallarion</strong>, los <strong>Reshk'arch </strong>quemaron las <em>Llanuras de Dorje</em> para complicar el paso de las tropas <strong>Gallarion </strong>por tierra y reforzando sus costas incluso con ayuda de pescadores para frenar los barcos de los verdes. Además, casas vasallas de los <strong>Reshk'arch </strong>financiaron a pescadores, que además de mejorar sus barcos, pudieron aprovechar las mareas para que las mismas dejaran sobre las costas <strong>Gallarion </strong>cadáveres de pescado en descomposición, lo que atraía a arpías y sirenas.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Gallarion",
+                "escudo": "../assets/img/gallarion.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            }
+        ],
+        "lugares": [
+            "Costa Ceniza",
+            "Llanuras de Dorje"
+        ],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/dorje.png",
+        "id": 1785763564367,
+        "imagenPosX": "72.7%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "51.6%"
+    },
+    {
+        "titulo": "Campaña del Lobo II: La Batalla de la Estepa",
+        "inicio": 1135,
+        "fin": 1135,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Tras las victorias en territorio <strong>Rehgis </strong>en el 34, los <strong>Kal'arch </strong>empiezan a agrupar sus fuerzas en <em>Huéspeda </em>para atacar <em>Tiregond</em>.</p><p><br></p><p>Las huestes <strong>Rehgis</strong>, que habían estado esperando a que los <strong>Kal'arch </strong>reunieran a todas sus fuerzas en <em>Huéspeda</em>, atacan finalmente desde <em>Tiregond</em>.</p><p><br></p><p>Durante el combate, y para sorpresa de <strong>los rojos</strong>, aparecen nuevas tropas <strong>Rehgis </strong>desde el noreste, las mismas que hacía apenas un año se habían separado del ejército principal y tomado <em>Torre del Oso</em> y <em>Piedrafría</em>, y de esta manera los <strong>Rehgis </strong>atacan también al ejército <strong>Kal'arch </strong>desde su espalda.</p><p><br></p><p>Los <strong>Rehgis </strong>vencen en la <strong><em>Batalla del Lobo</em></strong>, y llevan sus tropas hasta <em>Baja Sanabria</em>, haciéndose con el sur de la región.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            }
+        ],
+        "lugares": [
+            "Huéspeda",
+            "Tiregond",
+            "Torre del Oso",
+            "Piedrafría"
+        ],
+        "consecuencias": [
+            "Los Kal'arch pierden la parte sur de su territorio, que toman los Rehgis"
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/loboii.png",
+        "id": 1785763764651,
+        "imagenPosX": "55.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "96.4%"
+    },
+    {
+        "titulo": "Escuadra de Galeras",
+        "inicio": 1136,
+        "fin": 1136,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Tras seis años de guerra, las flotas <strong>A'Drien </strong>recorren las costas <strong>Vaelekin </strong>e inician diferentes batallas en la <em>Costa de las Sirenas</em>. Es aquí cuando los <strong>Vaelekin </strong>pierden posiciones estratégicas como <em>Niyari </em>y <em>Wakiri</em>, al oeste de su territorio.</p><p><br></p><p>A la par, el prodigio <strong>Veclar Ve'anor</strong> se une al ejército de su tío <strong>Krylden II</strong>. Su liderazgo e inteligencia provocan una meteórica evolución en el bando <strong>Ve'anor</strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [],
+        "lugares": [
+            "Costa de las Sirenas",
+            "Niyari",
+            "Wakiri"
+        ],
+        "consecuencias": [
+            "Los Vaelekin pierden Niyari y Wakiri, a manos de los A'Drien."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [
+            {
+                "nombre": "Veclar Ve'anor",
+                "imagen": "img/personajes/veclar.jpeg"
+            }
+        ],
+        "imagen": "img/eventos/gg36.png",
+        "imagenPosX": "42.7%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "15.7%",
+        "id": 1785763801864
+    },
+    {
+        "titulo": "La Batalla del Estrecho",
+        "inicio": 1137,
+        "fin": 1137,
+        "era": "clasica",
+        "tipo": "Guerra",
+        "color": "#1e2a3b",
+        "descripcion": "<p>La flota <strong>A'Drien </strong>consigue finalmente el control total de la <em>Costa de las Sirenas</em> y junto a los <strong>Ve'anor </strong>entran en el <em>Mar Rojo</em>, dando lugar a la <strong><em>Batalla del Estrecho</em></strong> contra los <strong>Vaelekin </strong>y los <strong>Blavyr</strong>.</p><p><br></p><p>Tanto <em>Yaku </em>como <em>Puerta de A'Rossa</em> se enfrentan a las flotas <strong>A'Drien </strong>y el ejército <strong>Ve'anor</strong>, cayendo ambas ciudades. Esta fue la primera gran victoria del nuevo rey, que ahora tenía control total de uno de los mares con mayor movimiento de comercio de metales.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            },
+            {
+                "nombre": "Vaelekin",
+                "escudo": "../assets/img/vaelekin.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "lugares": [
+            "Yaku",
+            "Puerta de A'Rossa"
+        ],
+        "consecuencias": [
+            "Los Blavyr pierden Yaku y Puerta de A'Rossa, a manos de los A'Drien y los Ve'anor.",
+            "Los Ve'anor consiguen control total sobre el Mar Rojo."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/estrecho.png",
+        "imagenPosX": "0.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "38.7%",
+        "id": 1785764100146
+    },
+    {
+        "titulo": "La Caída de los Blavyr",
+        "inicio": 1137,
+        "fin": 1137,
+        "era": "clasica",
+        "tipo": "Conquista",
+        "color": "#1e2a3b",
+        "descripcion": "<p>El ejército <strong>Ve'anor </strong>y <strong>Gallarion </strong>atacan a los <strong>Blavyr </strong>en el estrecho de la<em> península de Sarraken</em>, dando lugar a la <strong><em>Batalla de Suhra</em></strong>, donde fallece <strong>Lilia Blavyr</strong>, la líder de la casa.</p><p><br></p><p>Para evitar la tierra quemada con la entrada <strong>Ve'anor </strong>a la región del desierto, los <strong>Blavyr</strong> acceden a entregar rehenes <strong>Gallarion </strong>y <strong>Ve'anor</strong>, pero esta entrega nunca se lleva a cabo. En represalia a esto, los <strong>Gallarion </strong>atacan sin autorización <strong>Ve'anor </strong>el <em>Golfo de la Arena</em> con la intención de quedarse con esas tierras.</p><p><br></p><p>Al estar el ejército <strong>Gallarion</strong> en el sur, y vistas mermadas sus tropas por la batalla con <strong>Blavyr</strong>, en donde no consiguen ningún asentamiento, los <strong>Vaelekin </strong>conquistan <em>Manqari</em>, <em>Nantali</em>, <em>Mêlgar </em>y <em>Kalluma</em>, dominando la <em>Llanura de Jinetes.</em></p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            },
+            {
+                "nombre": "Vaelekin",
+                "escudo": "../assets/img/vaelekin.png"
+            },
+            {
+                "nombre": "Gallarion",
+                "escudo": "../assets/img/gallarion.png"
+            }
+        ],
+        "lugares": [
+            "Suhra",
+            "Manqari",
+            "Nantali",
+            "Mêlgar",
+            "Kalluma"
+        ],
+        "consecuencias": [
+            "Los Blavyr claudican a favor de los Ve'anor, siendo la primera facción conquistada en la Gran Guerra.",
+            "Los Vaelekin dominan la Llanura de Jinetes, conquistando Manqari, Nantali, Mêlgar y Kalluma a los Gallarion."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/gg37.png",
+        "id": 1785764440727,
+        "imagenPosX": "61.3%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "0.0%"
+    },
+    {
+        "titulo": "La Rendición Vaelekin",
+        "inicio": 1138,
+        "fin": 1138,
+        "era": "clasica",
+        "tipo": "Rendición",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Con la pérdida de la <em>Costa de las Sirenas</em>, los <strong>A'Drien </strong>y los <strong>Ve'anor </strong>emprenden una campaña por el oeste de la región <strong>Vaelekin </strong>hasta hacerse con la <em>Estepa de Kintaya</em> y llegar a <em>Suelo Encharcado</em>, asediando <em>Menesa</em>. Durante el asedio, el nuevo regente <strong>Blavyr</strong>, <strong>Ovel Alger Blavyr</strong>, acude a la capital <strong>Vaelekin</strong>, negociando y obteniendo la rendición de <strong>los azules</strong>, que cedieron a la entrada de <strong>los morados</strong> en aras de no sufrir bajas en su casa.</p><p><br></p><p>Sin embargo, las <strong>Casas Vasallas</strong> de los <strong>Vaelekin </strong>no ofrecen rendición y marchan al norte con los <strong>Kal'arch </strong>y los <strong>Reshk'arch</strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Vaelekin",
+                "escudo": "../assets/img/vaelekin.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            },
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            }
+        ],
+        "lugares": [
+            "Estepa de Kintaya",
+            "Suelo Encharcado",
+            "Menesa"
+        ],
+        "consecuencias": [
+            "Los Vaelekin claudican a favor de los Ve'anor a causa de las negociaciones efectuadas por el líder Blavyr, Ovel.",
+            "Las Casas Vasallas Vaelekin niegan la rendición y marchan con sus tropas al norte, uniéndose a los Kal'arch y Reshk'arch."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [
+            {
+                "nombre": "Ovel Alger Blavyr",
+                "imagen": "img/personajes/ovel.png"
+            }
+        ],
+        "imagen": "img/eventos/caidavaele.png",
+        "id": 1785764663236,
+        "imagenPosX": "28.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "2.0%"
+    },
+    {
+        "titulo": "Maquis",
+        "inicio": 1138,
+        "fin": 1138,
+        "era": "clasica",
+        "tipo": "Guerra",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Tras años de batallas, los <strong>Rehgis </strong>consiguen hacerse con <em>Guardiasombría </em>y acceder a la zona norte del territorio <strong>Reshk'arch</strong>.</p><p><br></p><p>En el norte, y tras numerosas batallas ganadas por parte de los <strong>A'Drien </strong>en la zona oeste del territorio <strong>Kal</strong>, una pequeña comitiva <strong>Kal'arch </strong>se infiltra en un barco dirección <em>Isla Dorastil</em>, llegando hasta <em>Ilmaraen </em>y quemando al ciudad hasta sus cimientos.</p><p><br></p><p>En el este, los <strong>Reshk'arch </strong>atacan<em> Fincas Shari </em>y <em>Thar'Satuladh</em>, convirtiendo su defensa en una ofensiva hacia los verdes.</p><p><br></p><p>También, en territorio <strong>Gallarion</strong>, un pequeño grupo conformado por las casas vasallas <strong>Vaelekin </strong>intentaron quemar el árbol <em>TenShao</em>, insignia de la casa del <strong>Ojo de Dios</strong>. Ante tal ataque, los <strong>Gallarion </strong>asesinaron a cada soldado, colgando sus cadáveres de las ramas más bajas del árbol y enviando sus cabezas a<em> Caer Dolonde</em> y <em>Alta Sanabria</em> con un mensaje que decía <strong><em>LO VEMOS TODO</em></strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            },
+            {
+                "nombre": "Gallarion",
+                "escudo": "../assets/img/gallarion.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            }
+        ],
+        "lugares": [
+            "Guardiasombría",
+            "Ilmaraen",
+            "Fincas Shari",
+            "Thar'Satuladh",
+            "Árbol TenShao"
+        ],
+        "consecuencias": [
+            "Los Rehgis conquistan Guardiasombría.",
+            "Los Kal'arch queman Ilmaraen.",
+            "Los Reshk'arch conquistan Fincas Shari y Thar'Satuladh.",
+            "Los Gallarion impiden un atentado contra el Árbol TenShao y ejecutan con extrema crueldad a los perpetradores, amenazando a los Kal'arch y Reshk'arch."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/maquis.png",
+        "imagenPosX": "58.1%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "27.9%",
+        "id": 1785765925586
+    },
+    {
+        "titulo": "Las Batallas por el Norte",
+        "inicio": 1139,
+        "fin": 1139,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Al ver el escaso avance de la casa <strong>Gallarion </strong>en su contienda en el este, el ejército <strong>Ve'anor </strong>y sus <strong>Mura </strong>se unen a las filas <strong>Gallarion </strong>y atacan el sur <strong>Reshk'arch</strong>, consiguiendo el control de la <em>Cordillera de Urdun</em> y de toda la <em>Estepa del Oso</em>.</p><p><br></p><p>En el norte del continente, los monstruos empiezan a ser más y más numerosos, volviendo los caminos más peligrosos y convirtiéndose en un nuevo problema para el ejército <strong>Kal'arch</strong>, lo que debilita y fragmenta su ejército que, mientras trata de hacer frente a los <strong>A'Drien</strong>, los <strong>Ve'anor </strong>y los <strong>Rehgis</strong>, se ven en la obligación de además combatir las criaturas que asolan sus tierras.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Gallarion",
+                "escudo": "../assets/img/gallarion.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            },
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            }
+        ],
+        "lugares": [
+            "Cordillera de Urdun",
+            "Estepa del Oso"
+        ],
+        "consecuencias": [
+            "Los Gallarion conquistan el sur del territorio Reshk'arch con ayuda del ejército Ve'anor y sus Mura.",
+            "El aumento de los monstruos hacen que las facciones deban preocuparse por la supervivencia y el control de sus propios terrenos."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/1139.png",
+        "id": 1785766553064,
+        "imagenPosX": "38.8%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "67.6%"
+    },
+    {
+        "titulo": "La Caída de la Casa Kal'arch",
+        "inicio": 1140,
+        "fin": 1140,
+        "era": "clasica",
+        "tipo": "Caída",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Tras años de desgaste, batallas y monstruos, el ejército de los <strong>Kal'arch </strong>se desgasta y se enfrentan a los <strong>A'Drien </strong>y los <strong>Rehgis </strong>por última vez en <em>Norrfen</em>, donde son derrotados y se rinden a los <strong>Ve'anor</strong>.</p><p><br></p><p>Esta victoria hizo que los <strong>Ve'anor </strong>cedieran a los <strong>A'Drien </strong>parte de la <em>Región de Mêlgar.</em></p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "lugares": [
+            "Norrfen"
+        ],
+        "consecuencias": [
+            "Los Kal'arch caen, claudicando a favor de los Ve'anor."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/caidakal.png",
+        "id": 1785768078248,
+        "imagenPosX": "48.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "15.8%"
+    },
+    {
+        "titulo": "Campaña del Lobo III: El control del Oeste",
+        "inicio": 1135,
+        "fin": 1137,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#4a050c",
+        "descripcion": "<p>Los <strong>A'Drien </strong>comienzan a conquistar territorio <strong>Kal'arch </strong>desde el oeste, conquistando el <em>Paso de la Doncella</em> y <em>Thalrisen</em>, mientras que los <strong>Ve'anor </strong>asedian desde el sur, comenzando a replegar a los <strong>Kal'arch</strong> al norte, terreno demasiado peligroso para forasteros. Los prisioneros <strong>Kal'arch </strong>son torturados por <strong>Ukaz</strong>, quien desgasta su psique, permitiendo que los <strong>A'Drien </strong>entren en sus sueños para así obtener información de valor, comenzando a ejecutar batallas estratégicas donde eliminan figuras influyentes de los <strong>Kal'arch</strong>.</p><p><br></p><p>A partir del 1136 y hasta el 37, los <strong>Kal'arch </strong>y los <strong>Rehgis </strong>protagonizan diferentes enfrentamientos y aunque no pierden más territorio, tampoco recuperan sus tierras.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            }
+        ],
+        "lugares": [
+            "Paso de la Doncella",
+            "Thalrisen"
+        ],
+        "consecuencias": [
+            "Los A'Drien conquistan Paso de la Doncella y Thalrisen, arrebatándoselas a los Kal'arch.",
+            "Los Ve'anor consiguen información estratégica sobre los Kal'arch mediante torturas."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [
+            {
+                "nombre": "Ukaz Ve'anor",
+                "imagen": "img/personajes/ukaz.jpg"
+            }
+        ],
+        "imagen": "img/eventos/loboIII.png",
+        "id": 1785768293263,
+        "imagenPosX": "58.7%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "62.5%"
+    },
+    {
+        "titulo": "Campaña del Lobo IV: Enemigo a las puertas",
+        "inicio": 1138,
+        "fin": 1139,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#4a050c",
+        "descripcion": "<p>Tras la caída de <em>Fuerte Bruma</em>, las fuerzas <strong>A'Drien </strong>y <strong>Ve'anor </strong>consiguen asesinar a <strong>Ulrad Fortingard</strong> y su séquito, principales comandantes y estrategas <strong>Kal'arch</strong>.</p><p><br></p><p>En el sur, los <strong>Rehgis </strong>aprovechan el momento de flaqueo para tomar <em>Cuna del Huérfano</em>. Las tres tropas se reúnen en <em>Norrfen </em>y los <strong>Kal'arch </strong>retroceden a <strong>Alta Sanabria</strong>.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            }
+        ],
+        "lugares": [
+            "Fuerte Bruma",
+            "Cuna del Huérfano"
+        ],
+        "consecuencias": [
+            "Ulrad Fortingard muere. Los Kal'arch pierden a su principal estratega.",
+            "Los Kal'arch retroceden a Alta Sanabria."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/loboiv.png",
+        "id": 1785769986988,
+        "imagenPosX": "62.4%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "22.8%"
+    },
+    {
+        "titulo": "La Ciudad de las Mil Caras: Reden",
+        "inicio": 1137,
+        "fin": 1142,
+        "era": "clasica",
+        "tipo": "",
+        "color": "#4a050c",
+        "descripcion": "<p>Tras su derrota, y mientras veían cómo el ejército <strong>Ve'anor </strong>imponía sus nuevas normas, <strong>los Blavyr </strong>se dedicaron en secreto a usar su poder para crear provisiones para las casas contrarias al reinado de <strong>Krylden II</strong>. Mantuvieron de forma continua, hasta el fin de la guerra, un suministro constante de provisiones; comida, armamento y otras necesidades, a los <strong>Vaelekin</strong>, los <strong>Kal'arch </strong>y los <strong>Reshk'arch</strong>.</p><p><br></p><p>Al haber perdido el control del <em>Mar Rojo</em>, ahora bajo vigilancia de los <strong>A'Drien</strong> y sus galeones, las comunicaciones entre los <strong>Blavyr </strong>y los <strong>Vaelekin </strong>estaban cortadas y controladas para evitar una posible organización por parte de ambas casas.</p><p><br></p><p>Es por ello que, a partir de la derrota <strong>Vaelekin </strong>en el 1138, las Casas Vasallas <strong>Ojo Negro</strong>, <strong>Tomka</strong>, <strong>Egar </strong>y <strong>Basan </strong>viajan hasta <em>Reden </em>para organizarse, creando una base para las <strong>Casas Rebeldes</strong>. Desde <em>Reden </em>organizan los suministros creados por los <strong>Blavyr, </strong>con los <strong>Kal'arch </strong>distribuyéndolos.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            },
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            },
+            {
+                "nombre": "Vaelekin",
+                "escudo": "../assets/img/vaelekin.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            }
+        ],
+        "lugares": [
+            "Reden"
+        ],
+        "consecuencias": [
+            "Los Rebeldes se asientan en Reden, creando una base de operaciones.",
+            "Los Blavyr utilizan su Noble Poder de Materialización para crear un suministro constante hacia los Rebeldes.",
+            "Los Kal'arch utilizan su Noble Poder de Portales para distribuir los suministros."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/reden.png",
+        "id": 1785770343355,
+        "imagenPosX": "61.8%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "43.8%"
+    },
+    {
+        "titulo": "Asedio a Caer Dolonde",
+        "inicio": 1140,
+        "fin": 1142,
+        "era": "clasica",
+        "tipo": "Asedio",
+        "color": "#4a050c",
+        "descripcion": "<p>Tras la caída de los <strong>Kal'arch</strong>, los <strong>Reshk'arch </strong>eran la única casa opositora al reinado de los <strong>Ve'anor </strong>que todavía podía plantar cara a las <strong>Casas Aliadas</strong>. Ellas, por su parte, por fin podían unirse frente a la única casa que había acumulado más victorias frente al bando <strong>Ve'anor</strong>. Precavidos a los <strong>Reshk'arch</strong>, ejecutaron un plan que no solo se centraba en la fuerza bruta. </p><p><br></p><p><strong>Veclar Ve'anor </strong>comandaba las fuerzas <strong>Rehgis</strong>, que a finales del 41 se asentaron en las lindes de <em>Caer Dolonde</em> para iniciar el asedio a la capital de <strong>los amarillos</strong>. <strong>Ukaz Ve'anor</strong> comandaba desde <em>Ciudad del Rey</em> a los <strong>Beliar</strong>, guerreros extremadamente fieros y organizados capaces de competir con los <strong>Reshk'arch</strong>, por lo que hacerlos infiltrarse en la ciudad fue sencillo.</p><p><br></p><p>Por mar, los buques de guerra <strong>A'Drien</strong>, con su enorgullecida <strong>Escuadra de Galeras</strong>, obligaron a los mercaderes y los pescaderos a no poder navegar hasta el final del asedio. Más adelante se unieron los <strong>Gallarion </strong>y los <strong>Rehgis</strong>.</p><p><br></p><p>Tras más de un año de asedio, el bando aliado era incapaz de comprender la capacidad de los <strong>Reshk'arch </strong>de aguantar tanto tiempo con un bloqueo tanto terrestre como marítimo. Es por ello que las manos empezaron a señalar a los <strong>Kal'arch </strong>y sus Portales: tal vez ellos estaban mandando suministros y alimento a sus aliados del norte. Tras incursiones a todas las aldeas y ciudades <strong>Kal'arch</strong>, todas las cuevas en las montañas y hasta mirar bajo las faldas de las mujeres, vieron que allí no se estaba realizando ninguna actividad ilícita. Descubrir aquello hizo que, inevitablemente, miraran al siguiente destino: <em>Reden</em>.</p><p><br></p><p>Parte del ejército <strong>Rehgis </strong>y los <strong>Mura </strong>de <em>la Corona</em> entraron en la <em>Ciudad sin ley</em> hasta localizar el almacén de estraperlo que habían creado los <strong>Blavyr </strong>con ayuda de las casas vasallas de los <strong>Vaelekin</strong>, y que los <strong>Kal'arch </strong>se encargaban de mover hasta <em>Caer Dolonde</em>.</p><p><br></p><p><em>La Coron</em>a arrasó el lugar, aprovechando para hacerse con el control de <em>Reden</em>. Sin embargo, un actor con el que no habían contado apareció en escena. Tras negociaciones con <strong>La Guilda</strong>, los <strong>Rehgis </strong>y los <strong>Mura </strong>abandonaron <em>Reden</em>, y nunca más volvieron a entrar.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Blavyr",
+                "escudo": "../assets/img/blavyr.png"
+            },
+            {
+                "nombre": "Vaelekin",
+                "escudo": "../assets/img/vaelekin.png"
+            },
+            {
+                "nombre": "Kal'arch",
+                "escudo": "../assets/img/kalarch.png"
+            },
+            {
+                "nombre": "Rehgis",
+                "escudo": "../assets/img/rehgis.png"
+            },
+            {
+                "nombre": "A'Drien",
+                "escudo": "../assets/img/adrien.png"
+            },
+            {
+                "nombre": "Gallarion",
+                "escudo": "../assets/img/gallarion.png"
+            },
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "lugares": [
+            "Caer Dolonde",
+            "Reden"
+        ],
+        "consecuencias": [
+            "Las Casas Aliadas asedian Caer Dolonde por tierra y mar.",
+            "Las Casas Aliadas desmantelan la red de suministros de los Rebeldes en Reden.",
+            "La Guilda negocia con los Aliados y los Rebeldes para dejar Reden libre."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [
+            {
+                "nombre": "Veclar Ve'anor",
+                "imagen": "img/personajes/veclar.png"
+            },
+            {
+                "nombre": "Ukaz Ve'anor",
+                "imagen": "img/personajes/ukaz.png"
+            }
+        ],
+        "imagen": "img/eventos/gg41.png",
+        "imagenPosX": "54.0%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "14.8%",
+        "id": 1785770849945
+    },
+    {
+        "titulo": "La Caída de la Casa Reshk'arch",
+        "inicio": 1142,
+        "fin": 1142,
+        "era": "clasica",
+        "tipo": "Derrota",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Tras haber desmantelado el movimiento de provisiones que mantenía a <em>Caer Dolonde</em> en pie, las tropas de<em> la Corona</em> esperaron unos meses hasta que el ejército estuviera debilitado y finalmente entraron en la ciudad. Tal y como cuentan los relatos, los <strong>Reshk'arch </strong>se atrincheraron en el salón de mando del palacio de la ciudad, generando un cuello de botella en la entrada y matando a tanto <strong>Ve'anor </strong>como pudieron antes de quedar superados en fuerza y número.</p><p><br></p><p>Finalmente, el bando aliado se hizo con <em>Caer Dolonde</em>, ganando finalmente la <strong><em>Gran Guerra</em></strong>.</p><p><br></p><p>Tras esta última victoria se llevó a cabo la coronación de <strong>Krylden II Ve'anor</strong>, que había esperado hasta ver a todos sus enemigos hincar la rodilla para colocar sobre su cabello dorado la corona que le nombraba rey de toda <strong>Gran Siniestra</strong>.</p><p><br></p><p>Este momento quedó reflejado en el evento <a href=\"https://discord.com/channels/1332036974453981327/1457087702943010877\" rel=\"noopener noreferrer\" target=\"_blank\">Acero y Espinas</a>, en el que todos los jugadores pueden participar para mostrar su reacción a la coronación.</p>",
+        "textoCompleto": "",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [
+            {
+                "nombre": "Reshk'arch",
+                "escudo": "../assets/img/reshkarch.png"
+            },
+            {
+                "nombre": "Ve'anor",
+                "escudo": "../assets/img/veanor.png"
+            }
+        ],
+        "lugares": [
+            "Caer Dolonde"
+        ],
+        "consecuencias": [
+            "Los Ve'anor ganan la Gran Guerra, dando la misma por finalizada."
+        ],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/caidaresh.png",
+        "id": 1785771068376,
+        "imagenPosX": "38.4%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "0.0%"
+    },
+    {
+        "titulo": "Preludio: Ashes and Ruins",
+        "inicio": 1145,
+        "fin": 1145,
+        "era": "actual",
+        "tipo": "Narración Secreta",
+        "color": "#1e2a3b",
+        "descripcion": "<p>Los únicos personajes que conocen esta información son: <strong>Aen Dhara’sha Lyamis</strong>, <strong>Eden Reshk'arch</strong>, <strong>Ffier Vahgyr</strong>, <strong>Marcus Vaughn</strong>, <strong>Rhogar Vaelekin</strong> &amp; <strong>Zhierziexa Zibecchi</strong>.</p><p><br></p><p>Sus esfuerzos persiguiendo el rumor han permitido desbloquear este preludio.</p>",
+        "textoCompleto": "<p>La arena parecía tener memoria y aún latía en cada grano el recuerdo de cada imperio que creyó durar para siempre y cada guerra que probaba lo contrario. El sol, en su posición más vertical, avisando al cielo de lo que estaba por acontecer. El viento intentaba lo contrario, tratando de borrar las huellas de algo que no debería pasar. Tres portales se abrieron en simultáneo y de cada uno emergió una figura cuyas sombras se alargaron sobre las dunas. Tres historias que hasta entonces acostumbraban a existir en rumores y leyendas.</p><p><br></p><p>El portal tras la primera figura se resquebrajó, como si el frío cristalizase los bordes con el aire que salía de dentro. El ártico apareció al otro lado, y el soplo de aire glacial que escapó, murió en el desierto antes de tocar la arena. Durante un breve segundo, el desierto y el ártico compartieron horizonte. La figura se desperezó, paliando el brusco cambio de temperatura. Miró a sus camaradas, y la escarcha de su cabello se convirtió en gotas de agua que se deslizaron por su rostro.</p><p><br></p><p>—Supongo que debo presentar mis respetos —habló con una media sonrisa, con los ojos convertidos en media lunas—. Incómodo momento para el desierto.</p><p><br></p><p>Había hombres buscados por toda Gran Siniestra. Luego estaba U’Shax. El Regicida caminaba como alguien acostumbrado a cruzar por donde todos querían matarlo, y pronunciar su nombre en voz baja era como condenar el alma. Hablaba con la misma tranquilidad que con la que se movía; total, ya había hecho lo peor que podía hacer un hombre. Alto, pelinegro y con una apariencia mucho más juvenil que la de un hombre bien entrado en su cuarta década, U’Shax era la definición de peligro. Vestía de negro, haciendo un irónico luto al universo. Disfrutaba siendo encontrado en un ámbito en el que todo el mundo quería esconderse.</p><p><br></p><p>—Bueno, las grandes historias empiezan con encuentros incómodos.</p><p><br></p><p>El portal tras Thal’kadar se cerró más rápido, entregando un breve reflejo de las murallas que decoraban la fortificación alrededor de Ciudad del Rey. Él mismo se encargó de activar ese rumor. Quería que la Corona supiese que siempre estuvo cerca. Vestía de marrón y la capa que rodeaba su cuerpo parecía combinarse a la perfección con la arena que paulatinamente hundía sus botas. Su rostro estaba cubierto por una máscara. La máscara. Las grietas doradas que la decoraban parecían referenciar las múltiples cicatrices del continente. El Hilo Dorado representaba la venganza de los estratos bajos y sus rumores habían incitado múltiples conflictos, a la vez que revelaban incómodas verdades. Todo empezaba y terminaba en él.</p><p><br></p><p>—Dejadles las historias a los bardos —replicó una voz femenina—. Busco resultados.</p><p><br></p><p>La Bruja Blanca era la consecuencia de demasiados experimentos con éxito. Sus manos no temblaban, eran la herramienta más importante del continente. En un mundo donde la magia existía, su alquimia era algo más. Observaba el universo como si fuera una mezcla, y miraba a las personas como si fueran ingredientes. Los monstruos en Gran Siniestra tenían muchas formas, una de ellas vestía con una túnica blanca, ocultando su rostro bajo la sombra que proyectaba la capucha.</p><p>El viento movía la arena y cambiaba a diario la posición de las dunas, haciendo errática la posición de las mismas. Los planes que iban a acontecer allí, cambiarían el continente entero. Thal’kadar lo dejó claro con un rápido lanzamiento, mandando a volar una bolsa que impactó suave en la arena. De ella asomó una maraña rubia de pelo. Los ojos de Levius Rehgis miraron al cielo con la sorpresa eterna de alguien que creía ser intocable. La brisa movió un mechón de su cercenada cabeza, como si el desierto quisiera comprobar que de verdad estaba muerto. Cuando la gente profesaba el dicho de “el sur siempre responde por Esra Blavyr”, nadie esperaba una respuesta tan literal.</p><p><br></p><p>—Cortesía profesional —replicó Thal’kadar. Su voz sonaba hueca. Chocaba contra la máscara—. Me dijeron que aprecias los gestos contundentes.</p><p><br></p><p>—Vaya —rió el regicida—. Esto sí que es hablar mi idioma.</p><p><br></p><p>—Cuando un nigromante se aburre, los muertos tienen la mala costumbre de levantarse. Creo que prefiero eliminar esa posibilidad.</p><p><br></p><p>—Espero que los nuevos cronistas sean ingeniosos. —Empujó la cabeza, acariciándola con el pie suavemente—. Porque cuando acabe con todos, van a tener que inventarse nuevos apellidos.</p><p><br></p><p>U’Shax disfrutó de aquella imagen más de lo que cualquier persona debería. Sus ojos, marrones, se tiñeron durante un breve segundo de negro ante la mera idea de consumir a un Rehgis. Su mirada volvió a la normalidad segundos después. Repitió el movimiento de Thal’kadar, lanzando por los aires una hoja envainada que giró sobre sí misma antes de clavarse en la arena. El arma aún no había decidido qué ser y su empuñadura reflejaba el atento brillo del sol, juzgándola. Era el tipo de arma que no necesitaba desenvainar para erizar la piel. Thal’kadar lo hizo igualmente, dejando que el astro examinase también la hoja. No era un arma diseñada para matar hombres; estaba pensada para asesinar cosas que no deberían morir.</p><p><br></p><p>—Necesito que esa espada haga algo muy específico. —U’Shax llevó ambas manos a la espalda—. Y justo estoy en presencia de alguien que lo sabe todo, y de quien puede hacer cualquier cosa. Resolved esto.</p><p><br></p><p>La Bruja Blanca y el Hilo Dorado se miraron sutilmente. Un imperceptible movimiento de cabeza por parte de ambos. U’Shax dejó escapar una animada carcajada. Señaló la hoja y los tres la miraron con atención. Era una imagen residual, forjada con una precisión prácticamente imposible. Runas. Decenas de ellas.</p><p><br></p><p>—Si vais a querer mi ayuda para enterrar inmortales, necesitamos algo más que la intención de sepultarlos. —Su sonrisa se volvió siniestra, como si llevase aguantándose el comentario durante horas—. Buscad la forma de meter un sangriento ahí dentro.</p><p><br></p><p>Volvieron a mirarse. Otro movimiento imperceptible. Un dato en el que ninguno había pensado. Esta vez fue la Bruja Blanca quien lanzó algo al aire. A diferencia de las anteriores, no cayó en la arena, sino en las manos del regicida.</p><p><br></p><p>—Oh, es lo que se viene rumoreando, ¿verdad?</p><p><br></p><p>—No lo sé. Pruébalo y saca tus propias conclusiones.</p><p><br></p><p>Hechizos embotellados. La nueva obra maestra de aquella autora, de pie sobre una enorme duna. U’Shax paseó la botella entre sus dedos, examinando el contenido. Destrucción líquida, contenida bajo un sencillo tapón de corcho. Muerte aislada tras una capa de cristal.</p><p><br></p><p>El aire se rasgó con un sonido húmedo a la orden de la sonrisa del regicida. La herida en el espacio mostró un pantano oscuro donde la niebla bailaba sobre agua negra y espesa. El olor a barro llegó poco después y la humedad se deslizó por la arena como un visitante incongruente. U’Shax se giró y dedicó una mirada a sus, ahora, compañeros.</p><p>—Bueno, ha sido un placer —inició—. Si vamos a meter un sangriento en esa espada, hará falta un Vaelekin.</p><p><br></p><p>Volvió a sonreír. La Bruja Blanca y el Hilo Dorado se quedaron callados. Ya sabían la respuesta. U’Shax ensanchó su expresión al entrecerrar los ojos.</p><p><br></p><p>—Así que alguien tendrá que comerse a la puta niña que los lidera.</p><p><br></p><p>El croar del pantano se apagó cuando el portal desapareció de la vista, dejando al desierto en silencio. El olor a barro podrido tardó varios segundos en aparecer. El sol brilló sobre la máscara de Thal’kadar, y esta pareció sonreír con el reflejo. La Bruja Blanca observó la espada con el interés clínico de alguien que acaba de recibir un nuevo experimento. No parecía impresionada con las revelaciones, más bien apática con el mundo donde ocurrían.</p><p><br></p><p>—Encantador sujeto.</p><p><br></p><p>—Es eficiente —respondió ella—. Eso es lo único que me importa.</p><p><br></p><p>Ambos se giraron en silencio; Nueva Meneurien en la distancia, brillando bajo el sol como una corona negra, emponzoñándolo desde las profundidades de la que emergió.</p><p><br></p><p>Las otras dos figuras desaparecieron poco después. El viento siguió arrastrando la arena sobre el lugar del encuentro, como si quisiera enterrar la conversación.</p>",
+        "colecciones": [
+            "general"
+        ],
+        "reinos": [],
+        "lugares": [],
+        "consecuencias": [],
+        "consecuenciasDestacadas": [],
+        "personajes": [],
+        "imagen": "img/eventos/preludeanr.jpg",
+        "imagenPosX": "19.6%",
+        "imagenPosY": "50.0%",
+        "cardPosX": "50.0%",
+        "cardPosY": "42.0%",
+        "id": 1785790623430
+    }
+]
