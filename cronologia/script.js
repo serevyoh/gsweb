@@ -2357,6 +2357,14 @@ botonesCasa.forEach(boton=>{
                 .getElementById("proximamente")
                 .classList.remove("oculto");
 
+            /* El evento abierto pertenece a la cronología
+               anterior: se cierra el panel de detalle para que
+               no siga mostrando un evento que ya no está en
+               pantalla. */
+            document
+                .getElementById("detalle-evento")
+                .classList.add("oculto");
+
         }
     );
 
